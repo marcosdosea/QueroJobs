@@ -1,0 +1,13 @@
+@import "./landing.css";
+@import "./partners.css";
+
+:root {
+    --azul: #09B7CE;
+    --azul-marinho: #1596A8;
+    --roxo: #652ED8;
+    --roxo-escuro: #6245A0;
+    --verde: #7FD771;
+    --verde-claro: #B9EFB0;
+    --vermelho: #FF6969;
+    --cinza: #f0f0f0;
+}
