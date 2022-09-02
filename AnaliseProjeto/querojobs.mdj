@@ -52142,6 +52142,28 @@
 								},
 								{
 									"_type": "UMLOperation",
+<<<<<<< HEAD
+=======
+									"_id": "AAAAAAGA4W95eV91EDs=",
+									"_parent": {
+										"$ref": "AAAAAAGA4W95eF9yXnM="
+									},
+									"name": "buscarEmpresa",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGCtCWKLzXYGvE=",
+											"_parent": {
+												"$ref": "AAAAAAGA4W95eV91EDs="
+											},
+											"name": "id",
+											"type": "Integer"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+>>>>>>> a168de86e78bd4987a08a59d604ed051daf22e81
 									"_id": "AAAAAAGA4W95eV92HNE=",
 									"_parent": {
 										"$ref": "AAAAAAGA4W95eF9yXnM="
