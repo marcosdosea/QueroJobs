@@ -2,10 +2,11 @@
 
 public interface ICompanyService
 {
-    int Create(Company company);
-    void Edit(Company company);
-    void Delete(int idCompany);
-    Company Get(int idCompany);
-    IEnumerable<Company> GetAll();
-    IEnumerable<Candidate> GetAllInterestedsCandidates();
+    Task<int> Create(Company company);
+    Task Edit(Company company);
+    Task Delete(int idCompany);
+    Task<Company> Get(int idCompany);
+    Task<IEnumerable<Company>> GetAll();
+    Task<IEnumerable<Candidate>> GetAllInterestedsCandidates();
+    Task UpdateCompanyNameById(int id, string corporateName);
 }
