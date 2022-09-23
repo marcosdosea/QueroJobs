@@ -12,35 +12,55 @@ public class CompanyService : ICompanyService
     {
         _queroJobsContext = queroJobsContext;
     }
-    public int Create(Company company)
+    public async Task<int> Create(Company company)
     {
-        _queroJobsContext.Add(company);
-        _queroJobsContext.SaveChanges();
+        await _queroJobsContext.AddAsync(company);
+        await _queroJobsContext.SaveChangesAsync();
         return company.Id;
     }
 
-    public void Delete(int idCompany)
+    public async Task Delete(int idCompany)
     {
-        throw new NotImplementedException();
+        var company = await _queroJobsContext.Companies.
+            FirstOrDefaultAsync(c => c.Id == idCompany);
+
+        if (company == null) return;
+
+        _queroJobsContext.Remove(company);
+        await _queroJobsContext.SaveChangesAsync();
+
     }
 
-    public void Edit(Company company)
+    public async Task Edit(Company company)
     {
-        throw new NotImplementedException();
+        _queroJobsContext.Update(company);
+
+        await _queroJobsContext.SaveChangesAsync();
     }
 
-    public Company Get(int idCompany)
+    public async Task<Company> Get(int idCompany)
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Companies.FirstOrDefaultAsync(c => c.Id == idCompany);
     }
 
-    public IEnumerable<Company> GetAll()
+    public async Task<IEnumerable<Company>> GetAll()
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Companies.Select(c => c).ToListAsync();
     }
 
-    public IEnumerable<Candidate> GetAllInterestedsCandidates()
+    public Task<IEnumerable<Candidate>> GetAllInterestedsCandidates()
     {
-        throw new NotImplementedException();
+        throw new NotImplementedException(); //TODO Voltar para implementar esse método!
+    }
+
+    public async Task UpdateCompanyNameById(int id, string corporateName)
+    {
+        var company = await _queroJobsContext.Companies.FirstOrDefaultAsync(c => c.Id == id);
+
+        if (company == null) return;
+
+        company.CorporateName = corporateName;
+
+        await _queroJobsContext.SaveChangesAsync();
     }
 }
