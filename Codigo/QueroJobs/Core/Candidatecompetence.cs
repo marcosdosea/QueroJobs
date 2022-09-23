@@ -9,5 +9,8 @@ namespace Core
     {
         public int IdCandidate { get; set; }
         public int IdCompetence { get; set; }
+
+        public virtual Candidate IdCandidateNavigation { get; set; }
+        public virtual Competence IdCompetenceNavigation { get; set; }
     }
 }

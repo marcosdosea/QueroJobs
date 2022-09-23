@@ -14,6 +14,7 @@ namespace Core
         public int? EndMonth { get; set; }
         public int? EndYear { get; set; }
 
+        public virtual Candidate IdCandidateNavigation { get; set; }
         public virtual Role IdRoleNavigation { get; set; }
     }
 }

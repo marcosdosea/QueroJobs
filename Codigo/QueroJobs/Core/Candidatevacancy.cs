@@ -13,6 +13,7 @@ namespace Core
         public string Situation { get; set; }
         public string Message { get; set; }
 
+        public virtual Candidate IdCandidateNavigation { get; set; }
         public virtual Vacancy IdVacancyNavigation { get; set; }
     }
 }

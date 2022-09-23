@@ -7,6 +7,15 @@ namespace Core
 {
     public partial class Candidate
     {
+        public Candidate()
+        {
+            Candidatecompetences = new HashSet<Candidatecompetence>();
+            Candidateoccupationareas = new HashSet<Candidateoccupationarea>();
+            Candidateroles = new HashSet<Candidaterole>();
+            Candidatevacancies = new HashSet<Candidatevacancy>();
+            Formations = new HashSet<Formation>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -28,5 +37,11 @@ namespace Core
         public string EmploymentStatus { get; set; }
         public string ActualRole { get; set; }
         public string Description { get; set; }
+
+        public virtual ICollection<Candidatecompetence> Candidatecompetences { get; set; }
+        public virtual ICollection<Candidateoccupationarea> Candidateoccupationareas { get; set; }
+        public virtual ICollection<Candidaterole> Candidateroles { get; set; }
+        public virtual ICollection<Candidatevacancy> Candidatevacancies { get; set; }
+        public virtual ICollection<Formation> Formations { get; set; }
     }
 }

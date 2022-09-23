@@ -7,6 +7,11 @@ namespace Core
 {
     public partial class Company
     {
+        public Company()
+        {
+            Vacancies = new HashSet<Vacancy>();
+        }
+
         public int Id { get; set; }
         public string FantasyName { get; set; }
         public string Email { get; set; }
@@ -24,5 +29,7 @@ namespace Core
         public string StateRegistration { get; set; }
         public string CorporateName { get; set; }
         public string ResponsibleName { get; set; }
+
+        public virtual ICollection<Vacancy> Vacancies { get; set; }
     }
 }
