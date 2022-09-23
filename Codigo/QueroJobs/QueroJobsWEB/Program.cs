@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<QueroJobsContext>(
-                options => options.UseMySQL(builder.Configuration.GetConnectionString("server=localhost;port=3306;user=root;password=admin;database=querojobs")));
+                options => options.UseMySQL("server=localhost;port=3306;user=root;password=admin;database=querojobs"));
 
 builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
@@ -19,6 +19,11 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
+}
+else
+{
+    SeedingService seed = new SeedingService(app.Services.CreateScope().ServiceProvider.GetRequiredService<QueroJobsContext>());
+    seed.Seed();
 }
 
 app.UseHttpsRedirection();
