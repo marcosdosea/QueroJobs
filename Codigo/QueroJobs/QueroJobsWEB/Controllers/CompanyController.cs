@@ -1,4 +1,5 @@
-﻿using Core.Services;
+﻿using Core;
+using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace QueroJobsWEB.Controllers;
@@ -11,11 +12,11 @@ public class CompanyController : Controller
         _companyService = companyService;
     }
 
-    /*[HttpGet]*/
+    [HttpGet]
     /// <summary>
     /// Return all companies in a ViewModel
     /// </summary>
-    /// <returns></returns>
+    /// <returns>View(companies)</returns>
     public async Task<ActionResult> Index()
     {
         var companies = await _companyService.GetAll();
@@ -26,6 +27,7 @@ public class CompanyController : Controller
     }
 
     // GET: CompanyController/Details/5
+    [HttpGet]
     public async Task<ActionResult> Details(int id)
     {
         var company = await _companyService.Get(id);
@@ -36,7 +38,7 @@ public class CompanyController : Controller
     }
 
     // GET: CompanyController/Create
-    public ActionResult Create()
+    public  ActionResult Create()
     {
         return View();
     }
@@ -44,57 +46,80 @@ public class CompanyController : Controller
     // POST: CompanyController/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Create(IFormCollection collection)
+    public async Task<ActionResult> Create(Company company)
     {
-        try
+
+        if (ModelState.IsValid)
         {
+            try
+            {
+                await _companyService.Create(company);
+            }
+            catch
+            {
+                return View(company);
+            }
+
             return RedirectToAction(nameof(Index));
         }
-        catch
-        {
-            return View();
-        }
+
+        return View(company);
+
     }
 
     // GET: CompanyController/Edit/5
-    public ActionResult Edit(int id)
+    [HttpGet]
+    public async Task<ActionResult> Edit(int id)
     {
-        return View();
+        var company = await _companyService.Get(id);
+        return View(company);
     }
 
     // POST: CompanyController/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Edit(int id, IFormCollection collection)
+    public async Task<ActionResult> Edit(int id, Company company )
     {
-        try
+        if (id != company.Id) return NotFound();
+
+        if (ModelState.IsValid)
         {
+            try
+            {
+                await _companyService.Edit(company);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
             return RedirectToAction(nameof(Index));
         }
-        catch
-        {
-            return View();
-        }
+
+        return View(company);
+
     }
 
     // GET: CompanyController/Delete/5
-    public ActionResult Delete(int id)
+    [HttpGet]
+    public async Task<ActionResult> Delete(int? id)
     {
-        return View();
+        if (id == null) return BadRequest();
+
+        var company = await _companyService.Get((int)id);
+
+        if (company == null) return NotFound();
+
+        return View(company);
     }
 
     // POST: CompanyController/Delete/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Delete(int id, IFormCollection collection)
+    public async Task<ActionResult> Delete(int id)
     {
-        try
-        {
-            return RedirectToAction(nameof(Index));
-        }
-        catch
-        {
-            return View();
-        }
+        await _companyService.Delete(id);
+
+        return RedirectToAction(nameof(Index));
     }
 }

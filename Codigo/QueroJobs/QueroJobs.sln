@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueroJobsWEB", "QueroJobsWEB\QueroJobsWEB.csproj", "{3378335D-3E72-4897-815F-5AC98B025462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueroJobsWEB", "QueroJobsWEB\QueroJobsWEB.csproj", "{3378335D-3E72-4897-815F-5AC98B025462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F81DD06A-6F07-46DD-87BB-06DFDBFD5494}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{F81DD06A-6F07-46DD-87BB-06DFDBFD5494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{1E81CCF0-5D67-4369-929E-F3A687FBD40C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{1E81CCF0-5D67-4369-929E-F3A687FBD40C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
