@@ -22,7 +22,7 @@ public class RoleService : IRoleService
 
     public async Task Delete(int idRole)
     {
-        var role = await _queroJobsContext.Roles.FirstOrDefaultAsync(c => c.Id == idRole);
+        var role = await _queroJobsContext.Roles.FirstOrDefaultAsync(r => r.Id == idRole);
 
         if (role == null) return;
 
@@ -38,11 +38,11 @@ public class RoleService : IRoleService
 
     public async Task<Role> Get(int idRole)
     {
-        return await _queroJobsContext.Roles.FirstOrDefaultAsync(c => c.Id == idRole);
+        return await _queroJobsContext.Roles.FirstOrDefaultAsync(r => r.Id == idRole);
     }
 
     public async Task<IEnumerable<Role>> GetAll()
     {
-        return await _queroJobsContext.Roles.Select(c => c).ToListAsync();
+        return await _queroJobsContext.Roles.ToListAsync();
     }
 }
