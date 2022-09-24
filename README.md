@@ -8,10 +8,11 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%23316192.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-<h1 align=center style="font-size:100px;"> QueroJobs </h1>
+<h1 align=center> QueroJobs </h1>
+
 <h2 align=center id="objetivo">  Plataforma de conexão entre pessoas em busca de emprego e empresas contratantes </h2>
 
-<br><br>
+<br>
 
 <h2 align=center> Navegação </h2>
 <p align="center">
@@ -33,7 +34,8 @@
     - Usuários enviam seu curriculum apenas para empresas as quais tem interesse;
     - Empresas e Usuários podem filtrar área de atuação;
     - Empresas podem solicitar dados adicionais dos possíveis contratados;
-    - Empresas poderão selecionar candidatos como favoritos para poder entrar em contato. Além de obter acesso a mais informações sobre cada um deles;
+    - Empresas poderão selecionar candidatos como favoritos para poder entrar em contato. 
+    - Além de obter acesso a mais informações sobre cada um deles;
     - Os usuários pré-selecionados pelas empresas serão notificados por email e whatsapp;
     - Os certificados inseridos pelo usuário serão validados pela equipe, quando possível.
 
@@ -43,19 +45,19 @@
 
 <h2 align=center id="solucao"> Um pouco sobre a nossa solução </h2>
 
-    Embora as redes sociais de seleção de candidatos possuam incontáveis características positivas, ainda é possível observar problemas que precisam ser resolvidos. Do ponto de vista tanto do recrutador, quanto do candidato, a carência da validação de informações pode ser resolvida através do envio de um arquivo que possa comprovar a habilidade ou experiência especificada pelo usuário. No QueroJobs essa necesssidade deixa de existir, pois nós responsáveis pela plataforma disponibilizamos uma equipe para fazer a analise previamente e validar.
+   Embora as redes sociais de seleção de candidatos possuam incontáveis características positivas, ainda é possível observar problemas que precisam ser resolvidos. Do ponto de vista tanto do recrutador, quanto do candidato, a carência da validação de informações pode ser resolvida através do envio de um arquivo que possa comprovar a habilidade ou experiência especificada pelo usuário. No QueroJobs essa necesssidade deixa de existir, pois nós responsáveis pela plataforma disponibilizamos uma equipe para fazer a analise previamente e validar.
 
 <br><br>
 
 <h2 id="usuarios">  :raising_hand_man: Usuários</h2>
 
-    O cliente alvo deste sistema é composto por um grupo de indivíduos que procuram por uma ocupação no mercado de trabalho e empresas interessadas em admitir mão de obra sem espera e sem dificuldades. Em outras palavras, o mercado alvo está fortemente associado a soluções de recrutamento e seleção personificado e humanizado.
+   O cliente alvo deste sistema é composto por um grupo de indivíduos que procuram por uma ocupação no mercado de trabalho e empresas interessadas em admitir mão de obra sem espera e sem dificuldades. Em outras palavras, o mercado alvo está fortemente associado a soluções de recrutamento e seleção personificado e humanizado.
 
 <br><br>
 
 <h2 id="gestores">:office: Gestores</h2>
 
-    Aos gestores possuem funcionalidades capazes de auxiliar nas tomadas de decisões, preventivas e corretivas, com relação aos registros de ocorrências, permitindo saber quais pontos possuem maiores taxas de ocorrência, necessitam de novos agentes para reforçar uma determinada área. Além, de permitir gerenciar sub-locais dentro de uma instituição, como campus de universidades, clubes e eventos de grande porte.
+   Aos gestores possuem funcionalidades capazes de auxiliar nas tomadas de decisões, preventivas e corretivas, com relação aos registros de ocorrências, permitindo saber quais pontos possuem maiores taxas de ocorrência, necessitam de novos agentes para reforçar uma determinada área. Além, de permitir gerenciar sub-locais dentro de uma instituição, como campus de universidades, clubes e eventos de grande porte.
 
 <br><br>
 
@@ -91,7 +93,7 @@
         </sub>
       </a>
     </td>
-    <td align="center">
+    <td align="center" >
       <a href="https://github.com/MariaMilena" target="_blank">
         <img style="border-radius:100px;" src="https://avatars.githubusercontent.com/u/65188572?v=4" target="_blank"  width="100px;" alt="Foto de Maria Milena no GitHub"/><br>
         <sub>
