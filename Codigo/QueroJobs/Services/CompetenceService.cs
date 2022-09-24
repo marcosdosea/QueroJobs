@@ -22,7 +22,7 @@ public class CompetenceService : ICompetenceService
 
     public async Task Delete(int idCompetence)
     {
-        var competence = await _queroJobsContext.Roles.FirstOrDefaultAsync(c => c.Id == idCompetence);
+        var competence = await _queroJobsContext.Competences.FirstOrDefaultAsync(c => c.Id == idCompetence);
 
         if (competence == null) return;
 
