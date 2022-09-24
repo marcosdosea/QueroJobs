@@ -45,7 +45,7 @@ public class CompanyService : ICompanyService
 
     public async Task<IEnumerable<Company>> GetAll()
     {
-        return await _queroJobsContext.Companies.Select(c => c).ToListAsync();
+        return await _queroJobsContext.Companies.ToListAsync();
     }
 
     public Task<IEnumerable<Candidate>> GetAllInterestedsCandidates()
