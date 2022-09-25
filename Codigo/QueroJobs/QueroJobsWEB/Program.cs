@@ -15,8 +15,6 @@ builder.Services.AddTransient<IVacancyService, VacancyService>();
 builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<ICompetenceService, CompetenceService>();
 
-
-
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
