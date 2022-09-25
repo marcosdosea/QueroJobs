@@ -1,4 +1,4 @@
-﻿using Core;
+using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,7 +38,7 @@ public class CompanyController : Controller
     }
 
     // GET: CompanyController/Create
-    public  ActionResult Create()
+    public ActionResult Create()
     {
         return View();
     }
@@ -78,7 +78,7 @@ public class CompanyController : Controller
     // POST: CompanyController/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Edit(int id, Company company )
+    public async Task<ActionResult> Edit(int id, Company company)
     {
         if (id != company.Id) return NotFound();
 
