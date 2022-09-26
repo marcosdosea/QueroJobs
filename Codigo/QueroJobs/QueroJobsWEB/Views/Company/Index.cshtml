@@ -1,13 +1,13 @@
-﻿@model IEnumerable<Core.Company>
+﻿@model IEnumerable<QueroJobsWEB.Models.CompanyModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "QueroJobs - Empresa";
 }
 
-<h1>Index</h1>
+<h1>Empresas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar nova empresa</a>
 </p>
 <table class="table">
     <thead>
@@ -26,9 +26,9 @@
                     @Html.DisplayFor(modelItem => item.FantasyName)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
                 </td>
             </tr>
         }
