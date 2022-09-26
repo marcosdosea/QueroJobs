@@ -1,15 +1,19 @@
+using AutoMapper;
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using QueroJobsWEB.Models;
 
 namespace QueroJobsWEB.Controllers;
 
 public class CompanyController : Controller
 {
     private readonly ICompanyService _companyService;
-    public CompanyController(ICompanyService companyService)
+    private readonly IMapper _mapper;
+    public CompanyController(ICompanyService companyService, IMapper mapper)
     {
         _companyService = companyService;
+        _mapper = mapper;
     }
 
     [HttpGet]
@@ -23,7 +27,9 @@ public class CompanyController : Controller
 
         if (companies == null) return BadRequest();
 
-        return View(companies);
+        var companiesModel = _mapper.Map<List<CompanyModel>>(companies);
+
+        return View(companiesModel);
     }
 
     // GET: CompanyController/Details/5
@@ -34,7 +40,9 @@ public class CompanyController : Controller
 
         if (company == null) return BadRequest();
 
-        return View(company);
+        var companyModel = _mapper.Map<CompanyModel>(company);
+
+        return View(companyModel);
     }
 
     // GET: CompanyController/Create
@@ -46,24 +54,25 @@ public class CompanyController : Controller
     // POST: CompanyController/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Create(Company company)
+    public async Task<ActionResult> Create(CompanyModel companyModel)
     {
 
         if (ModelState.IsValid)
         {
             try
             {
+                var company = _mapper.Map<Company>(companyModel);
                 await _companyService.Create(company);
             }
             catch
             {
-                return View(company);
+                return View(companyModel);
             }
 
             return RedirectToAction(nameof(Index));
         }
 
-        return View(company);
+        return View(companyModel);
 
     }
 
@@ -72,20 +81,25 @@ public class CompanyController : Controller
     public async Task<ActionResult> Edit(int id)
     {
         var company = await _companyService.Get(id);
-        return View(company);
+
+        var companyModel = _mapper.Map<CompanyModel>(company);
+
+        return View(companyModel);
     }
 
     // POST: CompanyController/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Edit(int id, Company company)
+    public async Task<ActionResult> Edit(int id, CompanyModel companyModel)
     {
-        if (id != company.Id) return NotFound();
+        if (id != companyModel.Id) return NotFound();
+
 
         if (ModelState.IsValid)
         {
             try
             {
+                var company = _mapper.Map<Company>(companyModel);
                 await _companyService.Edit(company);
             }
             catch
@@ -96,7 +110,7 @@ public class CompanyController : Controller
             return RedirectToAction(nameof(Index));
         }
 
-        return View(company);
+        return View(companyModel);
 
     }
 
@@ -110,7 +124,9 @@ public class CompanyController : Controller
 
         if (company == null) return NotFound();
 
-        return View(company);
+        var companyModel = _mapper.Map<CompanyModel>(company);
+
+        return View(companyModel);
     }
 
     // POST: CompanyController/Delete/5
