@@ -1,12 +1,12 @@
 ﻿@model QueroJobsWEB.Models.CompanyModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar empresa";
 }
 
-<h1>Create</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h4>Company</h4>
+<h4>Empresa</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -116,7 +116,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para lista de empresas</a>
 </div>
 
 @section Scripts {
