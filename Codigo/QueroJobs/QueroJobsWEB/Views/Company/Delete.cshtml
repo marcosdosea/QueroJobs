@@ -1,14 +1,14 @@
 ﻿@model QueroJobsWEB.Models.CompanyModel
 
 @{
-    ViewData["Title"] = "Deletar";
+    ViewData["Title"] = "Deletar empresa";
 }
 
-<h1>Delete</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você tem certeza que deseja deletar essa empresa?</h3>
 <div>
-    <h4>Department</h4>
+    <h4>Empresa</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -25,3 +25,8 @@
         <a asp-action="Index">Voltar para lista de empresas</a>
     </form>
 </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

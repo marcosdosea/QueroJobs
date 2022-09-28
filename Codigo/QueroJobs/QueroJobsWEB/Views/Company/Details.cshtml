@@ -1,13 +1,13 @@
 ﻿@model QueroJobsWEB.Models.CompanyModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes da empresa";
 }
 
-<h1>Details</h1>
+<h1>@ViewData["Title"]</h1>
 
 <div>
-    <h4>Department</h4>
+    <h4>Empresa</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -125,6 +125,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar para lista de empresas</a>
 </div>
