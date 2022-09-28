@@ -11,7 +11,7 @@ public class SeedingService
 
     public void Seed()
     {
-        if (_queroJobsContext.Companies.Any() || _queroJobsContext.Vacancies.Any() || _queroJobsContext.Roles.Any()) return;
+        if (_queroJobsContext.Companies.Any() || _queroJobsContext.Vacancies.Any() || _queroJobsContext.Roles.Any() || _queroJobsContext.Candidates.Any()) return;
 
         Company c1 = new Company
         {
@@ -132,9 +132,60 @@ public class SeedingService
             Quantity = 2
         };
 
+        Candidate cand1 = new Candidate
+        {
+            Id = 1,
+            Name = "Milena",
+            Email = "@gmail.com",
+            Cep = "4955-000",
+            Country = "Brasil",
+            State = "SE",
+            City = "Carira",
+            District = "Centro",
+            Street = "Rua",
+            HouseNumber = "233",
+            Complement = "Casa",
+            CellphoneNumber = "79981341962",
+            TelephoneNumber = "",
+            BirthDate = DateTime.UtcNow,
+            Gender = "F",
+            Cpf = "123456789",
+            Deficiency = "Não se aplica",
+            SalaryExpectation = 1000,
+            EmploymentStatus = "FREELANCE",
+            ActualRole = "Desenvolvedor de Softwares",
+            Description = "Algo sobre mim"
+        };
+
+        Candidate cand2 = new Candidate
+        {
+            Id = 2,
+            Name = "Eri",
+            Email = "@gmail.com",
+            Cep = "4955-000",
+            Country = "USA",
+            State = "MI",
+            City = "Mass",
+            District = "Centro",
+            Street = "Rua",
+            HouseNumber = "233",
+            Complement = "Casa",
+            CellphoneNumber = "7912345678",
+            TelephoneNumber = "",
+            BirthDate = DateTime.UtcNow,
+            Gender = "M",
+            Cpf = "1234569",
+            Deficiency = "Não se aplica",
+            SalaryExpectation = 1000,
+            EmploymentStatus = "FREELANCE",
+            ActualRole = "DBA",
+            Description = "Algo sobre mim"
+        };
+
         _queroJobsContext.AddRange(c1, c2, c3);
         _queroJobsContext.AddRange(r1, r2, r3, r4, r5, r6);
         _queroJobsContext.AddRange(v1, v2, v3);
+        _queroJobsContext.AddRange(cand1, cand2);
 
         _queroJobsContext.SaveChanges();
     }

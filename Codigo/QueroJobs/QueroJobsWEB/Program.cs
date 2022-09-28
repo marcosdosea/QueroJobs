@@ -14,6 +14,7 @@ builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
 builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<ICompetenceService, CompetenceService>();
+builder.Services.AddTransient<ICandidateService, CandidateService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
