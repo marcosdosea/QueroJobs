@@ -45,7 +45,7 @@
 
 <h2 align=center id="solucao"> Um pouco sobre a nossa solução </h2>
 
-   Embora as redes sociais de seleção de candidatos possuam incontáveis características positivas, ainda é possível observar problemas que precisam ser resolvidos. Do ponto de vista tanto do recrutador, quanto do candidato, a carência da validação de informações pode ser resolvida através do envio de um arquivo que possa comprovar a habilidade ou experiência especificada pelo usuário. No QueroJobs essa necesssidade deixa de existir, pois nós responsáveis pela plataforma disponibilizamos uma equipe para fazer a analise previamente e validar.
+   Embora as redes sociais de seleção de candidatos possuam incontáveis características positivas, ainda é possível observar problemas que precisam ser resolvidos. Do ponto de vista tanto do recrutador, quanto do candidato, a carência da validação de informações pode ser resolvida através do envio de um arquivo que possa comprovar a habilidade ou experiência especificada pelo usuário. No QueroJobs essa necesssidade deixa de existir, pois nós disponibilizamos uma equipe para fazer a analise previamente e validar os dados.
 
 <br><br>
 
@@ -120,7 +120,7 @@
         <img style="border-radius:100px;" src="https://avatars.githubusercontent.com/u/7799935?v=4" target="_blank" width="100px;" alt="Foto de Marcos Dósea no GitHub"/><br>
         <sub>
           <b>DOUTOR MASCOS DÓSEA</b>
-          <p>Scrum Master</p>
+          <p>Product Owner</p>
         </sub>
       </a>
     </td>
