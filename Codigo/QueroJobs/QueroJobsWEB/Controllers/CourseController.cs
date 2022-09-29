@@ -34,6 +34,39 @@ public class CourseController : Controller
         return View(coursesModel);
     }
 
+
+    // GET: CourseController/Create
+    public ActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: CourseController/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<ActionResult> Create(CourseModel courseModel)
+    {
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var course = _mapper.Map<Course>(courseModel);
+                await _courseService.Create(course);
+            }
+            catch
+            {
+                return View(courseModel);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        return View(courseModel);
+
+    }
+
+
     // GET: CourseController/Edit/5
     [HttpGet]
     public async Task<ActionResult> Edit(int id)
@@ -45,7 +78,7 @@ public class CourseController : Controller
         return View(courseModel);
     }
 
-    // POST: CompanyController/Edit/5
+    // POST: CourseController/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<ActionResult> Edit(int id, CourseModel courseModel)
@@ -71,6 +104,7 @@ public class CourseController : Controller
         return View(courseModel);
 
     }
+
 
     // GET: CourseController/Delete/5
     [HttpGet]

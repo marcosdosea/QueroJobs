@@ -27,7 +27,7 @@ namespace Services
 
         public async Task Delete(int idCourse)
         {
-            var course = await _queroJobsContext.Companies.FirstOrDefaultAsync(c => c.Id == idCourse);
+            var course = await _queroJobsContext.Courses.FirstOrDefaultAsync(c => c.Id == idCourse);
 
             if (course == null) return;
 

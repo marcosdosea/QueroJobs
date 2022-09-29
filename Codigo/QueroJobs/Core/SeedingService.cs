@@ -11,7 +11,12 @@ public class SeedingService
 
     public void Seed()
     {
-        if (_queroJobsContext.Companies.Any() || _queroJobsContext.Vacancies.Any() || _queroJobsContext.Roles.Any() || _queroJobsContext.Candidates.Any() || _queroJobsContext.Courses.Any()) return;
+        if (_queroJobsContext.Companies.Any() || 
+            _queroJobsContext.Vacancies.Any() || 
+            _queroJobsContext.Roles.Any()     ||
+            _queroJobsContext.Candidates.Any()|| 
+            _queroJobsContext.Courses.Any()) 
+            return;
 
         Company c1 = new Company
         {
@@ -182,6 +187,8 @@ public class SeedingService
             Description = "Algo sobre mim"
         };
 
+        //Formation for1 = new Formation { }
+
 
         Course course1 = new Course { Id = 1, CourseName = "Sistemas de Informação" };
         Course course2 = new Course { Id = 2, CourseName = "Engenharia de Software" };
@@ -189,6 +196,7 @@ public class SeedingService
         Course course4 = new Course { Id = 4, CourseName = "Contabilidade" };
         Course course5 = new Course { Id = 5, CourseName = "Medicina" };
         Course course6 = new Course { Id = 6, CourseName = "Direito" };
+
 
 
         _queroJobsContext.AddRange(c1, c2, c3);
