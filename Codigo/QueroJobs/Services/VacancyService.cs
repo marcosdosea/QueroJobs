@@ -1,52 +1,55 @@
 ﻿using Core;
 using Core.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services;
 
 public class VacancyService : IVacancyService
 {
-    private readonly QueroJobsContext _queroJobsContext;
-    public VacancyService(QueroJobsContext queroJobsContext)
-    {
-        _queroJobsContext = queroJobsContext;
-    }
-    /// <summary>
-    /// Cria uma vaga
-    /// </summary>
-    /// <param ///name="vacancy"></param>
-    /// <returns></returns>
-    public int Create(Vacancy vacancy)
-    {
-        _queroJobsContext.Add(vacancy);
-        _queroJobsContext.SaveChanges();
-        return vacancy.Id;
-    }
+     private readonly QueroJobsContext _queroJobsContext;
+     public VacancyService(QueroJobsContext queroJobsContext)
+     {
+         _queroJobsContext = queroJobsContext;
+     }
+     /// <summary>
+     /// Cria uma vaga
+     /// </summary>
+     /// <param ///name="vacancy"></param>
+     /// <returns></returns>
+     /// 
 
-    public void Delete(int idVacancy)
-    {
-        var vacancy = await _queroJobsContext.Vacancy.
-            FirstOrDefaultAsync(c => c.Id == idVacancy);
+     public async Task<int> Create(Vacancy vacancy)
+     {
+         await _queroJobsContext.AddAsync(vacancy);
+         await _queroJobsContext.SaveChangesAsync();
+         return vacancy.Id;
+     }
 
-        if (vacancy == null) return;
+     public async Task Delete(int idVacancy)
+     {
+         var vacancy = await _queroJobsContext.Vacancies.
+             FirstOrDefaultAsync(v => v.Id == idVacancy);
 
-        _queroJobsContext.Remove(vacancy);
-        await _queroJobsContext.SaveChangesAsync();
-    }
+         if (vacancy == null) return;
 
-    public void Edit(Vacancy vacancy)
-    {
-        _queroJobsContext.Update(vacancy);
+         _queroJobsContext.Remove(vacancy);
+         await _queroJobsContext.SaveChangesAsync();
+     }
 
-        await _queroJobsContext.SaveChangesAsync();
-    }
+     public async Task Edit(Vacancy vacancy)
+     {
+         _queroJobsContext.Update(vacancy);
 
-    public Vacancy Get(int idVacancy)
-    {
-        return await _queroJobsContext.Vacancies.FirstOrDefaultAsync(c => c.Id == idVacancy);
-    }
+         await _queroJobsContext.SaveChangesAsync();
+     }
 
-    public IEnumerable<Vacancy> GetAll()
-    {
-        return await _queroJobsContext.Vacancies .Select(c => c).ToListAsync();
-    }
+     public async Task<Vacancy> Get(int idVacancy)
+     {
+         return await _queroJobsContext.Vacancies.FirstOrDefaultAsync(v => v.Id == idVacancy);
+     }
+
+     public async Task<IEnumerable<Vacancy>> GetAll()
+     {
+         return await _queroJobsContext.Vacancies.Select(v => v).ToListAsync();
+     }
 }
