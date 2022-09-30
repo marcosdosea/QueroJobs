@@ -1,4 +1,4 @@
-﻿namespace Core;
+namespace Core;
 
 public class SeedingService
 {
@@ -187,6 +187,43 @@ public class SeedingService
             Description = "Algo sobre mim"
         };
 
+        Competence competence1 = new Competence
+        {
+            Id = 1,
+            CompetenceName = " superior"
+        };
+
+        Competence competence2 = new Competence
+        {
+            Id = 2,
+            CompetenceName= " medio"
+        };
+        Competence competence3 = new Competence
+        {
+            Id = 3,
+            CompetenceName = " concurso"
+        };
+
+        Competence competence4 = new Competence
+        {
+            Id = 4,
+            CompetenceName = " fundamental"
+        };
+
+        Competence competence5 = new Competence
+        {
+            Id = 5,
+            CompetenceName = " graducao"
+        };
+
+        Competence competence6 = new Competence
+        {
+            Id = 6,
+            CompetenceName = " terminos"
+        };
+
+
+
         //Formation for1 = new Formation { }
 
 
@@ -204,6 +241,7 @@ public class SeedingService
         _queroJobsContext.AddRange(v1, v2, v3);
         _queroJobsContext.AddRange(cand1, cand2);
         _queroJobsContext.AddRange(course1, course2, course3, course4, course5, course6);
+        _queroJobsContext.AddRange(competence1, competence2, competence3, competence4, competence5, competence6);
 
         _queroJobsContext.SaveChanges();
     }
