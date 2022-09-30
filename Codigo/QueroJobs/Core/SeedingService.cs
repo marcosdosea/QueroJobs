@@ -85,6 +85,7 @@ public class SeedingService
         Role r4 = new Role { Id = 4, RoleName = "DBA" };
         Role r5 = new Role { Id = 5, RoleName = "Gerente de redes" };
         Role r6 = new Role { Id = 6, RoleName = "Gerente de segurança" };
+        Role r7 = new Role { Id = 7, RoleName = "Gerente de infraestrutura" };
 
         Vacancy v1 = new Vacancy
         {
@@ -237,7 +238,7 @@ public class SeedingService
 
 
         _queroJobsContext.AddRange(c1, c2, c3);
-        _queroJobsContext.AddRange(r1, r2, r3, r4, r5, r6);
+        _queroJobsContext.AddRange(r1, r2, r3, r4, r5, r6,r7);
         _queroJobsContext.AddRange(v1, v2, v3);
         _queroJobsContext.AddRange(cand1, cand2);
         _queroJobsContext.AddRange(course1, course2, course3, course4, course5, course6);
