@@ -2,9 +2,9 @@
 
 public interface IVacancyService
 {
-    int Create(Vacancy vacancy);
-    void Edit(Vacancy vacancy);
-    void Delete(int idVacancy);
-    Vacancy Get(int idVacancy);
-    IEnumerable<Vacancy> GetAll();
+    Task<int> Create(Vacancy vacancy);
+    Task Edit(Vacancy vacancy);
+    Task Delete(int idVacancy);
+    Task<Vacancy> Get(int idVacancy);
+    Task<IEnumerable<Vacancy>> GetAll();
 }
