@@ -6,7 +6,13 @@ public class VacancyModel
 {
     [Key]
     public int Id { get; set; }
+
+
+    [Required(ErrorMessage = "Campo requerido")]
     public int IdCompany { get; set; }
+
+
+    [Required(ErrorMessage = "Campo requerido")]
     public int IdRole { get; set; }
 
 
@@ -22,7 +28,7 @@ public class VacancyModel
 
     [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Data de abertura")]
-    [DataType(DataType.Date)] 
+    [DataType(DataType.Date)]
     public DateTime OpenDate { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
@@ -58,10 +64,11 @@ public class VacancyModel
     public string Situation { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [DataType(DataType.Time, ErrorMessage = "Valor ma")] // TODO: tipo para o DataType pendente, para saber o que colocar em inteiro
+    [RegularExpression(@"([1-9]")] // TODO: Pesquisar
     public int Workload { get; set; }
 
 
     //TODO: Pesquisar qual restrição colocar para esse inteiro
+    [Required(ErrorMessage = "Campo requerido")]
     public int Quantity { get; set; }
 }
