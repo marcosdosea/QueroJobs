@@ -8,13 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<QueroJobsContext>(
-                options => options.UseMySQL("server=localhost;port=3306;user=root;password=123456;database=querojobs"));
+                options => options.UseMySQL("server=localhost;port=3306;user=root;password=admiro555;database=querojobs"));
 
 builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
 builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<ICompetenceService, CompetenceService>();
 builder.Services.AddTransient<ICandidateService, CandidateService>();
+builder.Services.AddTransient<ICourseService, CourseService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
