@@ -13,7 +13,7 @@ public class VacancyService : IVacancyService
     /// <summary>
     /// Cria uma vaga
     /// </summary>
-    /// <param name="vacancy"></param>
+    /// <param ///name="vacancy"></param>
     /// <returns></returns>
     public int Create(Vacancy vacancy)
     {
@@ -24,21 +24,29 @@ public class VacancyService : IVacancyService
 
     public void Delete(int idVacancy)
     {
-        throw new NotImplementedException();
+        var vacancy = await _queroJobsContext.Vacancy.
+            FirstOrDefaultAsync(c => c.Id == idVacancy);
+
+        if (vacancy == null) return;
+
+        _queroJobsContext.Remove(vacancy);
+        await _queroJobsContext.SaveChangesAsync();
     }
 
     public void Edit(Vacancy vacancy)
     {
-        throw new NotImplementedException();
+        _queroJobsContext.Update(vacancy);
+
+        await _queroJobsContext.SaveChangesAsync();
     }
 
     public Vacancy Get(int idVacancy)
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Vacancies.FirstOrDefaultAsync(c => c.Id == idVacancy);
     }
 
     public IEnumerable<Vacancy> GetAll()
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Vacancies .Select(c => c).ToListAsync();
     }
 }
