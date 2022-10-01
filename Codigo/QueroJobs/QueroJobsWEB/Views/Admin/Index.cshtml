@@ -13,10 +13,12 @@
 <button class="collapsible">Empresas</button>
 <div class="content">
 	<table class="table">
+		<thead>
+			<tr>
+				<a asp-action="CompanyCreate">Criar nova empresa</a>
+			</tr>
+		</thead>
 		<tbody>
-			<p>
-				<a asp-action="CompanyCreate">Criar nova empresa</a>	
-			</p>
 			@foreach (var item in Model.company)
 			{
 				<tr>
@@ -37,7 +39,7 @@
 	<table class="table">
 		<tbody>
 			<p>
-				<a asp-action="CandidateCreate">Criar novo candidato</a>	
+				<a asp-action="CandidateCreate">Criar novo candidato</a>
 			</p>
 			@foreach (var item in Model.candidate)
 			{
@@ -59,7 +61,7 @@
 	<table class="table">
 		<tbody>
 			<p>
-				<a asp-action="CompetenceCreate">Criar nova competência</a>	
+				<a asp-action="CompetenceCreate">Criar nova competência</a>
 			</p>
 			@foreach (var item in Model.competence)
 			{
@@ -80,7 +82,7 @@
 	<table class="table">
 		<tbody>
 			<p>
-				<a asp-action="CourseCreate">Criar novo curso</a>	
+				<a asp-action="CourseCreate">Criar novo curso</a>
 			</p>
 			@foreach (var item in Model.course)
 			{
@@ -101,7 +103,7 @@
 	<table class="table">
 		<tbody>
 			<p>
-				<a asp-action="RoleCreate">Criar novo cargo</a>	
+				<a asp-action="RoleCreate">Criar novo cargo</a>
 			</p>
 			@foreach (var item in Model.role)
 			{

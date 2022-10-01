@@ -3,7 +3,9 @@
 @{
 	ViewData["Title"] = "Editar empresa";
 }
-
+@{
+	var states = new List<string>{ "SE","BA","MG"};
+}
 <h1>@ViewData["Title"]</h1>
 
 <div class="row">
@@ -37,7 +39,11 @@
 
 			<div class="form-group">
 				<label asp-for="State" class="control-label"></label>
-				<select asp-for="State" class="form-control" />
+				<select asp-for="State" class="form-control" >
+					@foreach (var state in states){
+						<option>@state</option>
+					}
+				</select>
 				<span asp-validation-for="State" class="text-danger"></span>
 			</div>
 
