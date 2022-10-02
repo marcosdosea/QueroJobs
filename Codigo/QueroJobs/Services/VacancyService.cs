@@ -1,5 +1,6 @@
 ﻿using Core;
 using Core.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services;
 
@@ -10,35 +11,37 @@ public class VacancyService : IVacancyService
     {
         _queroJobsContext = queroJobsContext;
     }
-    /// <summary>
-    /// Cria uma vaga
-    /// </summary>
-    /// <param name="vacancy"></param>
-    /// <returns></returns>
-    public int Create(Vacancy vacancy)
+    public async Task<int> Create(Vacancy vacancy)
     {
-        _queroJobsContext.Add(vacancy);
-        _queroJobsContext.SaveChanges();
+        await _queroJobsContext.AddAsync(vacancy);
+        await _queroJobsContext.SaveChangesAsync();
         return vacancy.Id;
     }
-
-    public void Delete(int idVacancy)
+    public async Task Delete(int idVacancy)
     {
-        throw new NotImplementedException();
+        var vacancy = await _queroJobsContext.Vacancies.
+            FirstOrDefaultAsync(v => v.Id == idVacancy);
+
+        if (vacancy == null) return;
+
+        _queroJobsContext.Remove(vacancy);
+        await _queroJobsContext.SaveChangesAsync();
     }
 
-    public void Edit(Vacancy vacancy)
+    public async Task Edit(Vacancy vacancy)
     {
-        throw new NotImplementedException();
+        _queroJobsContext.Update(vacancy);
+
+        await _queroJobsContext.SaveChangesAsync();
     }
 
-    public Vacancy Get(int idVacancy)
+    public async Task<Vacancy> Get(int idVacancy)
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Vacancies.FirstOrDefaultAsync(v => v.Id == idVacancy);
     }
 
-    public IEnumerable<Vacancy> GetAll()
+    public async Task<IEnumerable<Vacancy>> GetAll()
     {
-        throw new NotImplementedException();
+        return await _queroJobsContext.Vacancies.Select(v => v).ToListAsync();
     }
 }

@@ -16,6 +16,7 @@ builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<ICompetenceService, CompetenceService>();
 builder.Services.AddTransient<ICandidateService, CandidateService>();
 builder.Services.AddTransient<ICourseService, CourseService>();
+builder.Services.AddTransient<IVacancyService, VacancyService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

@@ -23,11 +23,11 @@ public class CandidateController : Controller
     /// <returns>View(companies)</returns>
     public async Task<ActionResult> Index()
     {
-        var companies = await _candidateService.GetAll();
+        var canditates = await _candidateService.GetAll();
 
-        if (companies == null) return BadRequest();
+        if (canditates == null) return BadRequest();
 
-        var candidatesModel = _mapper.Map<List<CandidateModel>>(companies);
+        var candidatesModel = _mapper.Map<List<CandidateModel>>(canditates);
 
         return View(candidatesModel);
     }

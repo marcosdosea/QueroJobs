@@ -1,0 +1,35 @@
+﻿@model IEnumerable<QueroJobsWEB.Models.VacancyModel>
+
+@{
+    ViewData["Title"] = "Vagas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Criar nova vaga</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyName)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Detalhes", "Details", new {id=item.Id }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
