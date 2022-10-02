@@ -1,0 +1,32 @@
+﻿@model QueroJobsWEB.Models.CompetenceModel
+
+@{
+    ViewData["Title"] = "Deletar competência";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Você tem certeza que deseja deletar essa competência?</h3>
+<div>
+    <h4>Competência</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompetenceName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompetenceName)
+        </dd>
+    </dl>
+
+    <form asp-action="CompetenceDelete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para lista de competências</a>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

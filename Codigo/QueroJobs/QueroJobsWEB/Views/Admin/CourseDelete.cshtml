@@ -1,0 +1,32 @@
+﻿@model QueroJobsWEB.Models.CourseModel
+
+@{
+    ViewData["Title"] = "Deletar curso";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Você tem certeza que deseja deletar esse curso?</h3>
+<div>
+    <h4>Curso</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+    </dl>
+
+    <form asp-action="CourseDelete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para lista de cursos</a>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

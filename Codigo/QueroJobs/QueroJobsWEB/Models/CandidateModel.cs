@@ -60,13 +60,12 @@ public class CandidateModel
     [RegularExpression(@"^(\([1-9]{2}\)|[1-9]{2}) ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$", ErrorMessage = "Exemplo de numero de celular: (12)12345-6789")]
     public string CellphoneNumber { get; set; }
 
-    [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Número de telefone")]
     [RegularExpression(@"^(\([1-9]{2}\)|[1-9]{2}) ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$", ErrorMessage = "Exemplo de numero de telefone: (12)12345-6789")]
     public string TelephoneNumber { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Data de nascimento")] 
+    [Display(Name = "Data de nascimento")]
     [DataType(DataType.Date)]
     public DateTime BirthDate { get; set; }
 

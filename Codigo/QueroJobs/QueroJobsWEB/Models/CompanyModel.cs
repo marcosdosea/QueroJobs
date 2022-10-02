@@ -29,7 +29,7 @@ public class CompanyModel
 
     [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Estado")]
-    [StringLength(2, ErrorMessage = "Débito técnico, isso no futuro vai ser uma combobox",MinimumLength = 2)]
+    [StringLength(2)]
     public string State { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
