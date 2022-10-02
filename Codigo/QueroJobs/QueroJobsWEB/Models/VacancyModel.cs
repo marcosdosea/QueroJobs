@@ -64,7 +64,7 @@ public class VacancyModel
     public string Situation { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [RegularExpression(@"([1-9]")] // TODO: Pesquisar
+    [RegularExpression(@"[1-9]")] // TODO: Pesquisar
     public int Workload { get; set; }
 
 
