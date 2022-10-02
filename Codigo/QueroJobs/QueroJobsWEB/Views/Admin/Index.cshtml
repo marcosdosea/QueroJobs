@@ -1,0 +1,160 @@
+﻿@model QueroJobsWEB.Models.AdminModel
+
+@{
+	ViewData["Title"] = "Admin Panel";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<head>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+<button class="collapsible">Empresas</button>
+<div class="content">
+	<table class="table">
+		<thead>
+			<tr>
+				<a asp-action="CompanyCreate">Criar nova empresa</a>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.company)
+			{
+				<tr>
+					<td>
+						<p>@item.CorporateName</p>
+						@Html.ActionLink("Editar", "CompanyEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Detalhar", "CompanyDetails", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "CompanyDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Candidatos</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="CandidateCreate">Criar novo candidato</a>
+			</p>
+			@foreach (var item in Model.candidate)
+			{
+				<tr>
+					<td>
+						<p>@item.Name</p>
+						@Html.ActionLink("Editar", "CandidateEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Detalhar", "CandidateDetails", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "CandidateDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Competências</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="CompetenceCreate">Criar nova competência</a>
+			</p>
+			@foreach (var item in Model.competence)
+			{
+				<tr>
+					<td>
+						<p>@item.CompetenceName</p>
+						@Html.ActionLink("Editar", "CompetenceEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "CompetenceDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Cursos</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="CourseCreate">Criar novo curso</a>
+			</p>
+			@foreach (var item in Model.course)
+			{
+				<tr>
+					<td>
+						<p>@item.CourseName</p>
+						@Html.ActionLink("Editar", "CourseEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "CourseDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Cargos</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="RoleCreate">Criar novo cargo</a>
+			</p>
+			@foreach (var item in Model.role)
+			{
+				<tr>
+					<td>
+						<p>@item.RoleName</p>
+						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+@*<p>Collapsible Set:</p>
+<button class="collapsible">Vagas</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			@foreach (var item in Model.vacancy)
+			{
+				<tr>
+					<td>
+						<p>@item.VacancyName</p>
+						@Html.ActionLink("Editar", "Edit", new { id=item.Id  }) |
+						@Html.ActionLink("Detalhar", "Details", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "Delete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>*@
+
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+		});
+	}
+</script>
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Core;
-using Core.DTO;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
