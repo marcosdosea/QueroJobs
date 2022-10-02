@@ -45,11 +45,12 @@ namespace QueroJobsWEB.Controllers
             var roles = await _roleService.GetAll();
             //var vacancys = await _vacancyService.GetAll();
 
-            AdminModel adminModel = new AdminModel { 
-                candidate = candidates, 
-                company = companys, 
-                competence = competences, 
-                course = courses, 
+            AdminModel adminModel = new AdminModel
+            {
+                candidate = candidates,
+                company = companys,
+                competence = competences,
+                course = courses,
                 role = roles,
                 //vacancy = vacancys
             };

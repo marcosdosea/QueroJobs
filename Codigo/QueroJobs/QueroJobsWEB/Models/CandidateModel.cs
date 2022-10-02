@@ -65,7 +65,7 @@ public class CandidateModel
     public string TelephoneNumber { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Data de nascimento")] 
+    [Display(Name = "Data de nascimento")]
     [DataType(DataType.Date)]
     public DateTime BirthDate { get; set; }
 
