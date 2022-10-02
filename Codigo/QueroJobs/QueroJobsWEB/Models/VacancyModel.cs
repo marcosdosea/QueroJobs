@@ -6,23 +6,17 @@ public class VacancyModel
 {
     [Key]
     public int Id { get; set; }
-
-
-    [Required(ErrorMessage = "Campo requerido")]
     public int IdCompany { get; set; }
-
-
-    [Required(ErrorMessage = "Campo requerido")]
     public int IdRole { get; set; }
 
-
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Nome da Vaga")]
+    [Display(Name = "Vaga")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string VacancyName { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
+    [Display(Name = "Salário")]
     [DataType(DataType.Currency, ErrorMessage = "Digite um valor válido")]
     public decimal? Salary { get; set; }
 
@@ -42,7 +36,6 @@ public class VacancyModel
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string Description { get; set; }
 
-
     [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Localidade da Vaga")]
     [DataType(DataType.Text)]
@@ -51,24 +44,25 @@ public class VacancyModel
 
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Nome da Modalidade da Vaga")]
+    [Display(Name = "Modalidade")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string Modality { get; set; }
 
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Nome da Situação da Vaga")]
+    [Display(Name = "Situação")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string Situation { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [RegularExpression(@"[1-9]")] // TODO: Pesquisar
+    [Display(Name = "Carga horária")]
+    [Range(1, 24, ErrorMessage = "A carga horária tem que estar enttre 1 e 24")] 
     public int Workload { get; set; }
 
-
-    //TODO: Pesquisar qual restrição colocar para esse inteiro
     [Required(ErrorMessage = "Campo requerido")]
+    [Display(Name = "Quantidade de vagas")]
+    [Range(1, int.MaxValue, ErrorMessage = "Quantidade de vagas tem que ser maior que 0")]
     public int Quantity { get; set; }
 }

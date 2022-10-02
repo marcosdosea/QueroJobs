@@ -84,6 +84,7 @@ public class CandidateModel
     public string Deficiency { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
+    [Display(Name = "Pretensão Salarial")]
     [DataType(DataType.Currency, ErrorMessage = "Digite um valor válido")]
     public decimal SalaryExpectation { get; set; }
 
