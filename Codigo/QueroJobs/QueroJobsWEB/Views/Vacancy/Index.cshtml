@@ -1,0 +1,107 @@
+﻿@model IEnumerable<QueroJobsWEB.Models.VacancyModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpenDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CloseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Situation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Workload)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CloseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Situation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Workload)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new {id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
