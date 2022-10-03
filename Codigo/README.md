@@ -14,6 +14,6 @@ dotnet tool install --global dotnet-ef
  ```
 Atualizar as entidade do código (Executar esse comando a cada atualização na modelagem do Banco)
 ```CMD
-dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=123456;database=querojobs" MySql.EntityFrameworkCore -p Core -c BibliotecaContext -v -f 
+dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=123456;database=querojobs" MySql.EntityFrameworkCore -p Core -c QueroJobsContext -v -f
  ```
 Alterar o comando acima de acordo com as configurações da sua instância do mysql.
