@@ -137,4 +137,41 @@ public class CompanyServiceTests
         Assert.AreEqual(company.FantasyName, "No Hope");
         Assert.AreEqual(company.Email, "nohope@gmail.com");
     }
+
+    [TestMethod()]
+    public void DeleteTest()
+    {
+        // Act
+        _companyService.Delete(2).Wait();
+        // Assert
+        Assert.AreEqual(2, _companyService.GetAll().Result.Count());
+        var autor = _companyService.Get(2).Result;
+        Assert.AreEqual(null, autor);
+    }
+
+    [TestMethod()]
+    public void GetTest()
+    {
+        // Act
+        Company company = _companyService.Get(1).Result;
+
+        // Assert
+        Assert.IsNotNull(company);
+        Assert.AreEqual("ItatechJr", company.FantasyName);
+        Assert.AreEqual("itatechjr@gmail.com", company.Email);
+    }
+
+    [TestMethod()]
+    public void GetAllTest()
+    {
+        // Act
+        IEnumerable<Company> companyList = _companyService.GetAll().Result;
+
+        // Assert
+        Assert.IsInstanceOfType(companyList, typeof(IEnumerable<Company>));
+        Assert.IsNotNull(companyList);
+        Assert.AreEqual(3, companyList.Count());
+        Assert.AreEqual(1, companyList.First().Id);
+        Assert.AreEqual("ItatechJr", companyList.First().FantasyName);
+    }
 }
