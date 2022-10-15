@@ -88,12 +88,12 @@ public class CompanyServiceTests
 
         _companyService = new CompanyService(_queroJobsContext);
     }
-    [TestMethod()]
-    public async void CreateTest()
-    {
 
+    [TestMethod()]
+    public void CreateTest()
+    {
         // Act
-        _ = _companyService.Create(new Company()
+        _companyService.Create(new Company()
         {
             Id = 4,
             FantasyName = "Depressão",
@@ -112,14 +112,14 @@ public class CompanyServiceTests
             StateRegistration = null,
             CorporateName = "Depressão Corp",
             ResponsibleName = "Sem nome"
-        });
+        }).Wait();
 
         // Assert
         Assert.AreEqual(4, _companyService.GetAll().Result.Count());
-        Company company = await _companyService.Get(4);
+        Company company = _companyService.Get(4).Result;
         Assert.IsNotNull(company);
         Assert.AreEqual(company.FantasyName, "Depressão");
-        Assert.AreEqual(company.Email, "depressao");
+        Assert.AreEqual(company.Email, "depressao@gmail.com");
     }
 
     [TestMethod()]
