@@ -16,7 +16,8 @@ public class SeedingService
             _queroJobsContext.Roles.Any()     ||
             _queroJobsContext.Candidates.Any()|| 
             _queroJobsContext.Courses.Any() ||
-            _queroJobsContext.Competences.Any()) 
+            _queroJobsContext.Competences.Any() ||
+            _queroJobsContext.Scholarities.Any()) 
             return;
 
         Company c1 = new Company
@@ -223,6 +224,14 @@ public class SeedingService
         Course course5 = new Course { Id = 5, CourseName = "Medicina" };
         Course course6 = new Course { Id = 6, CourseName = "Direito" };
 
+        Scholarity scholarity1 = new Scholarity { Id = 1, ScholarityName = "Fundamental incompleto" };
+        Scholarity scholarity2 = new Scholarity { Id = 2, ScholarityName = "Fundamental completo" };
+        Scholarity scholarity3 = new Scholarity { Id = 3, ScholarityName = "Médio incompleto" };
+        Scholarity scholarity4 = new Scholarity { Id = 4, ScholarityName = "Médio completo" };
+        Scholarity scholarity5 = new Scholarity { Id = 3, ScholarityName = "Superior incompleto" };
+        Scholarity scholarity6 = new Scholarity { Id = 4, ScholarityName = "Superior completo" };
+        Scholarity scholarity7 = new Scholarity { Id = 3, ScholarityName = "Pós-graduação incompleto" };
+        Scholarity scholarity8 = new Scholarity { Id = 4, ScholarityName = "Pós-graduação completo" };
 
 
         _queroJobsContext.AddRange(c1, c2, c3);
@@ -231,6 +240,7 @@ public class SeedingService
         _queroJobsContext.AddRange(cand1, cand2);
         _queroJobsContext.AddRange(course1, course2, course3, course4, course5, course6);
         _queroJobsContext.AddRange(competence1, competence2, competence3, competence4);
+        _queroJobsContext.AddRange(scholarity1, scholarity2, scholarity3, scholarity4, scholarity5, scholarity6, scholarity7, scholarity8);
 
         _queroJobsContext.SaveChanges();
     }

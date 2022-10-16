@@ -10,5 +10,6 @@ namespace QueroJobsWEB.Models
         public IEnumerable<Course> course { get; set; }
         public IEnumerable<Role> role { get; set; }
         public IEnumerable<Vacancy> vacancy { get; set; }
+        public IEnumerable<Scholarity> scholarity { get; set; }
     }
 }

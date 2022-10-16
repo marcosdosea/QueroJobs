@@ -17,6 +17,7 @@ builder.Services.AddTransient<ICompetenceService, CompetenceService>();
 builder.Services.AddTransient<ICandidateService, CandidateService>();
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
+//builder.Services.AddTransient<IScholarityService, ScholarityService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
