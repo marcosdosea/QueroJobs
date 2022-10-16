@@ -1,9 +1,10 @@
 ﻿using Core;
+using Core.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace Services;
 
-public class ScholarityService
+public class ScholarityService : IScholarityService
 {
     private readonly QueroJobsContext _queroJobsContext;
 
