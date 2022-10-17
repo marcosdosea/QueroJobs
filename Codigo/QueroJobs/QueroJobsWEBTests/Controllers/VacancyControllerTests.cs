@@ -90,7 +90,7 @@ public class VacancyController : Controller
     public void CreateTest_InValid()
     {
         // Arrange
-        vacancyController.ModelState.AddModelError("FantasyName", "Campo requerido");
+        vacancyController.ModelState.AddModelError("VacancyName", "Campo requerido");
 
         // Act
         var result = vacancyController.Create(GetNewVacancy()).Result;
@@ -163,22 +163,18 @@ public class VacancyController : Controller
         return new VacancyModel
         {
             Id = 1,
-            FantasyName = "ItatechJr",
-            Email = "itatechjr@gmail.com",
-            Cep = "49504060",
-            Country = "Brasil",
-            State = "SE",
-            City = "Itabaiana",
-            District = "Marianga",
-            Street = "Rua Juca Monteiro",
-            HouseNumber = "1579",
-            Complement = "Ao lado do bar do Jegue",
-            CellphoneNumber = "79 999999999",
-            TelephoneNumber = null,
-            Cnpj = "10409486000170",
-            StateRegistration = null,
-            CorporateName = "SOFTWARES ITABAIANA JR. EMPRESA JUNIOR DO DEPARTAMENTO DE SISTEMAS DE INFORMACAO DA UFS",
-            ResponsibleName = "Ericles dos Santos"
+            IdCompany = 1,
+            VacancyName = "Engenheiro de Software III",
+            Salary = 27000.00,
+            OpenDate = 17102022,
+            CloseDate = 17112022,
+            Description = "Ajude a resolver desafios usando as mais novas tecnologias, e faça coisas extraordinárias. Impulsione soluções inovadoras para uma das organizações líderes mundiais. Faça parte!",
+            Location = "Rua Juca Monteiro",
+            Modality = "Remoto",
+            Situation = "Aberta",
+            Workload = 1,
+            Quantity = 1,
+            IdRole = 1
         };
 
     }
@@ -187,22 +183,18 @@ public class VacancyController : Controller
         return new Vacancy
         {
             Id = 1,
-            FantasyName = "ItatechJr",
-            Email = "itatechjr@gmail.com",
-            Cep = "49504060",
-            Country = "Brasil",
-            State = "SE",
-            City = "Itabaiana",
-            District = "Marianga",
-            Street = "Rua Juca Monteiro",
-            HouseNumber = "1579",
-            Complement = "Ao lado do bar do Jegue",
-            CellphoneNumber = "79 999999999",
-            TelephoneNumber = null,
-            Cnpj = "10409486000170",
-            StateRegistration = null,
-            CorporateName = "SOFTWARES ITABAIANA JR. EMPRESA JUNIOR DO DEPARTAMENTO DE SISTEMAS DE INFORMACAO DA UFS",
-            ResponsibleName = "Ericles dos Santos"
+            IdCompany = 1,
+            VacancyName = "Engenheiro de Software II",
+            Salary = 10000.00,
+            OpenDate = 17102022,
+            CloseDate = 17112022,
+            Description = "Ajude a resolver desafios usando as mais novas tecnologias, e faça coisas extraordinárias. Impulsione soluções inovadoras para uma das organizações líderes mundiais. Faça parte!",
+            Location = "Rua Juca Monteiro",
+            Modality = "Remoto",
+            Situation = "Aberta",
+            Workload = 1,
+            Quantity = 1,
+            IdRole = 1
         };
     }
 
@@ -211,22 +203,18 @@ public class VacancyController : Controller
         return new VacancyModel
         {
             Id = 1,
-            FantasyName = "ItatechJr",
-            Email = "itatechjr@gmail.com",
-            Cep = "49504060",
-            Country = "Brasil",
-            State = "SE",
-            City = "Itabaiana",
-            District = "Marianga",
-            Street = "Rua Juca Monteiro",
-            HouseNumber = "1579",
-            Complement = "Ao lado do bar do Jegue",
-            CellphoneNumber = "79 999999999",
-            TelephoneNumber = null,
-            Cnpj = "10409486000170",
-            StateRegistration = null,
-            CorporateName = "SOFTWARES ITABAIANA JR. EMPRESA JUNIOR DO DEPARTAMENTO DE SISTEMAS DE INFORMACAO DA UFS",
-            ResponsibleName = "Ericles dos Santos"
+            IdCompany = 1,
+            VacancyName = "Engenheiro de Software I",
+            Salary = 4000.00,
+            OpenDate = 17102022,
+            CloseDate = 17112022,
+            Description = "Ajude a resolver desafios usando as mais novas tecnologias, e faça coisas extraordinárias. Impulsione soluções inovadoras para uma das organizações líderes mundiais. Faça parte!",
+            Location = "Rua Juca Monteiro",
+            Modality = "Remoto",
+            Situation = "Aberta",
+            Workload = 1,
+            Quantity = 1,
+            IdRole = 1
         };
     }
 
