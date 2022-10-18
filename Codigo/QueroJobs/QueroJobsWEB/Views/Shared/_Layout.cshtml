@@ -8,13 +8,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/reset.css">
-	<link rel="stylesheet" href="~/css/landing.css">
-	<link rel="stylesheet" href="~/css/partners.css">
-	<link rel="stylesheet" href="~/css/styles.css">
 	<link rel="stylesheet" href="~/QueroJobsWEB.styles.css" /> <!--Ativa o css isolation-->
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/styles.css">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 
 <body>
@@ -22,43 +19,25 @@
 		<nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
 			<div class="container-fluid">
 				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-					<p>QueroJobs</p>
+					<div class="circle">
+						<p>QueroJobs</p>
+					</div>
 				</a>
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
-						<li class="nav-item">
+						<li class="nav-item" id="admin-item">
 							<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">
-								<p>Admin</p>
+								<p>ADMIN</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Company" asp-action="Index">
-								<p>Para empresas</p>
+							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+								<p>PARA VOCÊ</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Candidate" asp-action="Index">
-								<p>Para candidatos</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Course" asp-action="Index">
-								<p>Cursos</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Competence" asp-action="Index">
-								<p>Competências</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">
-								<p>Cargos</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Vacancy" asp-action="Index">
-								<p>Vagas</p>
+							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+								<p>PARA EMPRESAS</p>
 							</a>
 						</li>
 					</ul>

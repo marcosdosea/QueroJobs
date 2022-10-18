@@ -51,3 +51,13 @@ a {
 #content-wrap {
     padding-bottom: 2.5rem;
 }
+
+#admin-item {
+    display: none
+}
+
+@media screen and (max-width: 800px) {
+    .circle {
+        overflow-wrap: break-word; /* todo ainda nao esta quebrando para acessar a proxima linha */
+    }
+}
