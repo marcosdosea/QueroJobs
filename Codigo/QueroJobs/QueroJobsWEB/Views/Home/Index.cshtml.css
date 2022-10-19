@@ -1,3 +1,11 @@
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul-ceu);
+    height: 200px;
+}
+
 .landing {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,8 +14,8 @@
     padding: 20px 0 20px 0;
 }
 
-.landing__logo {
-    color: #FFFFFF;
+.logo {
+    color: var(--branco);
     text-align: left;
     font-size: 75px;
     font-weight: 900;
@@ -16,7 +24,7 @@
 
 @media screen and (max-width: 730px) {
 
-    .landing__logo {
+    .logo {
         font-size: 60px;
         width: 215px;
     }
@@ -25,29 +33,29 @@
 
 @media screen and (max-width: 600px) {
 
-    .landing__logo {
+    .logo {
         font-size: 40px;
         width: 145px;
     }
 
 }
 
-.landing__logo:last-of-type {
+.logo:last-of-type {
     color: rgba(255, 255, 255, 0.15);
 }
 
-.landing__button {
+.button {
     position: relative;
 }
 
-.button__image {
+.button_image {
     position: relative;
     width: 50vw;
     max-width: 400px;
     z-index: 2;
 }
 
-.button__tube {
+.button_tube {
     position: absolute;
     padding: 10px 40px 10px 40px;
     font-size: 18px;
@@ -62,17 +70,17 @@
     z-index: 2;
 }
 
-.button__tube:hover,
-.button__tube:hover {
+.button_tube:hover,
+.button_tube:hover {
     background-color: #ffffff;
 }
 
-.first-tube {
+.first_tube {
     bottom: 0;
     left: -30px;
 }
 
-.last-tube {
+.last_tube {
     left: auto;
     right: -20px;
     bottom: 20px;
@@ -80,13 +88,13 @@
 
 @media screen and (min-width: 1024px) {
 
-    .button__tube {
+    .button_tube {
         padding: 15px 80px 15px 80px;
         font-size: 26px;
         width: 420px;
     }
 
-    .last-tube {
+    .last_tube {
         right: -70px;
     }
 
@@ -94,13 +102,13 @@
 
 @media screen and (max-width: 500px) {
 
-    .button__tube {
+    .button_tube {
         padding: 10px 30px 10px 30px;
         font-size: 15px;
         width: 230px;
     }
 
-    .last-tube {
+    .last_tube {
         right: -20px;
     }
 
@@ -108,18 +116,18 @@
 
 @media screen and (max-width: 420px) {
 
-    .button__tube {
+    .button_tube {
         padding: 10px 30px 10px 30px;
         font-size: 13px;
         width: 180px;
     }
 
-    .first-tube {
+    .first_tube {
         bottom: 0;
         left: 0;
     }
 
-    .last-tube {
+    .last_tube {
         right: 0px;
         bottom: 0px;
     }
@@ -128,7 +136,7 @@
 
 @media screen and (max-width: 370px) {
 
-    .button__tube {
+    .button_tube {
         padding: 10px 30px 10px 30px;
         font-size: 10px;
         width: 150px;
@@ -136,7 +144,7 @@
 
 }
 
-.button__span--first, .button__span--last {
+.text_background_first, .text_background_last {
     position: absolute;
     color: rgba(255, 255, 255, 0.15);
     font-size: 40px;
@@ -145,20 +153,20 @@
     z-index: 1;
 }
 
-.button__span--first {
+.text_background_first {
     top: 30px;
     left: -100px;
 }
 
-.button__span--last {
+.text_background_last {
     bottom: -25px;
     right: -160px;
 }
 
 @media screen and (max-width: 1024px) {
 
-    .button__span--first,
-    .button__span--last {
+    .text_background_first,
+    .text_background_last {
         display: none;
     }
 
