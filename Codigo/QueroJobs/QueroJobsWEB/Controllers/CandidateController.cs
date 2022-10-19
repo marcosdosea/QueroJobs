@@ -2,7 +2,9 @@
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using QueroJobsWEB.Models;
+using static QueroJobsWEB.Models.FormModel;
 
 namespace QueroJobsWEB.Controllers;
 
@@ -155,5 +157,93 @@ public class CandidateController : Controller
         await _candidateService.Delete(id);
 
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet("[controller]/forms/{idCandidate}")]
+    public async Task<ActionResult> Form(int idCandidate)    
+    {
+        var candidate = await _candidateService.Get(idCandidate);
+
+        if (candidate == null) return NotFound();
+
+        /*List<SelectListItem> courses = candidate.Formations.Select(f => new SelectListItem
+        {
+            Text = f.IdCourseNavigation.CourseName,
+            Value = f.IdCourseNavigation.CourseName
+        }).ToList();
+
+        SelectList course = new SelectList(candidate.Formations.Select(f => new SelectListItem
+        {
+            Text = f.IdCourseNavigation.CourseName,
+            Value = f.IdCourseNavigation.CourseName
+        }).ToList());*/
+
+        FormModel form = new FormModel
+        {
+            CandidateId = candidate.Id,
+            EmploymentStatus = new SelectList(new List<SelectListItem>
+            {
+                new SelectListItem {
+                    Text = "Integral",
+                    Value = "NONE"
+                },
+                new SelectListItem {
+                    Text = "Integral",
+                    Value = "FULL-TIME"
+                },
+                new SelectListItem {
+                    Text = "Meio Período",
+                    Value = "PART-TIME"
+                },
+                new SelectListItem {
+                    Text = "Autônomo",
+                    Value = "SELF-EMPLOYED"
+                },
+                new SelectListItem {
+                    Text = "Freelance",
+                    Value = "FREELANCE"
+                },
+                new SelectListItem {
+                    Text = "Contrato",
+                    Value = "CONTRACT"
+                },
+                new SelectListItem {
+                    Text = "Contrato Indireto",
+                    Value = "INDIRECT-CONTRACT"
+                },
+                new SelectListItem {
+                    Text = "Estágio",
+                    Value = "INTERNSHIP"
+                },
+                new SelectListItem {
+                    Text = "Aprendiz",
+                    Value = "APPRENTICESHIP"
+                },
+                new SelectListItem {
+                    Text = "Líder",
+                    Value = "LEADERSHIP-PROGRAM"
+                }
+            },"Value","Text"),
+            Description = candidate.Description,
+            Formations = new List<FormationModel>
+            {   new FormationModel
+                {
+                    Course = string.Empty,
+                    StartDate = DateTime.Today,
+                    Instituion = string.Empty,
+                    Scholarity = string.Empty,
+                }
+            },
+            ProfessionalExperiences = new List<ProfessionalExperienceModel>
+            {   new ProfessionalExperienceModel
+                {
+                    Role = candidate.ActualRole,
+                    StartDate = DateTime.Today
+                }
+            },
+            OccupationAreaNames = candidate.Candidateoccupationareas.Select(c => c.IdOccupationAreaNavigation.OccupationAreaName),
+            SalaryExpectation = decimal.Zero,
+        };
+        return View(form);
     }
 }
