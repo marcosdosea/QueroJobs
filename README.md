@@ -119,7 +119,7 @@
       <a href="https://github.com/marcosdosea" target="_blank">
         <img style="border-radius:100px;" src="https://avatars.githubusercontent.com/u/7799935?v=4" target="_blank" width="100px;" alt="Foto de Marcos Dósea no GitHub"/><br>
         <sub>
-          <b>DOUTOR MASCOS DÓSEA</b>
+          <b>DOUTOR MARCOS DÓSEA</b>
           <p>Product Owner</p>
         </sub>
       </a>
