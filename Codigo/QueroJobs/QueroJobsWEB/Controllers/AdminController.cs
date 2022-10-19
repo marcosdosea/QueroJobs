@@ -3,6 +3,7 @@ using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
+using Services;
 
 namespace QueroJobsWEB.Controllers
 {
@@ -12,6 +13,7 @@ namespace QueroJobsWEB.Controllers
         private readonly ICompanyService _companyService;
         private readonly ICompetenceService _competenceService;
         private readonly ICourseService _courseService;
+        private readonly IInstitutionService _institutionService;
         private readonly IRoleService _roleService;
         //private readonly IVacancyService _vacancyService;
         private readonly IMapper _mapper;
@@ -21,6 +23,7 @@ namespace QueroJobsWEB.Controllers
             ICompanyService companyService,
             ICompetenceService competenceService,
             ICourseService courseService,
+            IInstitutionService institutionService,
             IRoleService roleService,
             //IVacancyService vacancyService,
             IMapper mapper
@@ -30,6 +33,7 @@ namespace QueroJobsWEB.Controllers
             _companyService = companyService;
             _competenceService = competenceService;
             _courseService = courseService;
+            _institutionService = institutionService;
             _roleService = roleService;
             //_vacancyService = vacancyService;
             _mapper = mapper;
@@ -42,6 +46,7 @@ namespace QueroJobsWEB.Controllers
             var companys = await _companyService.GetAll();
             var competences = await _competenceService.GetAll();
             var courses = await _courseService.GetAll();
+            var institutions = await _institutionService.GetAll();
             var roles = await _roleService.GetAll();
             //var vacancys = await _vacancyService.GetAll();
 
@@ -51,6 +56,7 @@ namespace QueroJobsWEB.Controllers
                 company = companys,
                 competence = competences,
                 course = courses,
+                institution = institutions,
                 role = roles,
                 //vacancy = vacancys
             };
@@ -421,6 +427,109 @@ namespace QueroJobsWEB.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        // GET: InstitutionController/Create
+        public ActionResult InstitutionCreate()
+        {
+            return View();
+        }
+
+        // POST: InstitutionController/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> InstitutionCreate(InstitutionModel institutionModel)
+        {
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var institution = _mapper.Map<Institution>(institutionModel);
+                    await _institutionService.Create(institution);
+                }
+                catch
+                {
+                    return View(institutionModel);
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(institutionModel);
+
+        }
+
+
+        // GET: InstitutionController/Edit/5
+        [HttpGet]
+        public async Task<ActionResult> InstitutionEdit(int id)
+        {
+            var institution = await _institutionService.Get(id);
+
+            var institutionModel = _mapper.Map<InstitutionModel>(institution);
+
+            return View(institutionModel);
+        }
+
+        // POST: InstitutionController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> InstitutionEdit(int id, InstitutionModel institutionModel)
+        {
+            if (id != institutionModel.Id) return NotFound();
+
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var institution = _mapper.Map<Institution>(institutionModel);
+                    await _institutionService.Edit(institution);
+                }
+                catch
+                {
+                    return BadRequest();
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(institutionModel);
+
+        }
+
+
+        // GET: InstitutionController/Delete/5
+        [HttpGet]
+        public async Task<ActionResult> InstitutionDelete(int? id)
+        {
+            if (id == null) return BadRequest();
+
+            var institution = await _institutionService.Get((int)id);
+
+            if (institution == null) return NotFound();
+
+            var institutionModel = _mapper.Map<InstitutionModel>(institution);
+
+            return View(institutionModel);
+        }
+
+        // POST: InstitutionController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> InstitutionDelete(int id)
+        {
+            await _institutionService.Delete(id);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
+
+
 
         public ActionResult RoleCreate()
         {

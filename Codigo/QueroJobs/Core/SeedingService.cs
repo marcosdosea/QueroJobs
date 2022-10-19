@@ -16,7 +16,8 @@ public class SeedingService
             _queroJobsContext.Roles.Any()     ||
             _queroJobsContext.Candidates.Any()|| 
             _queroJobsContext.Courses.Any() ||
-            _queroJobsContext.Competences.Any()) 
+            _queroJobsContext.Competences.Any() ||
+            _queroJobsContext.Institutions.Any())
             return;
 
         Company c1 = new Company
@@ -224,6 +225,11 @@ public class SeedingService
         Course course6 = new Course { Id = 6, CourseName = "Direito" };
 
 
+        Institution institution1 = new Institution { Id = 1, InstitutionName = "Universidade Federal de Sergipe - UFS" };
+        Institution institution2 = new Institution { Id = 2, InstitutionName = "Universideade Tiradentes - UNIT" };
+        Institution institution3 = new Institution { Id = 3, InstitutionName = "Unissal" };
+        Institution institution4 = new Institution { Id = 4, InstitutionName = "Estácio" };
+
 
         _queroJobsContext.AddRange(c1, c2, c3);
         _queroJobsContext.AddRange(r1, r2, r3, r4, r5, r6, r7);
@@ -231,6 +237,7 @@ public class SeedingService
         _queroJobsContext.AddRange(cand1, cand2);
         _queroJobsContext.AddRange(course1, course2, course3, course4, course5, course6);
         _queroJobsContext.AddRange(competence1, competence2, competence3, competence4);
+        _queroJobsContext.AddRange(institution1, institution2, institution3, institution4);
 
         _queroJobsContext.SaveChanges();
     }

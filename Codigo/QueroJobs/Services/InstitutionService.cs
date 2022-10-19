@@ -1,11 +1,6 @@
 ﻿using Core;
 using Core.Services;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services;
 
@@ -54,6 +49,13 @@ public class InstitutionService : IInstitutionService
 
     public async Task UpdateInstitutionNameById(int id, string institutionName)
     {
-        throw new NotImplementedException();
+        var institution = await _queroJobsContext.Institutions.FirstOrDefaultAsync(i => i.Id == id);
+
+        if (institution == null) return;
+        
+        institution.InstitutionName = institutionName;
+
+        await _queroJobsContext.SaveChangesAsync();
+    
     }
 }
