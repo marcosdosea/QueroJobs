@@ -38,6 +38,17 @@ namespace QueroJobsWEB.Controllers
             _mapper = mapper;
         }
 
+        //
+        public AdminController(
+            IInstitutionService institutionService,
+            IMapper mapper
+        )
+        {
+            _institutionService = institutionService;
+            _mapper = mapper;
+        }
+
+
         [HttpGet]
         public async Task<ActionResult> Index()
         {
