@@ -23,7 +23,7 @@
 			{
 				<tr>
 					<td>
-						<p>@item.CorporateName</p>
+						<p>@item.FantasyName</p>
 						@Html.ActionLink("Editar", "CompanyEdit", new { id=item.Id  }) |
 						@Html.ActionLink("Detalhar", "CompanyDetails", new { id=item.Id  }) |
 						@Html.ActionLink("Deletar", "CompanyDelete", new { id=item.Id})
@@ -112,6 +112,27 @@
 						<p>@item.RoleName</p>
 						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
 						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Instituições</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="InstitutionCreate">Criar nova instituição</a>
+			</p>
+			@foreach (var item in Model.institution)
+			{
+				<tr>
+					<td>
+						<p>@item.InstitutionName</p>
+						@Html.ActionLink("Editar", "InstitutionEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "InstitutionDelete", new { id=item.Id})
 					</td>
 				</tr>
 			}
