@@ -1,15 +1,36 @@
 ﻿@model QueroJobsWEB.Models.CandidateModel
 
 @{
-    ViewData["Title"] = "Criar candidato";
+    ViewData["Logo"] = "Quero Jobs";
+    ViewData["TitleForm"] = "Cadastro";
+    ViewData["TitleScreen"] = "Cadastro para candidatos";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<h4>Empresa</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row body">
+    <div class="col-sm-6 apresentation">
+        <div class="row logo">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3">
+                <p>@ViewData["Logo"]</p>
+            </div>
+            <div class="col-sm-7"></div>
+        </div>
+        <div class="row title_screen">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3">
+                <p>@ViewData["TitleScreen"]</p>
+            </div>
+            <div class="col-sm-7"></div>
+        </div>
+        <div class="row text_background_first">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4">
+                <p>@ViewData["logo"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 form">
+        <h1>@ViewData["TitleForm"]</h1>
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -30,7 +51,7 @@
                 <span asp-validation-for="Cep" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label asp-for="Country" class="control-label"></label>
                 <input asp-for="Country" class="form-control" />
                 <span asp-validation-for="Country" class="text-danger"></span>
@@ -130,7 +151,7 @@
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
+            </div>-->
 
             <div class="form-group">
                 <input type="submit" name="" value="Submit" class="btn btn-primary" />

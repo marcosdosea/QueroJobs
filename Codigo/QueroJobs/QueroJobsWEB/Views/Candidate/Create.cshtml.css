@@ -1,0 +1,32 @@
+﻿.apresentation {
+    background-color: var(--azul);
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    color: var(--branco);
+    text-align: left;
+    font-size: 7vw;
+    font-weight: 900;
+    word-spacing: 0;
+}
+
+.body {
+    min-height: 100vh;
+}
+
+.text_background_first {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.title_screen {
+    color: var(--branco);
+    text-align: left;
+    font-size: 30px;
+    font-weight: 400;
+}
