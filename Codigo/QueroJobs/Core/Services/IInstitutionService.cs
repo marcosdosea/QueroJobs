@@ -7,5 +7,4 @@ public interface IInstitutionService
     Task Delete(int idInstitution);
     Task<Institution> Get(int idInstitution);
     Task<IEnumerable<Institution>> GetAll();
-    Task UpdateInstitutionNameById(int id, string institutionName);
 }

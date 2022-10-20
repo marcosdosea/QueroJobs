@@ -46,16 +46,4 @@ public class InstitutionService : IInstitutionService
     {
         return await _queroJobsContext.Institutions.ToListAsync();
     }
-
-    public async Task UpdateInstitutionNameById(int id, string institutionName)
-    {
-        var institution = await _queroJobsContext.Institutions.FirstOrDefaultAsync(i => i.Id == id);
-
-        if (institution == null) return;
-        
-        institution.InstitutionName = institutionName;
-
-        await _queroJobsContext.SaveChangesAsync();
-    
-    }
 }
