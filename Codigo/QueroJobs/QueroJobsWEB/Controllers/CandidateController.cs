@@ -69,8 +69,10 @@ public class CandidateController : Controller
         return View(candidateModel);
     }
 
-    public ActionResult Create()
+    [HttpGet("[controller]/Create/{controllerPage}")]
+    public ActionResult Create(int controllerPage)
     {
+        ViewData["controllerPage"] = controllerPage;
         return View();
     }
 

@@ -8,7 +8,7 @@ public class CandidateModel
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Nome")]
+    [Display(Name = "Nome completo")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string Name { get; set; }
