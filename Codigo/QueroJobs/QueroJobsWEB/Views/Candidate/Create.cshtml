@@ -4,7 +4,6 @@
     ViewData["Logo"] = "Quero Jobs";
     ViewData["TitleForm"] = "Cadastro";
     ViewData["TitleScreen"] = "Cadastro para candidatos";
-    int controllerPage = (int) ViewData["controllerPage"];
 }
 
 <div class="row body">
@@ -35,90 +34,77 @@
         <div class="col-sm-8 form">
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                @{
-                    switch (@ViewData["controllerPage"])
-                    {
-                        case 1:
-                            <div class="form-group">
-                                <label asp-for="Name" class="control-label"></label>
-                                <input asp-for="Name" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Name" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="Email" class="control-label"></label>
-                                <input asp-for="Email" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Email" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="Cep" class="control-label"></label>
-                                <input asp-for="Cep" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Cep" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Cep" class="control-label"></label>
+                    <input asp-for="Cep" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Cep" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="Country" class="control-label"></label>
-                                <input asp-for="Country" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Country" class="text-danger"></span>
-                            </div>
-                            break;
-                        case 2:
-                            <div class="form-group">
-                                <label asp-for="State" class="control-label"></label>
-                                <input asp-for="State" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="State" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Country" class="control-label"></label>
+                    <input asp-for="Country" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <input asp-for="State" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="City" class="control-label"></label>
-                                <input asp-for="City" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="City" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="District" class="control-label"></label>
-                                <input asp-for="District" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="District" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="District" class="control-label"></label>
+                    <input asp-for="District" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="District" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="Street" class="control-label"></label>
-                                <input asp-for="Street" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Street" class="text-danger"></span>
-                            </div>
-                            break;
-                        case 3:
-                            <div class="form-group">
-                                <label asp-for="HouseNumber" class="control-label"></label>
-                                <input asp-for="HouseNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="HouseNumber" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Street" class="control-label"></label>
+                    <input asp-for="Street" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Street" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HouseNumber" class="control-label"></label>
+                    <input asp-for="HouseNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="HouseNumber" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="Complement" class="control-label"></label>
-                                <input asp-for="Complement" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="Complement" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="Complement" class="control-label"></label>
+                    <input asp-for="Complement" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Complement" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="CellphoneNumber" class="control-label"></label>
-                                <input asp-for="CellphoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="CellphoneNumber" class="text-danger"></span>
-                            </div>
+                <div class="form-group">
+                    <label asp-for="CellphoneNumber" class="control-label"></label>
+                    <input asp-for="CellphoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="CellphoneNumber" class="text-danger"></span>
+                </div>
 
-                            <div class="form-group">
-                                <label asp-for="TelephoneNumber" class="control-label"></label>
-                                <input asp-for="TelephoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
-                                <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
-                            </div>
-                            break;
-                    }
-                }
+                <div class="form-group">
+                    <label asp-for="TelephoneNumber" class="control-label"></label>
+                    <input asp-for="TelephoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+                </div>                
 
-                
-
-                <!--<div class="form-group">
+                <div class="form-group">
                     <label asp-for="Cpf" class="control-label"></label>
                     <input asp-for="Cpf" class="form-control py-2 rounded-pill mr-1 pr-5" />
                     <span asp-validation-for="Cpf" class="text-danger"></span>
@@ -164,42 +150,10 @@
                     <label asp-for="Description" class="control-label"></label>
                     <input asp-for="Description" class="form-control py-2 rounded-pill mr-1 pr-5" />
                     <span asp-validation-for="Description" class="text-danger"></span>
-                </div>-->
-
-                <div class="form-group d-flex justify-content-between">
-                    @{
-                        switch(@ViewData["controllerPage"]) {
-                            case 1:
-                                <p></p>
-                                break;
-                            case 2:
-                            case 3:
-                                <div class="button_back">
-                                    <a name="" value="Voltar" asp-route-controllerPage="@(controllerPage-=1)" asp-controller="Candidate" asp-action="Create">Voltar</a>
-                                </div>
-                                break;
-                        }
-                    }
-                    @{
-                        switch(@ViewData["controllerPage"]) {
-                            case 1:
-                            case 2:
-                                <div class="button_success">
-                                    <a name="" value="Continuar" asp-route-controllerPage="@(controllerPage+=1)" asp-controller="Candidate" asp-action="Create">Continuar</a>
-                                </div>
-                                break;
-                            case 3:
-                                <input type="submit" name="" value="Continuar" class="btn button_success" asp-controller="Candidate" asp-action="Create"/>
-                                break;
-                        }
-                    }
                 </div>
+
+                <input type="submit" name="" value="Salvar" class="btn button_success" asp-controller="Candidate" asp-action="Create"/>
             </form>
-            <div style="text-align:center;">
-                <span class="step active finish"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-            </div>
         </div>
     </div>
 </div>

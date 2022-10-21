@@ -100,4 +100,5 @@ public class CandidateModel
     [Display(Name = "Descrição")]
     [StringLength(2000, ErrorMessage = "A descrição tem no máximo 2000 digitos")]
     public string Description { get; set; }
+
 }

@@ -35,6 +35,19 @@ namespace Core
         public string ActualRole { get; set; }
         public string Description { get; set; }
 
+        public static int controllerPage = 1;
+        public int AddControllerPage()
+        {
+            return controllerPage += 1;
+            /*if (controllerPage == 1) { controllerPage = 2; return 2; }
+            else { controllerPage = 3; return 3; }*/
+        }
+        public int LessControllerPage()
+        {
+            if (controllerPage == 2) return controllerPage = 1;
+            return controllerPage-=1;
+        }
+
         public virtual ICollection<Candidatecompetence> Candidatecompetences { get; set; }
         public virtual ICollection<Candidateoccupationarea> Candidateoccupationareas { get; set; }
         public virtual ICollection<Candidaterole> Candidateroles { get; set; }
