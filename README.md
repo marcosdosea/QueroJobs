@@ -55,12 +55,6 @@
 
 <br><br>
 
-<h2 id="gestores">:office: Gestores</h2>
-
-   Aos gestores possuem funcionalidades capazes de auxiliar nas tomadas de decisões, preventivas e corretivas, com relação aos registros de ocorrências, permitindo saber quais pontos possuem maiores taxas de ocorrência, necessitam de novos agentes para reforçar uma determinada área. Além, de permitir gerenciar sub-locais dentro de uma instituição, como campus de universidades, clubes e eventos de grande porte.
-
-<br><br>
-
 
 <h2 id="autor" align=center>Realizadores </h2>
 <br>
