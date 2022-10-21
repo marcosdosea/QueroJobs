@@ -4,7 +4,6 @@
     ViewData["Logo"] = "Quero Jobs";
     ViewData["TitleForm"] = "Cadastro";
     ViewData["TitleScreen"] = "Cadastro para candidatos";
-    int controllerPage = (int) ViewData["controllerPage"];
 }
 
 <div class="row body">
@@ -175,7 +174,7 @@
                             case 2:
                             case 3:
                                 <div class="button_back">
-                                    <a name="" value="Voltar" asp-route-controllerPage="@(controllerPage-=1)" asp-controller="Candidate" asp-action="Create">Voltar</a>
+                                    <a name="" value="Voltar" asp-route-controllerPage="@(new Core.Candidate().LessControllerPage())" asp-controller="Candidate" asp-action="Create">Voltar</a>
                                 </div>
                                 break;
                         }
@@ -185,7 +184,7 @@
                             case 1:
                             case 2:
                                 <div class="button_success">
-                                    <a name="" value="Continuar" asp-route-controllerPage="@(controllerPage+=1)" asp-controller="Candidate" asp-action="Create">Continuar</a>
+                                    <a name="" value="Continuar" asp-route-controllerPage="@(new Core.Candidate().AddControllerPage())" asp-controller="Candidate" asp-action="Create">Continuar</a>
                                 </div>
                                 break;
                             case 3:
