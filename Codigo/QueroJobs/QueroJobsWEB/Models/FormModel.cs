@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace QueroJobsWEB.Models;
 
@@ -14,44 +13,35 @@ public class FormModel
     public decimal SalaryExpectation { get; set; }
 
     [Required]
-    public SelectList EmploymentStatus { get; set; }
+    public string EmploymentStatus { get; set; }
 
     [Required]
-    public IEnumerable<FormationModel> Formations { get; set; }
+    public string Scholarity { get; set; }
+    public string Course { get; set; }
+    public string Instituion { get; set; }
 
     [Required]
-    public IEnumerable<ProfessionalExperienceModel> ProfessionalExperiences { get; set; }
+    [DataType(DataType.Date)]
+    public DateTime ScholarityStartDate { get; set; }
 
+    [DataType(DataType.Date)]
+    public DateTime? ScholarityEndDate { get; set; }
+
+    [Required]
+    public string Role { get; set; }
+
+    [Required]
+    public int ProfessionalExperienceStartMonth { get; set; }
+
+    public int? ProfessionalExperienceEndMonth { get; set; }
+
+    [Required]
+    public int ProfessionalExperienceStartYear { get; set; }
+
+    public int? ProfessionalExperienceEndYear { get; set; }
     [Required]
     [MaxLength(2000)]
     [MinLength(10)]
     public string Description { get; set; }
 
-    public class FormationModel
-    {
-        [Required]
-        public string Scholarity { get; set; }
-        public string Course { get; set; }//aqui seria um like
-        public string Instituion { get; set; }//aqui seria um like
-
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime StartDate { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime EndDate { get; set; }
-    }
-
-    public class ProfessionalExperienceModel
-    {
-        [Required]
-        public string Role { get; set; }
-
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime StartDate { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime EndDate { get; set; }
-    }
 }

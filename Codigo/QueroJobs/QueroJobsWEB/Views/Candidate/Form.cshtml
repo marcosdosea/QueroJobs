@@ -1,34 +1,81 @@
 ﻿@model QueroJobsWEB.Models.FormModel
 
 @{
-    ViewData["Title"] = "Formulário";
+    ViewData["Title"] = "Form";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>Form</h1>
 
-<h4>@ViewData["Title"]</h4>
+<h4>FormModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Form">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <input type="hidden" asp-for="CandidateId" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label asp-for="Formations" class="control-label"></label>
-                @foreach (var item in Model.Formations)
-                {
-                    <input asp-for="@item.Course" class="form-control" />
-                }
-            </div>
-            <div class="form-group">
-                <label asp-for="EmploymentStatus" class="control-label"></label>
-                <select asp-items="@Model.EmploymentStatus" class="form-control" />
+                <label asp-for="CandidateId" class="control-label"></label>
+                <input asp-for="CandidateId" class="form-control" />
+                <span asp-validation-for="CandidateId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SalaryExpectation" class="control-label"></label>
                 <input asp-for="SalaryExpectation" class="form-control" />
+                <span asp-validation-for="SalaryExpectation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmploymentStatus" class="control-label"></label>
+                <input asp-for="EmploymentStatus" class="form-control" />
+                <span asp-validation-for="EmploymentStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scholarity" class="control-label"></label>
+                <input asp-for="Scholarity" class="form-control" />
+                <span asp-validation-for="Scholarity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course" class="control-label"></label>
+                <input asp-for="Course" class="form-control" />
+                <span asp-validation-for="Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instituion" class="control-label"></label>
+                <input asp-for="Instituion" class="form-control" />
+                <span asp-validation-for="Instituion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScholarityStartDate" class="control-label"></label>
+                <input asp-for="ScholarityStartDate" class="form-control" />
+                <span asp-validation-for="ScholarityStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScholarityEndDate" class="control-label"></label>
+                <input asp-for="ScholarityEndDate" class="form-control" />
+                <span asp-validation-for="ScholarityEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label"></label>
+                <input asp-for="Role" class="form-control" />
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfessionalExperienceStartMonth" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceStartMonth" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceStartMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfessionalExperienceEndMonth" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceEndMonth" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceEndMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfessionalExperienceStartYear" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceStartYear" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceStartYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfessionalExperienceEndYear" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceEndYear" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceEndYear" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>

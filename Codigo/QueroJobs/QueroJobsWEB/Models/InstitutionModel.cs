@@ -11,6 +11,6 @@ public class InstitutionModel
     [Display(Name = "Instituição")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo Curso aceita entre 3 e 100 caracteres", MinimumLength = 3)]
-    public string InstitutionName{ get; set; }
+    public string InstitutionName { get; set; }
 }
 

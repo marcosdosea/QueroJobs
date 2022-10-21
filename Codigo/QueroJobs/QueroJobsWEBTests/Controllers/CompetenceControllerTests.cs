@@ -142,38 +142,38 @@ public class CompetenceControllerTests
         Assert.AreEqual("Index", redirectToActionResult.ActionName);
     }
 
-        private CompetenceModel GetNewCompetence()
+    private CompetenceModel GetNewCompetence()
+    {
+        return new CompetenceModel
         {
-            return new CompetenceModel
-            {
-                Id = 1,
-                CompetenceName = "Especialização em Power BI"
-            };
-        }
+            Id = 1,
+            CompetenceName = "Especialização em Power BI"
+        };
+    }
 
-        private async Task<Competence> GetTargetCompetence()
+    private async Task<Competence> GetTargetCompetence()
+    {
+        return new Competence
         {
-            return new Competence
-            {
-                Id = 1,
-                CompetenceName = "Especialização em Power BI"
-            };
-        }
+            Id = 1,
+            CompetenceName = "Especialização em Power BI"
+        };
+    }
 
-        private CompetenceModel GetTargetCompetenceModel()
+    private CompetenceModel GetTargetCompetenceModel()
+    {
+        return new CompetenceModel
         {
-            return new CompetenceModel
-            {
-                Id = 1,
-                CompetenceName = "Especialização em Power BI"
-            };
-        }
+            Id = 1,
+            CompetenceName = "Especialização em Power BI"
+        };
+    }
 
-        private async Task<IEnumerable<Competence>> GetTestCompetences()
-        {
-            return new List<Competence>
+    private async Task<IEnumerable<Competence>> GetTestCompetences()
+    {
+        return new List<Competence>
             {
-            
+
                 new Competence
                 {
                     Id = 1,
@@ -190,5 +190,5 @@ public class CompetenceControllerTests
                     CompetenceName = "Analista de dados e DBA"
                 },
             };
-        }
+    }
 }

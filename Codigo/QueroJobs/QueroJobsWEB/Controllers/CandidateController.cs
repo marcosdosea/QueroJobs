@@ -2,9 +2,7 @@
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using QueroJobsWEB.Models;
-using static QueroJobsWEB.Models.FormModel;
 
 namespace QueroJobsWEB.Controllers;
 
@@ -160,23 +158,38 @@ public class CandidateController : Controller
     }
 
     [HttpGet("[controller]/forms/{idCandidate}")]
-    public async Task<ActionResult> Form(int idCandidate)    
+    public async Task<ActionResult> Form(int idCandidate)
     {
         var candidate = await _candidateService.Get(idCandidate);
 
         if (candidate == null) return NotFound();
 
-        /*List<SelectListItem> courses = candidate.Formations.Select(f => new SelectListItem
+        FormModel form = new FormModel
         {
-            Text = f.IdCourseNavigation.CourseName,
-            Value = f.IdCourseNavigation.CourseName
-        }).ToList();
+            CandidateId = candidate.Id,
+            Course = candidate.Formations.Select(c => c.IdCourseNavigation.CourseName).FirstOrDefault(),
+            Description = candidate.Description,
+            EmploymentStatus = candidate.EmploymentStatus,
+            Instituion = candidate.Formations.Select(c => c.IdInstitutionNavigation.InstitutionName).FirstOrDefault(),
+            OccupationAreaNames = candidate.Candidateoccupationareas.Select(c => c.IdOccupationAreaNavigation.OccupationAreaName),
+            ProfessionalExperienceStartMonth = candidate.Candidateroles.Select(c => c.StartMonth).FirstOrDefault(),
+            ProfessionalExperienceEndMonth = candidate.Candidateroles.Select(c => c.EndMonth).FirstOrDefault(),
+            ProfessionalExperienceStartYear = candidate.Candidateroles.Select(c => c.StartYear).FirstOrDefault(),
+            ProfessionalExperienceEndYear = candidate.Candidateroles.Select(c => c.EndYear).FirstOrDefault(),
+            Role = candidate.Candidateroles.Select(c => c.IdRoleNavigation.RoleName).FirstOrDefault(),
+            SalaryExpectation = candidate.SalaryExpectation,
+            Scholarity = candidate.Formations.Select(c => c.IdScholarityNavigation.ScholarityName).FirstOrDefault(),
+            ScholarityEndDate = candidate.Formations.Select(c => c.EndDate).FirstOrDefault(),
+            ScholarityStartDate = candidate.Formations.Select(c => c.StartDate).FirstOrDefault(),
+        };
 
+        //Bloco abaixo comentado pois será
+        /*
         SelectList course = new SelectList(candidate.Formations.Select(f => new SelectListItem
         {
             Text = f.IdCourseNavigation.CourseName,
             Value = f.IdCourseNavigation.CourseName
-        }).ToList());*/
+        }).ToList());
 
         FormModel form = new FormModel
         {
@@ -244,6 +257,8 @@ public class CandidateController : Controller
             OccupationAreaNames = candidate.Candidateoccupationareas.Select(c => c.IdOccupationAreaNavigation.OccupationAreaName),
             SalaryExpectation = decimal.Zero,
         };
+        */
+
         return View(form);
     }
 }
