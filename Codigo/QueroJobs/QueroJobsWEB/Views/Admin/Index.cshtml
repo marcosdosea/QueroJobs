@@ -7,10 +7,10 @@
 <h1>@ViewData["Title"]</h1>
 
 <head>
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> 
 </head>
 
-<button class="collapsible">Empresas</button>
+<!-- <button class="collapsible">Empresas</button>
 <div class="content">
 	<table class="table">
 		<thead>
@@ -32,9 +32,9 @@
 			}
 		</tbody>
 	</table>
-</div>
+</div> -->
 
-<button class="collapsible">Candidatos</button>
+<!--<button class="collapsible">Candidatos</button>
 <div class="content">
 	<table class="table">
 		<tbody>
@@ -54,7 +54,7 @@
 			}
 		</tbody>
 	</table>
-</div>
+</div> -->
 
 <button class="collapsible">Competências</button>
 <div class="content">
@@ -98,27 +98,6 @@
 	</table>
 </div>
 
-<button class="collapsible">Cargos</button>
-<div class="content">
-	<table class="table">
-		<tbody>
-			<p>
-				<a asp-action="RoleCreate">Criar novo cargo</a>
-			</p>
-			@foreach (var item in Model.role)
-			{
-				<tr>
-					<td>
-						<p>@item.RoleName</p>
-						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
-						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-</div>
-
 <button class="collapsible">Instituições</button>
 <div class="content">
 	<table class="table">
@@ -133,6 +112,27 @@
 						<p>@item.InstitutionName</p>
 						@Html.ActionLink("Editar", "InstitutionEdit", new { id=item.Id  }) |
 						@Html.ActionLink("Deletar", "InstitutionDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button class="collapsible">Cargos</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="RoleCreate">Criar novo cargo</a>
+			</p>
+			@foreach (var item in Model.role)
+			{
+				<tr>
+					<td>
+						<p>@item.RoleName</p>
+						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
 					</td>
 				</tr>
 			}
