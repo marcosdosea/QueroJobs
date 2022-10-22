@@ -63,7 +63,7 @@ public class VacancyControllerTests
         Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(VacancyModel));
         VacancyModel vacancyModel = (VacancyModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("ItatechJr", vacancyModel.VacancyName);
+        Assert.AreEqual("Engenheiro de Software II", vacancyModel.VacancyName);
         
     }
 
@@ -118,7 +118,7 @@ public class VacancyControllerTests
         Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(VacancyModel));
         VacancyModel vacancyModel = (VacancyModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("ItatechJr", vacancyModel.VacancyName);
+        Assert.AreEqual("Engenheiro de Software II", vacancyModel.VacancyName);
     }
 
     [TestMethod()]

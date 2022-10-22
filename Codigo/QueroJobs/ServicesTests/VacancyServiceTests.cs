@@ -75,7 +75,7 @@ public class VacancyServiceTests
         // Assert
         vacancy = _vacancyService.Get(3).Result;
         Assert.IsNotNull(vacancy);
-        Assert.AreEqual(vacancy.VacancyName, "SQL");
+        Assert.AreEqual(vacancy.VacancyName, "Marceneiro");
     }
 
     [TestMethod()]
