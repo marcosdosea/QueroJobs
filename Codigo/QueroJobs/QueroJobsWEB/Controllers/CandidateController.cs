@@ -157,7 +157,7 @@ public class CandidateController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    [HttpGet("[controller]/forms/{idCandidate}")]
+    [HttpGet("[controller]/form/{idCandidate}")]
     public async Task<ActionResult> Form(int idCandidate)
     {
         var candidate = await _candidateService.Get(idCandidate);
