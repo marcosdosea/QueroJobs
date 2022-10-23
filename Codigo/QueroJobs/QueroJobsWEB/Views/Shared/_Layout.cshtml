@@ -9,10 +9,23 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="~/QueroJobsWEB.styles.css" /> <!--Ativa o css isolation-->
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/css/styles.css">
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/QuerojobsComponents.css">
 </head>
+
+<script>
+	//Altera a cor de todos text-field do formulário.
+	function inputStyleField(){
+		[...document.getElementsByClassName('form-control')].forEach(
+			function(element){
+				element.style.backgroundColor= 'var(--cinza-claro)';
+				element.style.borderRadius= '25px';
+			}
+		)
+	}
+</script>
 
 <body>
 	<header>

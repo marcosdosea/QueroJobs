@@ -58,7 +58,7 @@ public class VacancyModel
 
     [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Carga horária")]
-    [Range(1, 24, ErrorMessage = "A carga horária tem que estar enttre 1 e 24")] 
+    [Range(1, 24, ErrorMessage = "A carga horária tem que estar enttre 1 e 24")]
     public int Workload { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]

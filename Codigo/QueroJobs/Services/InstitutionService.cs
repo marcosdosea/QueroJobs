@@ -7,7 +7,7 @@ namespace Services;
 public class InstitutionService : IInstitutionService
 {
     private readonly QueroJobsContext _queroJobsContext;
-    
+
     public InstitutionService(QueroJobsContext queroJobsContext)
     {
         _queroJobsContext = queroJobsContext;
