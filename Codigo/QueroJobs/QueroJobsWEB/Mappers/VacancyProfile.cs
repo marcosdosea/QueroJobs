@@ -1,6 +1,6 @@
-﻿using QueroJobsWEB.Models;
+﻿using AutoMapper;
 using Core;
-using AutoMapper;
+using QueroJobsWEB.Models;
 
 namespace QueroJobsWEB.Mappers;
 

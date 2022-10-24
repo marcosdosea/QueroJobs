@@ -1,0 +1,11 @@
+﻿#form-title{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+hr {
+    color: var(--azul);
+    margin: 5px;
+    opacity: 0.5;
+}
