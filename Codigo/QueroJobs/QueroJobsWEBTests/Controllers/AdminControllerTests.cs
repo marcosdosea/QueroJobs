@@ -47,7 +47,7 @@ public class AdminControllerTests
 
 
         //For All Use Cases Of Admin
-        adminController = new AdminController(mockService.Object, mapper);
+        //adminController = new AdminController(mockService.Object, mapper);
     }
 
     [TestMethod()]

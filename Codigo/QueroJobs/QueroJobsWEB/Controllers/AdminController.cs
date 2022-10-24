@@ -38,7 +38,7 @@ namespace QueroJobsWEB.Controllers
             _mapper = mapper;
         }
 
-        //
+        /*
         public AdminController(
             IInstitutionService institutionService,
             IMapper mapper
@@ -46,7 +46,7 @@ namespace QueroJobsWEB.Controllers
         {
             _institutionService = institutionService;
             _mapper = mapper;
-        }
+        }*/
 
 
         [HttpGet]
