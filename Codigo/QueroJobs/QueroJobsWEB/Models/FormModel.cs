@@ -13,6 +13,7 @@ public class FormModel
     public decimal SalaryExpectation { get; set; }
 
     [Required]
+    [Display(Name = "Pretensão salarial")]
     public string EmploymentStatus { get; set; }
 
     [Required]
