@@ -1,5 +1,4 @@
-﻿using Services;
-using Core;
+﻿using Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -130,7 +129,7 @@ public class CompanyServiceTests
         company.FantasyName = "No Hope";
         company.Email = "nohope@gmail.com";
         _companyService.Edit(company).Wait();
-        
+
         // Assert
         company = _companyService.Get(3).Result;
         Assert.IsNotNull(company);

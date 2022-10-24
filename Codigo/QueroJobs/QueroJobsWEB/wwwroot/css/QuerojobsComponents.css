@@ -1,0 +1,21 @@
+﻿.submit-button {
+    width: 120px;
+    background-color: var(--verde);
+    border-radius: 25px;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.button_success {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#textarea-description {
+    border-radius: 25px;
+    background-color: var(--cinza-claro);
+    padding: 10px;
+}
