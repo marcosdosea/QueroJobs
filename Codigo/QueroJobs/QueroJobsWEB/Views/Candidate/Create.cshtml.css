@@ -1,5 +1,15 @@
 ﻿.apresentation {
     background-color: var(--azul);
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20%;
+    overflow-y: visible;
 }
 
 h1 {
@@ -12,7 +22,6 @@ h1 {
     text-align: left;
     font-size: 7vw;
     font-weight: 900;
-    word-spacing: 0;
 }
 
 .body {
@@ -23,6 +32,7 @@ h1 {
     color: rgba(255, 255, 255, 0.15);
     font-size: 5vw;
     font-weight: 900;
+
 }
 
 .title_screen {
@@ -40,37 +50,11 @@ h1 {
     padding-top: 10px;
 }
 
-.step {
-    height: 20px;
-    width: 20px;
-    margin: 30px 2px;
-    background-color: var(--cinza-escuro);
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
+.space_form {
+    margin-left: 50%;
 }
 
-.step.active {
-    opacity: 1;
-}
-
-.step.finish {
-    background-color: var(--azul);
-}
-
-/* Colocar essa caracterização no css genericon */
-.button_success {
-    background-color: var(--verde);
-    margin-top: 20px;
-    padding: 1% 5%;
-    border-radius: 25px;
-}
-
-/* Colocar essa caracterização no css genericon */
-.button_back {
-    background-color: var(--amarelo);
-    margin-top: 20px;
-    padding: 1% 5%;
-    border-radius: 25px;
+.word_style {
+    line-height: 100%;
+    margin-top: 9%;
 }
