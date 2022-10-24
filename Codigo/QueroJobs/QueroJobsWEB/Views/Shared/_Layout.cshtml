@@ -25,11 +25,23 @@
 			}
 		)
 	}
+
+	//Altera a cor do header de acordo com a página 
+	function paintHeader(color){
+		let header = document.getElementById('head');
+		header.style.backgroundColor = color;
+	}
+
+	@*//Altera a cor do Footer de acordo com a página
+	function paintFooter(color){
+		let footer = document.getElementById('footer');
+		footer.style.backgroundColor = color;
+	}*@
 </script>
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
+		<nav id="head" class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
 			<div class="container-fluid">
 				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
 					<div class="circle">
@@ -74,7 +86,7 @@
 
 	@RenderBody()
 
-	<footer class="footer text-muted" style="background-color: #09B7CE;">
+	<footer id="footer" class="footer text-muted" style="background-color: #09B7CE;">
 		<div class="container">
 			<p class="text-justify" style="text-align: center; color: white;">QueroJobs - 2022</p>
 		</div>

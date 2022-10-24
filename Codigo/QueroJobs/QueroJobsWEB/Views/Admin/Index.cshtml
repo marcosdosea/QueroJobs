@@ -1,7 +1,7 @@
 ﻿@model QueroJobsWEB.Models.AdminModel
 
 @{
-	ViewData["Title"] = "Admin Panel";
+	ViewData["Title"] = "Configurações";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -33,7 +33,7 @@
 		</tbody>
 	</table>
 </div> -->
-
+<hr />
 <!--<button class="collapsible">Candidatos</button>
 <div class="content">
 	<table class="table">
@@ -77,6 +77,8 @@
 	</table>
 </div>
 
+<hr />
+
 <button class="collapsible">Cursos</button>
 <div class="content">
 	<table class="table">
@@ -97,6 +99,8 @@
 		</tbody>
 	</table>
 </div>
+
+<hr />
 
 <button class="collapsible">Instituições</button>
 <div class="content">
@@ -119,6 +123,8 @@
 	</table>
 </div>
 
+<hr class="admin"/>
+
 <button class="collapsible">Cargos</button>
 <div class="content">
 	<table class="table">
@@ -139,6 +145,7 @@
 		</tbody>
 	</table>
 </div>
+<hr />
 
 @*<p>Collapsible Set:</p>
 <button class="collapsible">Vagas</button>
@@ -162,6 +169,11 @@
 
 
 <script>
+	
+	paintHeader('var(--verde-escuro)');
+
+	//paintFooter('var(--verde-escuro)');
+
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
