@@ -6,43 +6,37 @@
 <div class="container px-5">
     <h1 id="form-title">@ViewData["Title"]</h1>
 
-
-<div class="container px-5">
-    <h1 id="form-title">@ViewData["Title"]</h1>
-
     <form asp-action="Form">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input asp-for="CandidateId" type="hidden" />
         <h4>Dados Gerais</h4>
         <hr />
         <div class="row">
-            <div class="col-3">
-                <div class="form-group">
-                    <label asp-for="OccupationAreaNames" class="control-label"></label>
-                    <input asp-for ="OccupationAreaNames" class="form-control"/>
-                    <span asp-validation-for="OccupationAreaNames" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="SalaryExpectation" class="control-label"></label>
-                    <input asp-for="SalaryExpectation" class="form-control" />
-                    <span asp-validation-for="SalaryExpectation" class="text-danger"></span>
-                </div>
+            <div class="form-group col-3">
+                <label asp-for="OccupationAreaNames" class="control-label"></label>
+                <input asp-for ="OccupationAreaNames" class="form-control"/>
+                <span asp-validation-for="OccupationAreaNames" class="text-danger"></span>
+            </div>
+            <div class="form-group pl-4 col-3">
+                <label asp-for="SalaryExpectation" class="control-label"></label>
+                <input asp-for="SalaryExpectation" class="form-control" />
+                <span asp-validation-for="SalaryExpectation" class="text-danger"></span>
             </div>
         </div>
         <div class="col-3">
             <div class="form-group">
                 <label asp-for="EmploymentStatus" class="control-label"></label>
                 <select asp-for="EmploymentStatus" class="form-control">
-                        <option value="NONE">Desempregado</option>
-                        <option value="FULL-TIME">Tempo Integral</option>
-                        <option value="PART-TIME">Meio Período</option>
-                        <option value="FREELANCE">Freelancer</option>
-                        <option value="CONTRACT">Contrato</option>
-                        <option value="INTERNSHIP">Estagiário</option>
-                        <option value="APPRENTICESHIP">Aprendiz</option>
-                        <option value="LEADERSHIP-PROGRAM">Lider</option>
-                        <option value="INDIRECT-CONTRACT">Contrato Indireto</option>
-                    </select>
+                    <option value="NONE">Desempregado</option>
+                    <option value="FULL-TIME">Tempo Integral</option>
+                    <option value="PART-TIME">Meio Período</option>
+                    <option value="FREELANCE">Freelancer</option>
+                    <option value="CONTRACT">Contrato</option>
+                    <option value="INTERNSHIP">Estagiário</option>
+                    <option value="APPRENTICESHIP">Aprendiz</option>
+                    <option value="LEADERSHIP-PROGRAM">Lider</option>
+                    <option value="INDIRECT-CONTRACT">Contrato Indireto</option>
+                </select>
                 <span asp-validation-for="EmploymentStatus" class="text-danger"></span>
             </div>
         </div>
