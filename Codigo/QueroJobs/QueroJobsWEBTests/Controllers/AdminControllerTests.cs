@@ -25,6 +25,8 @@ public class AdminControllerTests
     [TestInitialize]
     public void Initialize()
     {
+        Assert.Fail();
+        return;
         // Arrange
         var mockService = new Mock<IInstitutionService>();
 
@@ -216,6 +218,9 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionCreateTest_Valid()
     {
+        Assert.Fail();
+        
+        /*
         // Act
         var result = adminController.Create(GetNewInstitution()).Result;
 
@@ -223,12 +228,15 @@ public class AdminControllerTests
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
         RedirectToActionResult redirectToActionResult = (RedirectToActionResult)result;
         Assert.IsNull(redirectToActionResult.ControllerName);
-        Assert.AreEqual("Index",redirectToActionResult.ActionName);
+        Assert.AreEqual("Index",redirectToActionResult.ActionName);*/
     }
 
     [TestMethod()]
     public void InstitutionEditTest_Get()
     {
+        Assert.Fail();
+        
+        /*
         // Act
         var result = adminController.Edit(1).Result;
 
@@ -239,12 +247,15 @@ public class AdminControllerTests
         Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(InstitutionModel));
         InstitutionModel institutionModel = (InstitutionModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("TEXTOAQUI OXFORD", institutionModel.InstitutionName);
+        Assert.AreEqual("TEXTOAQUI OXFORD", institutionModel.InstitutionName);*/
     }
 
     [TestMethod()]
     public void InstitutionEditTest_Post()
     {
+        Assert.Fail();
+        
+        /*
         // Act
         var result = adminController.Edit(GetTargetInstitutionModel().Id, GetTargetInstitutionModel()).Result;
 
@@ -252,12 +263,15 @@ public class AdminControllerTests
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
         RedirectToActionResult redirectToActionResult = (RedirectToActionResult)result;
         Assert.IsNull(redirectToActionResult.ControllerName);
-        Assert.AreEqual("Index", redirectToActionResult.ActionName);
+        Assert.AreEqual("Index", redirectToActionResult.ActionName);*/
     }
 
     [TestMethod()]
     public void InstitutionDeleteTest_Post()
     {
+        Assert.Fail();
+        
+        /*
         // Act
         var result = adminController.Delete(1).Result;
 
@@ -265,12 +279,15 @@ public class AdminControllerTests
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
         RedirectToActionResult redirectToActionResult = (RedirectToActionResult)result;
         Assert.IsNull(redirectToActionResult.ControllerName);
-        Assert.AreEqual("Index", redirectToActionResult.ActionName);
+        Assert.AreEqual("Index", redirectToActionResult.ActionName);*/
     }
 
     [TestMethod()]
     public void InstitutionDeleteTest_Get()
     {
+        Assert.Fail();
+        
+        /*
         // Act
         var result = adminController.Delete(GetTargetInstitutionModel().Id).Result;
 
@@ -278,7 +295,7 @@ public class AdminControllerTests
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
         RedirectToActionResult redirectToActionResult = (RedirectToActionResult)result;
         Assert.IsNull(redirectToActionResult.ControllerName);
-        Assert.AreEqual("Index", redirectToActionResult.ActionName);
+        Assert.AreEqual("Index", redirectToActionResult.ActionName);*/
     }
 
     [TestMethod()]
