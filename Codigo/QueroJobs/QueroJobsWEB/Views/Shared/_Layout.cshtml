@@ -32,11 +32,12 @@
 		header.style.backgroundColor = color;
 	}
 
-	@*//Altera a cor do Footer de acordo com a página
+	
 	function paintFooter(color){
-		let footer = document.getElementById('footer');
+		let footer = document.getElementById('foot');
+		console.log(footer);
 		footer.style.backgroundColor = color;
-	}*@
+	}
 </script>
 
 <body>
@@ -84,9 +85,9 @@
 		</nav>
 	</header>
 
-	@RenderBody()
+	
 
-	<footer id="footer" class="footer text-muted" style="background-color: #09B7CE;">
+	<footer id="foot" class="footer">
 		<div class="container">
 			<p class="text-justify" style="text-align: center; color: white;">QueroJobs - 2022</p>
 		</div>
@@ -95,6 +96,7 @@
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	@await RenderSectionAsync("Scripts", required: false)
+	@RenderBody()
 </body>
 
 </html>
