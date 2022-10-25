@@ -179,8 +179,8 @@ public class CandidateController : Controller
             Role = candidate.Candidateroles.Select(c => c.IdRoleNavigation.RoleName).FirstOrDefault(),
             SalaryExpectation = candidate.SalaryExpectation,
             Scholarity = candidate.Formations.Select(c => c.IdScholarityNavigation.ScholarityName).FirstOrDefault(),
-            ScholarityEndDate = candidate.Formations.Select(c => c.EndDate).FirstOrDefault(),
             ScholarityStartDate = candidate.Formations.Select(c => c.StartDate).FirstOrDefault(),
+            ScholarityEndDate = candidate.Formations.Select(c => c.EndDate).FirstOrDefault(),
         };
 
         //Bloco abaixo comentado pois será

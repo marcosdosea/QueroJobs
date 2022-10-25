@@ -41,65 +41,74 @@
             </div>
         </div>
 
+
         <h4>Escolaridade</h4>
         <hr />
-        <div class="form-group">
-            <label asp-for="Scholarity" class="control-label col-3"></label>
-            <input asp-for="Scholarity" class="form-control" />
-            <span asp-validation-for="Scholarity" class="text-danger"></span>
+        <div class="row">
+            <div class="form-group col-3">
+                <label asp-for="Scholarity" class="control-label"></label>
+                <input asp-for="Scholarity" class="form-control" />
+                <span asp-validation-for="Scholarity" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="Course" class="control-label col-3"></label>
+                <input asp-for="Course" class="form-control" />
+                <span asp-validation-for="Course" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="Instituion" class="control-label"></label>
+                <input asp-for="Instituion" class="form-control" />
+                <span asp-validation-for="Instituion" class="text-danger"></span>
+            </div>
         </div>
-        <div class="form-group">
-            <label asp-for="Course" class="control-label"></label>
-            <input asp-for="Course" class="form-control" />
-            <span asp-validation-for="Course" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Instituion" class="control-label"></label>
-            <input asp-for="Instituion" class="form-control" />
-            <span asp-validation-for="Instituion" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="ScholarityStartDate" class="control-label"></label>
-            <input asp-for="ScholarityStartDate" class="form-control" />
-            <span asp-validation-for="ScholarityStartDate" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="ScholarityEndDate" class="control-label"></label>
-            <input asp-for="ScholarityEndDate" class="form-control" />
-            <span asp-validation-for="ScholarityEndDate" class="text-danger"></span>
+        <div class="row">
+            <div class="form-group col-3">
+                <label asp-for="ScholarityStartDate" class="control-label"></label>
+                <input asp-for="ScholarityStartDate" class="form-control" />
+                <span asp-validation-for="ScholarityStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="ScholarityEndDate" class="control-label"></label>
+                <input asp-for="ScholarityEndDate" class="form-control" />
+                <span asp-validation-for="ScholarityEndDate" class="text-danger"></span>
+            </div>
         </div>
 
         <h4>Experiência Profissional</h4>
         <hr />
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-3">
                 <div class="form-group">
                     <label asp-for="Role" class="control-label"></label>
                     <input asp-for="Role" class="form-control" />
                     <span asp-validation-for="Role" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="ProfessionalExperienceStartMonth" class="control-label"></label>
-                    <input asp-for="ProfessionalExperienceStartMonth" class="form-control" />
-                    <span asp-validation-for="ProfessionalExperienceStartMonth" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ProfessionalExperienceEndMonth" class="control-label"></label>
-                    <input asp-for="ProfessionalExperienceEndMonth" class="form-control" />
-                    <span asp-validation-for="ProfessionalExperienceEndMonth" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ProfessionalExperienceStartYear" class="control-label"></label>
-                    <input asp-for="ProfessionalExperienceStartYear" class="form-control" />
-                    <span asp-validation-for="ProfessionalExperienceStartYear" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ProfessionalExperienceEndYear" class="control-label"></label>
-                    <input asp-for="ProfessionalExperienceEndYear" class="form-control" />
-                    <span asp-validation-for="ProfessionalExperienceEndYear" class="text-danger"></span>
-                </div>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="form-group col-3">
+                <label asp-for="ProfessionalExperienceStartMonth" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceStartMonth" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceStartMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="ProfessionalExperienceEndMonth" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceEndMonth" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceEndMonth" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-3">
+                <label asp-for="ProfessionalExperienceStartYear" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceStartYear" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceStartYear" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="ProfessionalExperienceEndYear" class="control-label"></label>
+                <input asp-for="ProfessionalExperienceEndYear" class="form-control" />
+                <span asp-validation-for="ProfessionalExperienceEndYear" class="text-danger"></span>
             </div>
         </div>
 
@@ -115,9 +124,6 @@
         </div>
     </form>
 
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 <script>
