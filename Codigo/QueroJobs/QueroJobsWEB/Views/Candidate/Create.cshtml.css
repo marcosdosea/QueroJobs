@@ -10,10 +10,13 @@
     justify-content: space-between;
     margin-bottom: 20%;
     overflow-y: visible;
+<<<<<<< HEAD
 }
 
 .apresentation_mobile {
     display: none;
+=======
+>>>>>>> Branch_Milena215
 }
 
 h1 {
@@ -56,6 +59,7 @@ h1 {
 
 .space_form {
     margin-left: 50%;
+<<<<<<< HEAD
 }
 
 .word_style {
@@ -88,3 +92,11 @@ h2 {
         display: none;
     }
 }
+=======
+}
+
+.word_style {
+    line-height: 100%;
+    margin-top: 9%;
+}
+>>>>>>> Branch_Milena215
