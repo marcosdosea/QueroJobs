@@ -30,20 +30,20 @@
             </div>
         </div>
     </div>
-    <div class="apresentation_mobile">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-3 word_style">
-                <h2>@ViewData["TitleForm"]</h2>
+    <div class="row apresentation_mobile">
+        <div class="title_mobile">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5" style="">
+                    <div class="row">
+                        <h2>@ViewData["TitleForm"]</h2>
+                    </div>
+                    <div class="row" style="font-size: 20px;">
+                        <p>@ViewData["Title"]</p>
+                    </div>
+                </div>
+                <div class="col-sm-5"></div>
             </div>
-            <div class="col-sm-7"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-3 word_style">
-                <p>@ViewData["Title"]</p>
-            </div>
-            <div class="col-sm-7"></div>
         </div>
     </div>
     <div class="col-sm-6 space_form">
@@ -62,6 +62,18 @@
                     <input asp-for="Email" class="form-control py-2 rounded-pill mr-1 pr-5" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="control-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
                 
                 <div class="form-group">
                     <label asp-for="Cpf" class="control-label"></label>
@@ -72,18 +84,19 @@
                 <div class="row">
                     <div class="col-sm-6 form-group">
                         <label asp-for="Deficiency" class="control-label"></label>
-                        <!--input asp-for="Deficiency" class="form-control py-2 rounded-pill mr-1 pr-5" /-->
                         <select asp-for="Deficiency" class="form-control">
-                            <option value=""></option>
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
+                            <option value="nenhuma">Nenhuma</option>
+                            <option value="auditiva">Auditiva</option>
+                            <option value="fala">Fala</option>
+                            <option value="física">Física</option>
+                            <option value="intelectual">Intelectual</option>
+                            <option value="visual">Visual</option>
                         </select>
                         <span asp-validation-for="Deficiency" class="text-danger"></span>
                     </div>
                 
                     <div class="col-sm-6 form-group">
                         <label asp-for="Gender" class="control-label"></label>
-                        <!--input asp-for="Gender" class="form-control py-2 rounded-pill mr-1 pr-5" /-->
                         <select asp-for="Gender" class="form-control">
                             <option value=""></option>
                             <option value="F">Feminino</option>
@@ -193,7 +206,7 @@
                 </div>
 
                 <div class="button_success">
-                    <input type="submit" name="" value="Salvar" class="btn submit-button" asp-controller="Candidate" asp-action="Create"/>
+                    <input type="submit" name="" value="Finalizar Cadastro" class="btn btn-lg  submit-button" asp-controller="Candidate" asp-action="Create"/>
                 </div>
             </form>
         </div>

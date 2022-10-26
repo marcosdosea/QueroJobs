@@ -10,13 +10,11 @@
     justify-content: space-between;
     margin-bottom: 20%;
     overflow-y: visible;
-<<<<<<< HEAD
+    padding-bottom: 20%;
 }
 
 .apresentation_mobile {
     display: none;
-=======
->>>>>>> Branch_Milena215
 }
 
 h1 {
@@ -33,6 +31,7 @@ h1 {
 
 .body {
     min-height: 100vh;
+    background-color: var(--branco-escuro);
 }
 
 .text_background_first {
@@ -58,8 +57,8 @@ h1 {
 }
 
 .space_form {
+    min-height: 100vh;
     margin-left: 50%;
-<<<<<<< HEAD
 }
 
 .word_style {
@@ -88,15 +87,42 @@ h2 {
         align-items: center;
         display: flex;
     }
+    .title_mobile {
+        text-align: end;
+        color: var(--branco);
+    }
     h1 {
         display: none;
     }
-}
-=======
 }
 
 .word_style {
     line-height: 100%;
     margin-top: 9%;
 }
->>>>>>> Branch_Milena215
+
+.button_success {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+@media only screen and (max-width: 574px) {
+    .form {
+        padding: 0 50px;
+    }
+    .title_mobile {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .apresentation {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

@@ -101,4 +101,12 @@ public class CandidateModel
     [StringLength(2000, ErrorMessage = "A descrição tem no máximo 2000 digitos")]
     public string Description { get; set; }
 
+    [Display(Name = "Senha")]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+
+    [Display(Name = "Confirmar senha")]
+    [DataType(DataType.Password)]
+    [Compare("Password", ErrorMessage = "As senha devem ser iguais")]
+    public string ConfirmPassword { get; set; }
 }
