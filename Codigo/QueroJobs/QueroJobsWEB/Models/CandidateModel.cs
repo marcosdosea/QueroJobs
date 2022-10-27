@@ -8,7 +8,7 @@ public class CandidateModel
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Nome")]
+    [Display(Name = "Nome completo")]
     [DataType(DataType.Text)]
     [StringLength(100, ErrorMessage = "O campo nome aceita entre 3 e 100 caracteres", MinimumLength = 3)]
     public string Name { get; set; }
@@ -47,20 +47,20 @@ public class CandidateModel
     public string Street { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Numero da Casa")]
+    [Display(Name = "Número")]
     [StringLength(6, ErrorMessage = "Numero da casa tem entre 1 e 6 digitos", MinimumLength = 1)]
     public string HouseNumber { get; set; }
 
-    [Display(Name = "Complemento do endereço")]
+    [Display(Name = "Complemento")]
     [StringLength(100, ErrorMessage = "Complemento do endereço tem no máximo 100 digitos")]
     public string Complement { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
-    [Display(Name = "Número de celular")]
+    [Display(Name = "N° de celular")]
     [RegularExpression(@"^(\([1-9]{2}\)|[1-9]{2}) ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$", ErrorMessage = "Exemplo de numero de celular: (12)12345-6789")]
     public string CellphoneNumber { get; set; }
 
-    [Display(Name = "Número de telefone")]
+    [Display(Name = "N° de telefone")]
     [RegularExpression(@"^(\([1-9]{2}\)|[1-9]{2}) ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$", ErrorMessage = "Exemplo de numero de telefone: (12)12345-6789")]
     public string TelephoneNumber { get; set; }
 
@@ -100,4 +100,13 @@ public class CandidateModel
     [Display(Name = "Descrição")]
     [StringLength(2000, ErrorMessage = "A descrição tem no máximo 2000 digitos")]
     public string Description { get; set; }
+
+    [Display(Name = "Senha")]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+
+    [Display(Name = "Confirmar senha")]
+    [DataType(DataType.Password)]
+    [Compare("Password", ErrorMessage = "As senha devem ser iguais")]
+    public string ConfirmPassword { get; set; }
 }
