@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Utils;
 
 namespace QueroJobsWEB.Models;
 
@@ -17,6 +18,7 @@ public class CandidateModel
     [DataType(DataType.EmailAddress, ErrorMessage = "Digite um email válido")]
     public string Email { get; set; }
 
+    //[CEP]
     [Display(Name = "CEP")]
     [DataType(DataType.PostalCode)]
     public string Cep { get; set; }
@@ -28,7 +30,6 @@ public class CandidateModel
 
     [Required(ErrorMessage = "Campo requerido")]
     [Display(Name = "Estado")]
-    [StringLength(2, ErrorMessage = "Débito técnico, isso no futuro vai ser uma combobox", MinimumLength = 2)]
     public string State { get; set; }
 
     [Required(ErrorMessage = "Campo requerido")]
@@ -74,7 +75,10 @@ public class CandidateModel
     [StringLength(1, ErrorMessage = "Débito técnico, isso no futuro vai ser uma combobox", MinimumLength = 1)]
     public string Gender { get; set; }
 
+
+    //[CPF]
     [Required(ErrorMessage = "CPF requerido")]
+    [Display(Name = "CPF")]
     [RegularExpression(@"([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})")]
     public string Cpf { get; set; }
 

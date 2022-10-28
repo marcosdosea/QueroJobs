@@ -122,7 +122,11 @@
 
                     <div class="col-sm-6 form-group">
                         <label asp-for="State" class="control-label"></label>
-                        <input asp-for="State" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <select asp-for="State" class="form-control">
+                            <option value=""></option>
+                            <option value="SE">SE</option>
+                            <option value="RS">RS</option>
+                        </select>
                         <span asp-validation-for="State" class="text-danger"></span>
                     </div>
                 </div>

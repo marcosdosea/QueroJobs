@@ -6,12 +6,12 @@ namespace Utils;
 /// <summary>
 /// Validação customizada para CPF
 /// </summary>
-public class CepAttribute : ValidationAttribute
+public class CEPAttribute : ValidationAttribute
 {
     /// <summary>
     /// Construtor
     /// </summary>
-    public CepAttribute() { }
+    public CEPAttribute() { }
 
     /// <summary>
     /// Validação server
