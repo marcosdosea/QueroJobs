@@ -1,5 +1,5 @@
 ﻿.apresentation {
-    background-color: var(--azul);
+    background-color: var(--roxo);
     position: fixed;
     z-index: 0;
     top: 0;
@@ -38,7 +38,6 @@ h1 {
     color: rgba(255, 255, 255, 0.15);
     font-size: 5vw;
     font-weight: 900;
-
 }
 
 .title_screen {
@@ -74,12 +73,14 @@ h2 {
     .apresentation {
         display: none;
     }
+
     .space_form {
         margin: 0 auto;
         width: 100%;
     }
+
     .apresentation_mobile {
-        background-color: var(--azul);
+        background-color: var(--roxo);
         width: 100%;
         display: block;
         height: 150px;
@@ -87,10 +88,12 @@ h2 {
         align-items: center;
         display: flex;
     }
+
     .title_mobile {
         text-align: end;
         color: var(--branco);
     }
+
     h1 {
         display: none;
     }
@@ -113,6 +116,7 @@ h2 {
     .form {
         padding: 0 50px;
     }
+
     .title_mobile {
         justify-content: center;
         align-items: center;
@@ -125,4 +129,9 @@ h2 {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+}
+
+.to-access{
+    border-style: solid;
+    border-color: red;
 }
