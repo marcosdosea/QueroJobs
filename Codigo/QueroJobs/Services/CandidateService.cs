@@ -44,6 +44,6 @@ public class CandidateService : ICandidateService
 
     public async Task<IEnumerable<Candidate>> GetAll()
     {
-        return await _queroJobsContext.Candidates.Select(c => c).ToListAsync();
+        return await _queroJobsContext.Candidates.ToListAsync();
     }
 }

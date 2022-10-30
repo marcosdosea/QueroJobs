@@ -1,14 +1,16 @@
 ﻿@model QueroJobsWEB.Models.AdminModel
 
 @{
-	ViewData["Title"] = "Admin Panel";
+	ViewData["Title"] = "Configurações";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <head>
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> 
 </head>
+
+<hr />
 
 <button class="collapsible">Empresas</button>
 <div class="content">
@@ -34,6 +36,8 @@
 	</table>
 </div>
 
+<hr />
+
 <button class="collapsible">Candidatos</button>
 <div class="content">
 	<table class="table">
@@ -56,6 +60,8 @@
 	</table>
 </div>
 
+<hr />
+
 <button class="collapsible">Competências</button>
 <div class="content">
 	<table class="table">
@@ -76,6 +82,8 @@
 		</tbody>
 	</table>
 </div>
+
+<hr />
 
 <button class="collapsible">Cursos</button>
 <div class="content">
@@ -98,26 +106,7 @@
 	</table>
 </div>
 
-<button class="collapsible">Cargos</button>
-<div class="content">
-	<table class="table">
-		<tbody>
-			<p>
-				<a asp-action="RoleCreate">Criar novo cargo</a>
-			</p>
-			@foreach (var item in Model.role)
-			{
-				<tr>
-					<td>
-						<p>@item.RoleName</p>
-						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
-						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-</div>
+<hr />
 
 <button class="collapsible">Instituições</button>
 <div class="content">
@@ -139,6 +128,30 @@
 		</tbody>
 	</table>
 </div>
+
+<hr class="admin"/>
+
+<button class="collapsible">Cargos</button>
+<div class="content">
+	<table class="table">
+		<tbody>
+			<p>
+				<a asp-action="RoleCreate">Criar novo cargo</a>
+			</p>
+			@foreach (var item in Model.role)
+			{
+				<tr>
+					<td>
+						<p>@item.RoleName</p>
+						@Html.ActionLink("Editar", "RoleEdit", new { id=item.Id  }) |
+						@Html.ActionLink("Deletar", "RoleDelete", new { id=item.Id})
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+<hr />
 
 @*<p>Collapsible Set:</p>
 <button class="collapsible">Vagas</button>
@@ -162,6 +175,11 @@
 
 
 <script>
+	
+	paintHeader('var(--verde-escuro)');
+
+	paintFooter('var(--verde-escuro)');
+
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
