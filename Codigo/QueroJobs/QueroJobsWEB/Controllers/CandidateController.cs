@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -178,7 +178,7 @@ public class CandidateController : Controller
             ProfessionalExperienceStartYear = candidate.Candidateroles.Select(c => c.StartYear).FirstOrDefault(),
             ProfessionalExperienceEndYear = candidate.Candidateroles.Select(c => c.EndYear).FirstOrDefault(),
             Role = candidate.Candidateroles.Select(c => c.IdRoleNavigation.RoleName).FirstOrDefault(),
-            SalaryExpectation = candidate.SalaryExpectation,
+            SalaryExpectation = candidate.SalaryExpectation??0,
             Scholarity = candidate.Formations.Select(c => c.IdScholarityNavigation.ScholarityName).FirstOrDefault(),
             ScholarityStartDate = candidate.Formations.Select(c => c.StartDate).FirstOrDefault(),
             ScholarityEndDate = candidate.Formations.Select(c => c.EndDate).FirstOrDefault(),
