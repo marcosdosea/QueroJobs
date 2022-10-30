@@ -14,7 +14,6 @@ namespace Core
 
         public int Id { get; set; }
         public int IdCompany { get; set; }
-        public int IdRole { get; set; }
         public string VacancyName { get; set; }
         public decimal? Salary { get; set; }
         public DateTime OpenDate { get; set; }
@@ -25,6 +24,7 @@ namespace Core
         public string Situation { get; set; }
         public int Workload { get; set; }
         public int Quantity { get; set; }
+        public int IdRole { get; set; }
 
         public virtual Company IdCompanyNavigation { get; set; }
         public virtual Role IdRoleNavigation { get; set; }

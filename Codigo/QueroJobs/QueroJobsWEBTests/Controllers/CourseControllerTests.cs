@@ -10,42 +10,42 @@ using QueroJobsWEB.Models;
 namespace QueroJobsWEB.Controllers.Tests;
 
 [TestClass()]
-public class CompetenceControllerTests
+public class CourseControllerTests
 {
-    private static CompetenceController competenceController;
+    private static CourseController courseController;
 
     [TestInitialize]
     public void Initialize()
     {
         // Arrange
-        var mockService = new Mock<ICompetenceService>();
+        var mockService = new Mock<ICourseService>();
 
-        IMapper mapper = new MapperConfiguration(config => config.AddProfile(new CompetenceProfile())).CreateMapper();
+        IMapper mapper = new MapperConfiguration(config => config.AddProfile(new CourseProfile())).CreateMapper();
 
         mockService.Setup(service => service.GetAll())
-                .Returns(GetTestCompetences());
+                .Returns(GetTestCourses());
         mockService.Setup(service => service.Get(1))
-            .Returns(GetTargetCompetence());
-        mockService.Setup(service => service.Edit(It.IsAny<Competence>()))
+            .Returns(GetTargetCourse());
+        mockService.Setup(service => service.Edit(It.IsAny<Course>()))
             .Verifiable();
-        mockService.Setup(service => service.Create(It.IsAny<Competence>()))
+        mockService.Setup(service => service.Create(It.IsAny<Course>()))
             .Verifiable();
 
-        competenceController = new CompetenceController(mockService.Object, mapper);
+        courseController = new CourseController(mockService.Object, mapper);
     }
 
     [TestMethod()]
     public void IndexTest()
     {
         // Act
-        var result = competenceController.Index().Result;
+        var result = courseController.Index().Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(ViewResult));
         ViewResult viewResult = (ViewResult)result;
-        Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(List<CompetenceModel>));
+        Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(List<CourseModel>));
 
-        List<CompetenceModel> list = (List<CompetenceModel>)viewResult.ViewData.Model;
+        List<CourseModel> list = (List<CourseModel>)viewResult.ViewData.Model;
         Assert.AreEqual(3, list.Count);
     }
 
@@ -53,7 +53,7 @@ public class CompetenceControllerTests
     public void CreateTest()
     {
         // Act
-        var result = competenceController.Create();
+        var result = courseController.Create();
         // Assert
         Assert.IsInstanceOfType(result, typeof(ViewResult));
     }
@@ -62,7 +62,7 @@ public class CompetenceControllerTests
     public void CreateTest_Valid()
     {
         // Act
-        var result = competenceController.Create(GetNewCompetence()).Result;
+        var result = courseController.Create(GetNewCourse()).Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -75,13 +75,13 @@ public class CompetenceControllerTests
     public void CreateTest_InValid()
     {
         // Arrange
-        competenceController.ModelState.AddModelError("CompetenceName", "Campo requerido");
+        courseController.ModelState.AddModelError("CourseName", "Campo requerido");
 
         // Act
-        var result = competenceController.Create(GetNewCompetence()).Result;
+        var result = courseController.Create(GetNewCourse()).Result;
 
         // Assert
-        Assert.AreEqual(1, competenceController.ModelState.ErrorCount);
+        Assert.AreEqual(1, courseController.ModelState.ErrorCount);
         Assert.IsInstanceOfType(result, typeof(ViewResult));
         ViewResult viewResult = (ViewResult)result;
         Assert.IsNotNull(viewResult);
@@ -91,23 +91,23 @@ public class CompetenceControllerTests
     public void EditTest_Get()
     {
         // Act
-        var result = competenceController.Edit(1).Result;
+        var result = courseController.Edit(1).Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(ViewResult));
         ViewResult viewResult = (ViewResult)result;
 
-        Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(CompetenceModel));
-        CompetenceModel competenceModel = (CompetenceModel)viewResult.ViewData.Model;
+        Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(CourseModel));
+        CourseModel courseModel = (CourseModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("Especialização em Power BI", competenceModel.CompetenceName);
+        Assert.AreEqual("Matemática", courseModel.CourseName);
     }
 
     [TestMethod()]
     public void EditTest_Post()
     {
         // Act
-        var result = competenceController.Edit(GetTargetCompetenceModel().Id, GetTargetCompetenceModel()).Result;
+        var result = courseController.Edit(GetTargetCourseModel().Id, GetTargetCourseModel()).Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -120,7 +120,7 @@ public class CompetenceControllerTests
     public void DeleteTest_Post()
     {
         // Act
-        var result = competenceController.Delete(1).Result;
+        var result = courseController.Delete(1).Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -133,7 +133,7 @@ public class CompetenceControllerTests
     public void DeleteTest_Get()
     {
         // Act
-        var result = competenceController.Delete(GetTargetCompetenceModel().Id).Result;
+        var result = courseController.Delete(GetTargetCourseModel().Id).Result;
 
         // Assert
         Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -142,52 +142,52 @@ public class CompetenceControllerTests
         Assert.AreEqual("Index", redirectToActionResult.ActionName);
     }
 
-    private CompetenceModel GetNewCompetence()
+    private CourseModel GetNewCourse()
     {
-        return new CompetenceModel
+        return new CourseModel
         {
             Id = 1,
-            CompetenceName = "Especialização em Power BI"
+            CourseName = "Matemática"
         };
     }
 
-    private async Task<Competence> GetTargetCompetence()
+    private async Task<Course> GetTargetCourse()
     {
-        return new Competence
+        return new Course
         {
             Id = 1,
-            CompetenceName = "Especialização em Power BI"
+            CourseName = "Matemática"
         };
     }
 
-    private CompetenceModel GetTargetCompetenceModel()
+    private CourseModel GetTargetCourseModel()
     {
-        return new CompetenceModel
+        return new CourseModel
         {
             Id = 1,
-            CompetenceName = "Especialização em Power BI"
+            CourseName = "Matemática"
         };
     }
 
-    private async Task<IEnumerable<Competence>> GetTestCompetences()
+    private async Task<IEnumerable<Course>> GetTestCourses()
     {
-        return new List<Competence>
+        return new List<Course>
             {
 
-                new Competence
+                new Course
                 {
                     Id = 1,
-                    CompetenceName = "Especialização em Power BI"
+                    CourseName = "Matemática"
                 },
-                new Competence
+                new Course
                 {
                     Id = 2,
-                    CompetenceName = "Doutorado Sitemas"
+                    CourseName = "Contabilidade"
                 },
-                new Competence
+                new Course
                 {
                     Id = 3,
-                    CompetenceName = "Analista de dados e DBA"
+                    CourseName = "SQL"
                 },
             };
     }
