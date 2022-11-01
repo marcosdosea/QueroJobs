@@ -11,10 +11,10 @@ public class SeedingService
 
     public void Seed()
     {
-        if (_queroJobsContext.Companies.Any() || 
-            _queroJobsContext.Vacancies.Any() || 
-            _queroJobsContext.Roles.Any()     ||
-            _queroJobsContext.Candidates.Any()|| 
+        if (_queroJobsContext.Companies.Any() ||
+            _queroJobsContext.Vacancies.Any() ||
+            _queroJobsContext.Roles.Any() ||
+            _queroJobsContext.Candidates.Any() ||
             _queroJobsContext.Courses.Any() ||
             _queroJobsContext.Competences.Any() ||
             _queroJobsContext.Institutions.Any())

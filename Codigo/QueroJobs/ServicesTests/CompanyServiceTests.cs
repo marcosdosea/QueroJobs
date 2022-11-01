@@ -1,5 +1,4 @@
-﻿using Services;
-using Core;
+﻿using Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -130,7 +129,7 @@ public class CompanyServiceTests
         company.FantasyName = "No Hope";
         company.Email = "nohope@gmail.com";
         _companyService.Edit(company).Wait();
-        
+
         // Assert
         company = _companyService.Get(3).Result;
         Assert.IsNotNull(company);
@@ -145,7 +144,7 @@ public class CompanyServiceTests
         _companyService.Delete(2).Wait();
         // Assert
         Assert.AreEqual(2, _companyService.GetAll().Result.Count());
-        var autor = _companyService.Get(2).Result;
+        var autor = _companyService.Get(2).Result;  //TOCHANGE
         Assert.AreEqual(null, autor);
     }
 

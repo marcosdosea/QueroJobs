@@ -19,7 +19,7 @@ public class VacancyController : Controller
 
 
     [HttpGet]
- 
+
     public async Task<ActionResult> Index()
     {
         var vacancies = await _vacancyService.GetAll();

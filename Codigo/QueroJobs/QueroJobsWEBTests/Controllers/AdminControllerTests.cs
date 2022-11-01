@@ -4,16 +4,8 @@ using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuGet.ContentModel;
-using NuGet.Protocol.Core.Types;
-using QueroJobsWEB.Controllers;
 using QueroJobsWEB.Mappers;
 using QueroJobsWEB.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QueroJobsWEB.Controllers.Tests;
 
@@ -31,7 +23,7 @@ public class AdminControllerTests
         var mockService = new Mock<IInstitutionService>();
 
         IMapper mapper = new MapperConfiguration(config => config.AddProfile(new InstitutionProfile())).CreateMapper();
-        
+
         mockService.Setup(service => service.GetAll())
             .Returns(GetTestInstitutions());
         mockService.Setup(service => service.Get(1))
@@ -43,7 +35,7 @@ public class AdminControllerTests
 
 
 
-       
+
 
 
         //For All Use Cases Of Admin
@@ -219,7 +211,7 @@ public class AdminControllerTests
     public void InstitutionCreateTest_Valid()
     {
         Assert.Fail();
-        
+
         /*
         // Act
         var result = adminController.Create(GetNewInstitution()).Result;
@@ -235,7 +227,7 @@ public class AdminControllerTests
     public void InstitutionEditTest_Get()
     {
         Assert.Fail();
-        
+
         /*
         // Act
         var result = adminController.Edit(1).Result;
@@ -254,7 +246,7 @@ public class AdminControllerTests
     public void InstitutionEditTest_Post()
     {
         Assert.Fail();
-        
+
         /*
         // Act
         var result = adminController.Edit(GetTargetInstitutionModel().Id, GetTargetInstitutionModel()).Result;
@@ -270,7 +262,7 @@ public class AdminControllerTests
     public void InstitutionDeleteTest_Post()
     {
         Assert.Fail();
-        
+
         /*
         // Act
         var result = adminController.Delete(1).Result;
@@ -286,7 +278,7 @@ public class AdminControllerTests
     public void InstitutionDeleteTest_Get()
     {
         Assert.Fail();
-        
+
         /*
         // Act
         var result = adminController.Delete(GetTargetInstitutionModel().Id).Result;

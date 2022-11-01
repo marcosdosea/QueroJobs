@@ -2,12 +2,6 @@
 using Core.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services.Tests
 {
@@ -55,7 +49,7 @@ namespace Services.Tests
             Institution institution = _institutionService.Get(4).Result;
             Assert.IsNotNull(institution);
             Assert.AreEqual(institution.InstitutionName, "Harvard University - HAVARD");
-            
+
         }
 
         [TestMethod()]
