@@ -9,10 +9,23 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="~/QueroJobsWEB.styles.css" /> <!--Ativa o css isolation-->
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/css/styles.css">
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/QuerojobsComponents.css">
 </head>
+
+<script>
+	//Altera a cor de todos text-field do formulário.
+	function inputStyleField(){
+		[...document.getElementsByClassName('form-control')].forEach(
+			function(element){
+				element.style.backgroundColor= 'var(--cinza-claro)';
+				element.style.borderRadius= '25px';
+			}
+		)
+	}
+</script>
 
 <body>
 	<header>
@@ -26,17 +39,17 @@
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
 						<li class="nav-item" id="admin-item">
-							<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">	
 								<p>ADMIN</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Candidate" asp-action="Create">
 								<p>PARA VOCÊ</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Company" asp-action="Create">
 								<p>PARA EMPRESAS</p>
 							</a>
 						</li>
@@ -61,7 +74,7 @@
 
 	@RenderBody()
 
-	<footer class="footer text-muted" style="background-color: #09B7CE;">
+	<footer class="footer text-muted" style="background-color: #1596a8;">
 		<div class="container">
 			<p class="text-justify" style="text-align: center; color: white;">QueroJobs - 2022</p>
 		</div>

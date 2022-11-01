@@ -1,147 +1,201 @@
 ﻿@model QueroJobsWEB.Models.CandidateModel
 
 @{
-    ViewData["Title"] = "Criar candidato";
+    ViewData["Title"] = "Candidatos";
+    ViewData["Logo"] = "Quero Jobs";
+    ViewData["TitleForm"] = "Cadastro";
+    ViewData["TitleScreen"] = "Cadastro para candidatos";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<h4>Empresa</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+<div class="row body">
+    <div class="col-sm-6 apresentation">
+        <div class="row logo">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3 word_style">
+                <p>@ViewData["Logo"]</p>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+            <div class="col-sm-7"></div>
+        </div>
+        <div class="row title_screen">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3 word_style">
+                <p>@ViewData["TitleScreen"]</p>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Cep" class="control-label"></label>
-                <input asp-for="Cep" class="form-control" />
-                <span asp-validation-for="Cep" class="text-danger"></span>
+            <div class="col-sm-7"></div>
+        </div>
+        <div class="row text_background_first">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4 word_style">
+                <p>@ViewData["logo"]</p>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Country" class="control-label"></label>
-                <input asp-for="Country" class="form-control" />
-                <span asp-validation-for="Country" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row apresentation_mobile">
+        <div class="title_mobile">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5" style="">
+                    <div class="row">
+                        <h2>@ViewData["TitleForm"]</h2>
+                    </div>
+                    <div class="row" style="font-size: 20px;">
+                        <p>@ViewData["Title"]</p>
+                    </div>
+                </div>
+                <div class="col-sm-5"></div>
             </div>
+        </div>
+    </div>
+    <div class="col-sm-6 space_form">
+        <h1>@ViewData["TitleForm"]</h1>
+        <div class="col-sm-8 form">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="State" class="control-label"></label>
-                <input asp-for="State" class="form-control" />
-                <span asp-validation-for="State" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
-                <span asp-validation-for="City" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="District" class="control-label"></label>
-                <input asp-for="District" class="form-control" />
-                <span asp-validation-for="District" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="control-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Cpf" class="control-label"></label>
+                    <input asp-for="Cpf" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Cpf" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="Street" class="control-label"></label>
-                <input asp-for="Street" class="form-control" />
-                <span asp-validation-for="Street" class="text-danger"></span>
-            </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="Deficiency" class="control-label"></label>
+                        <select asp-for="Deficiency" class="form-control">
+                            <option value="nenhuma">Nenhuma</option>
+                            <option value="auditiva">Auditiva</option>
+                            <option value="fala">Fala</option>
+                            <option value="física">Física</option>
+                            <option value="intelectual">Intelectual</option>
+                            <option value="visual">Visual</option>
+                        </select>
+                        <span asp-validation-for="Deficiency" class="text-danger"></span>
+                    </div>
+                
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <select asp-for="Gender" class="form-control">
+                            <option value=""></option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                            <option value="">Prefiro não dizer</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="BirthDate" class="control-label"></label>
+                    <input asp-for="BirthDate" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="HouseNumber" class="control-label"></label>
-                <input asp-for="HouseNumber" class="form-control" />
-                <span asp-validation-for="HouseNumber" class="text-danger"></span>
-            </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="Cep" class="control-label"></label>
+                        <input asp-for="Cep" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <label asp-for="Complement" class="control-label"></label>
-                <input asp-for="Complement" class="form-control" />
-                <span asp-validation-for="Complement" class="text-danger"></span>
-            </div>
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="State" class="control-label"></label>
+                        <select asp-for="State" class="form-control">
+                            <option value=""></option>
+                            <option value="SE">SE</option>
+                            <option value="RS">RS</option>
+                        </select>
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="CellphoneNumber" class="control-label"></label>
-                <input asp-for="CellphoneNumber" class="form-control" />
-                <span asp-validation-for="CellphoneNumber" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="Country" class="control-label"></label>
+                    <input asp-for="Country" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="TelephoneNumber" class="control-label"></label>
-                <input asp-for="TelephoneNumber" class="form-control" />
-                <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
-            </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <label asp-for="Cpf" class="control-label"></label>
-                <input asp-for="Cpf" class="form-control" />
-                <span asp-validation-for="Cpf" class="text-danger"></span>
-            </div>
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="District" class="control-label"></label>
+                        <input asp-for="District" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="District" class="text-danger"></span>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="BirthDate" class="control-label"></label>
-                <input asp-for="BirthDate" class="form-control" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
-            </div>
+                <div class="row">
+                    <div class="col-sm-8 form-group">
+                        <label asp-for="Street" class="control-label"></label>
+                        <input asp-for="Street" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="Street" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
+                    <div class="col-sm-4 form-group">
+                        <label asp-for="HouseNumber" class="control-label"></label>
+                        <input asp-for="HouseNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="HouseNumber" class="text-danger"></span>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="Deficiency" class="control-label"></label>
-                <input asp-for="Deficiency" class="form-control" />
-                <span asp-validation-for="Deficiency" class="text-danger"></span>
-            </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="Complement" class="control-label"></label>
+                        <input asp-for="Complement" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="Complement" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <label asp-for="SalaryExpectation" class="control-label"></label>
-                <input asp-for="SalaryExpectation" class="form-control" />
-                <span asp-validation-for="SalaryExpectation" class="text-danger"></span>
-            </div>
+                    <div class="col-sm-6 form-group">
+                        <label asp-for="CellphoneNumber" class="control-label"></label>
+                        <input asp-for="CellphoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                        <span asp-validation-for="CellphoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="EmploymentStatus" class="control-label"></label>
-                <input asp-for="EmploymentStatus" class="form-control" />
-                <span asp-validation-for="EmploymentStatus" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="TelephoneNumber" class="control-label"></label>
+                    <input asp-for="TelephoneNumber" class="form-control py-2 rounded-pill mr-1 pr-5" />
+                    <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+                </div>                
 
-            <div class="form-group">
-                <label asp-for="ActualRole" class="control-label"></label>
-                <input asp-for="ActualRole" class="form-control" />
-                <span asp-validation-for="ActualRole" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" name="" value="Submit" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="button_success">
+                    <input type="submit" name="" value="Finalizar Cadastro" class="btn btn-lg  submit-button" asp-controller="Candidate" asp-action="Create"/>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar para lista de empresas</a>
-</div>
+<script>
+    inputStyleField();
+</script>
 
 @section Scripts {
     @{
