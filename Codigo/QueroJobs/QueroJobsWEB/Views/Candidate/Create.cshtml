@@ -98,10 +98,10 @@
                     <div class="col-sm-6 form-group">
                         <label asp-for="Gender" class="control-label"></label>
                         <select asp-for="Gender" class="form-control">
-                            <option value=""></option>
+                            <option value="X"></option>
                             <option value="F">Feminino</option>
                             <option value="M">Masculino</option>
-                            <option value="">Prefiro não dizer</option>
+                            <option value="X">Prefiro não dizer</option>
                         </select>
                         <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
@@ -195,6 +195,7 @@
 
 <script>
     inputStyleField();
+    paintFooter('var(--azul-escuro)');
 </script>
 
 @section Scripts {

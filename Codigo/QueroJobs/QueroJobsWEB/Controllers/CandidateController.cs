@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;

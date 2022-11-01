@@ -12,6 +12,12 @@
 
 .active, .collapsible:hover {
     background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1850px;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .content {
@@ -20,4 +26,17 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
+}
+
+hr {
+    border: none;
+    background-color: #09B7CE;
+    height: 100px;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.menu {
+    
+    /*Flex wrap torna o site um pouco mais responsivo fazendo a quebra de items*/
 }
