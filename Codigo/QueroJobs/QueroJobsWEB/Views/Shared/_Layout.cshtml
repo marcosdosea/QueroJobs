@@ -25,11 +25,24 @@
 			}
 		)
 	}
+
+	//Altera a cor do header de acordo com a página 
+	function paintHeader(color){
+		let header = document.getElementById('head');
+		header.style.backgroundColor = color;
+	}
+
+	
+	function paintFooter(color){
+		let footer = document.getElementById('foot');
+		console.log(footer);
+		footer.style.backgroundColor = color;
+	}
 </script>
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
+		<nav id="head" class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
 			<div class="container-fluid">
 				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
 					<div class="circle">
@@ -39,17 +52,17 @@
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
 						<li class="nav-item" id="admin-item">
-							<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">	
 								<p>ADMIN</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Candidate" asp-action="Create">
 								<p>PARA VOCÊ</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="" asp-action="Index">
+							<a class="nav-link" asp-area="" asp-controller="Company" asp-action="Create">
 								<p>PARA EMPRESAS</p>
 							</a>
 						</li>
@@ -72,9 +85,9 @@
 		</nav>
 	</header>
 
-	@RenderBody()
+	
 
-	<footer class="footer text-muted" style="background-color: #09B7CE;">
+	<footer id="foot" class="footer">
 		<div class="container">
 			<p class="text-justify" style="text-align: center; color: white;">QueroJobs - 2022</p>
 		</div>
@@ -83,6 +96,7 @@
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	@await RenderSectionAsync("Scripts", required: false)
+	@RenderBody()
 </body>
 
 </html>
