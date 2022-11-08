@@ -1,0 +1,29 @@
+.apresentation {
+    background-color: var(--azul);
+    width:100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20%;
+    overflow-y: visible;
+    padding-bottom: 20%;
+}
+
+
+.form {
+    margin: 0 auto;
+}
+
+.form-group {
+    padding-top: 10px;
+}
+
+.space_form {
+    min-height: 100vh;
+    margin-left: 50%;
+}
