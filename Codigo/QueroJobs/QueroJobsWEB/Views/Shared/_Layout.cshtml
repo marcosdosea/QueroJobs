@@ -69,6 +69,7 @@
 					</ul>
 				</div>
 
+				<partial name="_LoginPartial" />
 				<a class="navbar-brand" asp-area="" asp-controller="" asp-action="">
 					<div class="circle">
 						<p>INICIAR SESSÃO</p>
@@ -85,7 +86,7 @@
 		</nav>
 	</header>
 
-	
+	@RenderBody()
 
 	<footer id="foot" class="footer">
 		<div class="container">
@@ -96,7 +97,6 @@
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	@await RenderSectionAsync("Scripts", required: false)
-	@RenderBody()
 </body>
 
 </html>

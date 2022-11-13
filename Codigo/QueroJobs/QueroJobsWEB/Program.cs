@@ -1,14 +1,21 @@
 using Core;
 using Core.Services;
 using Microsoft.EntityFrameworkCore;
+using QueroJobsWEB.Areas.Identity.Data;
 using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("QueroJobsContextConnection") ?? throw new InvalidOperationException("Connection string 'QueroJobsContextConnection' not found.");
 
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<QueroJobsContext>(
                 options => options.UseMySQL("server=localhost;port=3306;user=root;password=123456;database=querojobs"));
+
+builder.Services.AddDefaultIdentity<UsersIdentity>(
+    options =>
+        options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<QueroJobsContext>();
 
 builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
@@ -41,10 +48,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();
