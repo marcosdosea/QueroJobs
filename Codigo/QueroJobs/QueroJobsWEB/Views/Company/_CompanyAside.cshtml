@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Empresas";
+    ViewData["Logo"] = "Quero Jobs";
+    ViewData["TitleForm"] = "Cadastro";
+    ViewData["TitleScreen"] = "Login para empresas";
+}
+
+<div class="col-sm-6 apresentation">
+    <div class="row logo">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3 word_style">
+            <p>@ViewData["Logo"]</p>
+        </div>
+        <div class="col-sm-7"></div>
+    </div>
+    <div class="row title_screen">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3 word_style">
+            <p>@ViewData["TitleScreen"]</p>
+        </div>
+        <div class="col-sm-7"></div>
+    </div>
+    <div class="row text_background_first">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4 word_style">
+            <p>@ViewData["logo"]</p>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .apresentation {
+        background-color: var(--azul);
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20%;
+        overflow-y: visible;
+        padding-bottom: 20%;
+    }
+
+    .logo {
+        color: var(--branco);
+        text-align: left;
+        font-size: 7vw;
+        font-weight: 900;
+    }
+
+    .title_screen {
+        color: var(--branco);
+        text-align: left;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .word_style {
+        line-height: 100%;
+        margin-top: 9%;
+    }
+
+    .text_background_first {
+        color: rgba(255, 255, 255, 0.15);
+        font-size: 5vw;
+        font-weight: 900;
+    }
+
+    @@media only screen and (max-width: 1000px) {
+        .apresentation {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+</style>
