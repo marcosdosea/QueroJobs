@@ -4,11 +4,10 @@ using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using QueroJobsWEB.Controllers;
 using QueroJobsWEB.Mappers;
 using QueroJobsWEB.Models;
 
-namespace QueroJobsWEBTests.Controllers.Tests;
+namespace QueroJobsWEB.Controllers.Tests;
 
 [TestClass()]
 public class CandidateControllerTests

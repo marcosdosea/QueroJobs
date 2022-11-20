@@ -17,7 +17,7 @@ public class AdminControllerTests
     [TestInitialize]
     public void Initialize()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
         return;
         // Arrange
         var mockService = new Mock<IInstitutionService>();
@@ -45,157 +45,157 @@ public class AdminControllerTests
     [TestMethod()]
     public void AdminControllerTest()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
     public void IndexTest()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
     public void CompanyDetailsTest()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyCreateTest()
+    public void CompanyCreateTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyCreateTest1()
+    public void CompanyCreateTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyEditTest()
+    public void CompanyEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyEditTest1()
+    public void CompanyEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyDeleteTest()
+    public void CompanyDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompanyDeleteTest1()
+    public void CompanyDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
     public void CandidateDetailsTest()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CandidateEditTest()
+    public void CandidateEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CandidateEditTest1()
+    public void CandidateEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CandidateDeleteTest()
+    public void CandidateDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CandidateDeleteTest1()
+    public void CandidateDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceCreateTest()
+    public void CompetenceCreateTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceCreateTest1()
+    public void CompetenceCreateTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceEditTest()
+    public void CompetenceEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceEditTest1()
+    public void CompetenceEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceDeleteTest()
+    public void CompetenceDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CompetenceDeleteTest1()
+    public void CompetenceDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseCreateTest()
+    public void CourseCreateTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseCreateTest1()
+    public void CourseCreateTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseEditTest()
+    public void CourseEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseEditTest1()
+    public void CourseEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseDeleteTest()
+    public void CourseDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CourseDeleteTest1()
+    public void CourseDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
@@ -210,7 +210,7 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionCreateTest_Valid()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
 
         /*
         // Act
@@ -226,7 +226,7 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
 
         /*
         // Act
@@ -245,7 +245,7 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
 
         /*
         // Act
@@ -261,7 +261,7 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
 
         /*
         // Act
@@ -277,7 +277,7 @@ public class AdminControllerTests
     [TestMethod()]
     public void InstitutionDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
 
         /*
         // Act
@@ -291,75 +291,75 @@ public class AdminControllerTests
     }
 
     [TestMethod()]
-    public void RoleCreateTest()
+    public void RoleCreateTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void RoleCreateTest1()
+    public void RoleCreateTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void RoleEditTest()
+    public void RoleEditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void RoleEditTest1()
+    public void RoleEditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void RoleDeleteTest()
+    public void RoleDeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void RoleDeleteTest1()
+    public void RoleDeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CreateTest()
+    public void CreateTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void CreateTest1()
+    public void CreateTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void EditTest()
+    public void EditTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void EditTest1()
+    public void EditTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void DeleteTest()
+    public void DeleteTest_Get()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     [TestMethod()]
-    public void DeleteTest1()
+    public void DeleteTest_Post()
     {
-        Assert.Fail();
+        Assert.Inconclusive();
     }
 
     private InstitutionModel GetNewInstitution()
