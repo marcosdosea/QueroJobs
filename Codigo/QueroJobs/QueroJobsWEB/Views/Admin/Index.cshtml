@@ -1,10 +1,10 @@
 ﻿@model QueroJobsWEB.Models.AdminModel
 
 @{
-	ViewData["Title"] = "Configurações";
+	ViewData["Title"] = "CONFIGURAÇÕES";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="titulo_centro">@ViewData["Title"]</h1>
 
 <head>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> 
@@ -36,6 +36,12 @@
 	</table>
 </div>
 
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="+ Adicionar"/>
+	<input class="admin-button-update" type="submit" value=" Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="- Remover"/>
+</div>
+
 <hr />
 
 <button class="collapsible">Candidatos</button>
@@ -60,6 +66,13 @@
 	</table>
 </div>
 
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="+ Adicionar"/>
+	<input class="admin-button-update" type="submit" value=" Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="- Remover"/>
+</div>
+
+
 <hr />
 
 <button class="collapsible">Competências</button>
@@ -83,6 +96,13 @@
 	</table>
 </div>
 
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="+ Adicionar"/>
+	<input class="admin-button-update" type="submit" value="  Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="- Remover"/>
+</div>
+
+
 <hr />
 
 <button class="collapsible">Cursos</button>
@@ -104,6 +124,12 @@
 			}
 		</tbody>
 	</table>
+</div>
+
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="+ Adicionar"/>
+	<input class="admin-button-update" type="submit" value=" Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="- Remover"/>
 </div>
 
 <hr />
@@ -129,6 +155,12 @@
 	</table>
 </div>
 
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="+ Adicionar"/>
+	<input class="admin-button-update" type="submit" value=" Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="- Remover"/>
+</div>
+
 <hr class="admin"/>
 
 <button class="collapsible">Cargos</button>
@@ -151,6 +183,14 @@
 		</tbody>
 	</table>
 </div>
+
+<div class="button_container my-5">
+	<input class="admin-button-add" type="submit" value="Adicionar"/>
+	<input class="admin-button-update" type="submit" value="Atualizar"/>
+	<input class="admin-button-remove" type="submit" value="Remover"/>
+</div>
+
+
 <hr />
 
 @*<p>Collapsible Set:</p>
