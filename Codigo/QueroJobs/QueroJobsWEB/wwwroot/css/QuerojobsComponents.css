@@ -5,6 +5,30 @@
     font-size: 1.4rem;
 }
 
+.admin-button-add {
+    background-color: var(--verde);
+    border-radius: 23px;
+    border: none;
+    font-size: 1.0rem;
+    width: 100px;
+}
+
+.admin-button-update {
+    background-color: var(--azul-claro);
+    border-radius: 23px;
+    border: none;
+    font-size: 1.0rem;
+    width: 100px;
+}
+
+.admin-button-remove {
+    background-color: var(--vermelho-claro);
+    border-radius: 23px;
+    border: none;
+    font-size: 1.0rem;
+    width: 100px;
+}
+
 .button_success {
     padding: 5px;
     display: flex;
@@ -12,6 +36,7 @@
     justify-content: center;
 }
 
+}
 
 #textarea-description {
     border-radius: 25px;
