@@ -1,14 +1,59 @@
 using Core;
 using Core.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using QueroJobsWEB.Areas.Identity.Data;
 using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("QueroJobsContextConnection") ?? throw new InvalidOperationException("Connection string 'QueroJobsContextConnection' not found.");
 
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<QueroJobsContext>(
-                options => options.UseMySQL("server=localhost;port=3306;user=root;password=123456;database=querojobs"));
+                options => options.UseMySQL(connectionString));
+
+builder.Services.AddDbContext<IdentityContext>(
+                options => options.UseMySQL(connectionString));
+
+builder.Services.AddDefaultIdentity<UsersIdentity>(options =>
+{
+    // SignIn settings
+    options.SignIn.RequireConfirmedAccount = false;
+    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+
+    // Password settings
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+
+    // Default User settings.
+    options.User.AllowedUserNameCharacters =
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = false;
+
+    // Default Lockout settings
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.AllowedForNewUsers = true;
+}).AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+    options.Cookie.Name = "YourAppCookieName";
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+    options.LoginPath = "/Identity/Account/Login";
+    // ReturnUrlParameter requires 
+    options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+    options.SlidingExpiration = true;
+});
 
 builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
@@ -41,10 +86,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

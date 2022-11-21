@@ -68,30 +68,12 @@
 						</li>
 					</ul>
 				</div>
-
-				<a class="navbar-brand" asp-area="" asp-controller="" asp-action="">
-					<div class="circle">
-						<p>INICIAR SESSÃO</p>
-					</div>
-				</a>
-
-				<a class="navbar-brand" asp-area="" asp-controller="" asp-action="">
-					<div class="circle">
-						<p>CADASTRE-SE</p>
-					</div>
-				</a>
-
-				<a class="navbar-brand" asp-area="" asp-controller="Candidate" asp-action="Login">
-					<div class="circle">
-						<p>LOGIN</p>
-					</div>
-				</a>
-
+				<partial name="_LoginPartial" />
 			</div>
 		</nav>
 	</header>
 
-	
+	@RenderBody()
 
 	<footer id="foot" class="footer">
 		<div class="container">
@@ -102,7 +84,6 @@
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	@await RenderSectionAsync("Scripts", required: false)
-	@RenderBody()
 </body>
 
 </html>
