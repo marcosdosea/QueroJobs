@@ -292,4 +292,5 @@ public class CandidateController : Controller
 
         return View(form);
     }
+
 }

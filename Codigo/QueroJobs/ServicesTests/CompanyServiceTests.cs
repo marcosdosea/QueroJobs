@@ -144,7 +144,7 @@ public class CompanyServiceTests
         _companyService.Delete(2).Wait();
         // Assert
         Assert.AreEqual(2, _companyService.GetAll().Result.Count());
-        var autor = _companyService.Get(2).Result;
+        var autor = _companyService.Get(2).Result;  //TOCHANGE
         Assert.AreEqual(null, autor);
     }
 

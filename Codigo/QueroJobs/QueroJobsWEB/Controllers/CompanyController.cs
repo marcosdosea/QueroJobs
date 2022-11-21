@@ -3,6 +3,7 @@ using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
+using Services;
 
 namespace QueroJobsWEB.Controllers;
 
@@ -137,5 +138,21 @@ public class CompanyController : Controller
         await _companyService.Delete(id);
 
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
+    public ActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<ActionResult> Login(LoginCompanyModel loginCompanyModel)
+    {
+
+        // vai ter autenticação aqui
+
+        return View(loginCompanyModel);
     }
 }
