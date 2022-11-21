@@ -158,6 +158,36 @@ public class CandidateController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [HttpGet]
+    public ActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<ActionResult> Login(LoginCandidateModel loginCandidateModel)
+    {
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var candidate = _mapper.Map<Candidate>(loginCandidateModel);
+                await _candidateService.Create(candidate);
+            }
+            catch
+            {
+                return View(loginCandidateModel);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        return View(loginCandidateModel);
+
+    }
+
     [HttpGet("[controller]/form/{idCandidate}")]
     public async Task<ActionResult> Form(int idCandidate)
     {

@@ -1,0 +1,14 @@
+﻿.apresentation {
+    background-color: var(--azul);
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20%;
+    overflow-y: visible;
+    padding-bottom: 20%;
+}
