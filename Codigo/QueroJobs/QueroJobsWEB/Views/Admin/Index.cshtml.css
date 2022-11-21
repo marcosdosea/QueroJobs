@@ -5,9 +5,35 @@
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: Center;
     outline: none;
     font-size: 15px;
+}
+
+.titulo_centro {
+    text-align: center;
+}
+
+.button_container {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.button_update {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_remove {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .active, .collapsible:hover {

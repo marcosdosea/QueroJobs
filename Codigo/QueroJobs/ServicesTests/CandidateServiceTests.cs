@@ -1,9 +1,8 @@
 ﻿using Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Services;
 
-namespace ServicesTests;
+namespace Services.Tests;
 
 [TestClass()]
 public class CandidateServiceTests
