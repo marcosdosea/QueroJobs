@@ -5,9 +5,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using QueroJobsWEB.Areas.Identity.Data;
 using Services;
-using Microsoft.AspNetCore.Identity;
-using QueroJobsWEB.Data;
-using QueroJobsWEB.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("QueroJobsContextConnection") ?? throw new InvalidOperationException("Connection string 'QueroJobsContextConnection' not found.");
