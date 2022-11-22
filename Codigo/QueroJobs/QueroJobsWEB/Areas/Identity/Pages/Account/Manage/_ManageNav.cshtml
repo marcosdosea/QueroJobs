@@ -1,4 +1,4 @@
-﻿@inject SignInManager<QueroJobsWEBUser> SignInManager
+@inject SignInManager<UsersIdentity> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

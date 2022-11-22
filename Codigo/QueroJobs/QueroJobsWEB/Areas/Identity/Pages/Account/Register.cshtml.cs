@@ -1,40 +1,33 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.Logging;
 using QueroJobsWEB.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace QueroJobsWEB.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly IUserStore<QueroJobsWEBUser> _userStore;
-        private readonly IUserEmailStore<QueroJobsWEBUser> _emailStore;
+        private readonly SignInManager<UsersIdentity> _signInManager;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly IUserStore<UsersIdentity> _userStore;
+        private readonly IUserEmailStore<UsersIdentity> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<QueroJobsWEBUser> userManager,
-            IUserStore<QueroJobsWEBUser> userStore,
-            SignInManager<QueroJobsWEBUser> signInManager,
+            UserManager<UsersIdentity> userManager,
+            IUserStore<UsersIdentity> userStore,
+            SignInManager<UsersIdentity> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -155,27 +148,27 @@ namespace QueroJobsWEB.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private QueroJobsWEBUser CreateUser()
+        private UsersIdentity CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<QueroJobsWEBUser>();
+                return Activator.CreateInstance<UsersIdentity>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(QueroJobsWEBUser)}'. " +
-                    $"Ensure that '{nameof(QueroJobsWEBUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(UsersIdentity)}'. " +
+                    $"Ensure that '{nameof(UsersIdentity)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<QueroJobsWEBUser> GetEmailStore()
+        private IUserEmailStore<UsersIdentity> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<QueroJobsWEBUser>)_userStore;
+            return (IUserEmailStore<UsersIdentity>)_userStore;
         }
     }
 }

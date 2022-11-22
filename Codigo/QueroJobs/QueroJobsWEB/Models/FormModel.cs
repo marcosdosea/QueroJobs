@@ -41,19 +41,19 @@ public class FormModel
 
     [Required]
     [Display(Name = "Mês de início")]
-    [Range(1,12)]
+    [Range(1, 12)]
     public int ProfessionalExperienceStartMonth { get; set; }
 
-    [Range(1,12)]
+    [Range(1, 12)]
     [Display(Name = "Mês de Conclusão")]
     public int? ProfessionalExperienceEndMonth { get; set; }
 
     [Required]
-    [Range(1900,2022)]
+    [Range(1900, 2022)]
     [Display(Name = "Ano de início")]
     public int ProfessionalExperienceStartYear { get; set; }
 
-    [Range(1900,2022)]
+    [Range(1900, 2022)]
     [Display(Name = "Ano de Conclusão")]
     public int? ProfessionalExperienceEndYear { get; set; }
 

@@ -1,25 +1,22 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using QueroJobsWEB.Areas.Identity.Data;
 
 namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
 {
     public class TwoFactorAuthenticationModel : PageModel
     {
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly SignInManager<UsersIdentity> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
 
         public TwoFactorAuthenticationModel(
-            UserManager<QueroJobsWEBUser> userManager, SignInManager<QueroJobsWEBUser> signInManager, ILogger<TwoFactorAuthenticationModel> logger)
+            UserManager<UsersIdentity> userManager, SignInManager<UsersIdentity> signInManager, ILogger<TwoFactorAuthenticationModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;

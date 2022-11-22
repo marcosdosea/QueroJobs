@@ -1,25 +1,23 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using QueroJobsWEB.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly SignInManager<UsersIdentity> _signInManager;
 
         public SetPasswordModel(
-            UserManager<QueroJobsWEBUser> userManager,
-            SignInManager<QueroJobsWEBUser> signInManager)
+            UserManager<UsersIdentity> userManager,
+            SignInManager<UsersIdentity> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

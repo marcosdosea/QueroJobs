@@ -1,26 +1,23 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using QueroJobsWEB.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
 {
     public class IndexModel : PageModel
     {
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly SignInManager<UsersIdentity> _signInManager;
 
         public IndexModel(
-            UserManager<QueroJobsWEBUser> userManager,
-            SignInManager<QueroJobsWEBUser> signInManager)
+            UserManager<UsersIdentity> userManager,
+            SignInManager<UsersIdentity> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -61,7 +58,7 @@ namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
-        private async Task LoadAsync(QueroJobsWEBUser user)
+        private async Task LoadAsync(UsersIdentity user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);

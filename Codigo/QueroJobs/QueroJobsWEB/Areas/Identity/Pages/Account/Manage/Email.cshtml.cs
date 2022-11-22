@@ -1,30 +1,28 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using QueroJobsWEB.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
 {
     public class EmailModel : PageModel
     {
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly SignInManager<UsersIdentity> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public EmailModel(
-            UserManager<QueroJobsWEBUser> userManager,
-            SignInManager<QueroJobsWEBUser> signInManager,
+            UserManager<UsersIdentity> userManager,
+            SignInManager<UsersIdentity> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -74,7 +72,7 @@ namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
             public string NewEmail { get; set; }
         }
 
-        private async Task LoadAsync(QueroJobsWEBUser user)
+        private async Task LoadAsync(UsersIdentity user)
         {
             var email = await _userManager.GetEmailAsync(user);
             Email = email;

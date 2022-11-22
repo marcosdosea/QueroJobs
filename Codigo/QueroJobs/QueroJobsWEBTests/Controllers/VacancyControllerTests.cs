@@ -12,7 +12,7 @@ namespace QueroJobsWEB.Controllers.Tests;
 [TestClass()]
 public class VacancyControllerTests
 {
-    
+
     private static VacancyController vacancyController;
 
     [TestInitialize]
@@ -35,7 +35,7 @@ public class VacancyControllerTests
         vacancyController = new VacancyController(mockService.Object, mapper);
     }
 
-   
+
     [TestMethod()]
     public void IndexTest()
     {
@@ -64,7 +64,7 @@ public class VacancyControllerTests
         VacancyModel vacancyModel = (VacancyModel)viewResult.ViewData.Model;
 
         Assert.AreEqual("Engenheiro de Software II", vacancyModel.VacancyName);
-        
+
     }
 
     [TestMethod()]

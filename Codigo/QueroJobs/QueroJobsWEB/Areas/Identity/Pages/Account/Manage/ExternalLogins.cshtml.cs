@@ -1,12 +1,7 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +12,14 @@ namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {
-        private readonly UserManager<QueroJobsWEBUser> _userManager;
-        private readonly SignInManager<QueroJobsWEBUser> _signInManager;
-        private readonly IUserStore<QueroJobsWEBUser> _userStore;
+        private readonly UserManager<UsersIdentity> _userManager;
+        private readonly SignInManager<UsersIdentity> _signInManager;
+        private readonly IUserStore<UsersIdentity> _userStore;
 
         public ExternalLoginsModel(
-            UserManager<QueroJobsWEBUser> userManager,
-            SignInManager<QueroJobsWEBUser> signInManager,
-            IUserStore<QueroJobsWEBUser> userStore)
+            UserManager<UsersIdentity> userManager,
+            SignInManager<UsersIdentity> signInManager,
+            IUserStore<UsersIdentity> userStore)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -70,7 +65,7 @@ namespace QueroJobsWEB.Areas.Identity.Pages.Account.Manage
                 .ToList();
 
             string passwordHash = null;
-            if (_userStore is IUserPasswordStore<QueroJobsWEBUser> userPasswordStore)
+            if (_userStore is IUserPasswordStore<UsersIdentity> userPasswordStore)
             {
                 passwordHash = await userPasswordStore.GetPasswordHashAsync(user, HttpContext.RequestAborted);
             }
