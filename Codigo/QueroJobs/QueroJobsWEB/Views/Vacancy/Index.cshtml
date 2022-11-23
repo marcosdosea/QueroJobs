@@ -21,8 +21,29 @@
     <tbody>
     @foreach (var item in Model) {
         <tr>
+            <section class ="card">
+                <div class="row">
+                    <div class="block">
+                            <img src="https://m.media-amazon.com/images/I/6172VX9HZqS._AC_SX425_.jpg">
+                            @Html.DisplayNameFor(model => model.VacancyName)
+                            @Html.DisplayFor(modelItem => item.Description)
+                    </div>
+                        
+
+                </div>
+                @Html.DisplayFor(modelItem => item.VacancyName)
+                @Html.DisplayFor(modelItem => item.Description)
+                <button> Confirmar vaga </button>
+                <button> Recusar vaga </button>
+            </section>
+            <section class="card">
+                  
+            </section>
             <td>
                 @Html.DisplayFor(modelItem => item.VacancyName)
+                <div>
+
+                </div>
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
@@ -33,3 +54,5 @@
     }
     </tbody>
 </table>
+
+
