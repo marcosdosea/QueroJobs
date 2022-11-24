@@ -7,4 +7,5 @@ public interface IVacancyService
     Task Delete(int idVacancy);
     Task<Vacancy> Get(int idVacancy);
     Task<IEnumerable<Vacancy>> GetAll();
+    Task<IEnumerable<Candidate>> GetAllInterestedsCandidates();
 }
