@@ -1,0 +1,43 @@
+﻿.card {
+    background: rgba(185, 239, 185, 1),
+}
+
+
+.sb {
+    column-count: 3;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+}
+
+.photo {
+    height: 200px;
+    width: 200px;
+}
+
+.salary {
+    left: 370.64px;
+    top: 49.82px;
+}
+
+.block {
+    overflow: hidden;
+    background: #ffff;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+    .block img {
+        width: 75px;
+        height: 75px;
+        float: left;
+        margin: 0 1rem 0 0;
+    }
+
+    .block h2 {
+        margin: 0 0 0.5rem 0;
+    }
+/*NEW STYLES*/
+.block {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+}
