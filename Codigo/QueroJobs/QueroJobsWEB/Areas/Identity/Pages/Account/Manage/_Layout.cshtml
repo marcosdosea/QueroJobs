@@ -1,4 +1,6 @@
-﻿@{
+﻿<link rel="stylesheet" href="~/{APP ASSEMBLY}.styles.css" />
+
+@{
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
         Layout = (string)parentLayout;

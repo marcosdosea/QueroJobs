@@ -64,7 +64,7 @@ builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
 builder.Services.AddTransient<IInstitutionService, InstitutionService>();
 
-
+builder.Services.AddRazorPages();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

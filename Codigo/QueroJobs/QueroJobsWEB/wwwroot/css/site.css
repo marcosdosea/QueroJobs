@@ -7,3 +7,9 @@ body {
     margin-bottom: 60px;
     overflow-x: hidden;
 }
+
+a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: bold;
+}
