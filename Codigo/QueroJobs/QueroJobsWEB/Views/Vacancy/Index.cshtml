@@ -21,38 +21,30 @@
     <tbody>
     @foreach (var item in Model) {
         <tr>
-            <section class ="card">
-                <div class="row">
-                    <div class="block">
-                            <img src="https://m.media-amazon.com/images/I/6172VX9HZqS._AC_SX425_.jpg">
-                            @Html.DisplayNameFor(model => model.VacancyName)
-                            @Html.DisplayFor(modelItem => item.Description)
-                    </div>
-                        
-
-                </div>
-                @Html.DisplayFor(modelItem => item.VacancyName)
-                @Html.DisplayFor(modelItem => item.Description)
-                <button> Confirmar vaga </button>
-                <button> Recusar vaga </button>
-            </section>
-            <section class="card">
-                  
-            </section>
             <td>
-                @Html.DisplayFor(modelItem => item.VacancyName)
-                <div>
-
+                <div class="block">
+                   <img class="photo" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.webp">
+                   <div class="row">
+                        <div class="block sb">
+                            <p>@item.VacancyName</p>
+                            <p>PRESENCIAL</p>
+                        </div>
+                            <div class="block sb">
+                            <p>@item.Description</p>
+                            <p>@item.Salary</p>
+                        </div>
+                        <div class="block sb">
+                        <p>@item.CloseDate</p>
+                        </div>  
+                            <div class="block sb">
+                                @Html.ActionLink("Editar", "Edit", new {id=item.Id})
+                                @Html.ActionLink("Detalhes", "Details", new {id=item.Id})
+                                @Html.ActionLink("Deletar", "Delete", new {id=item.Id})
+                            </div>
+                   </div>
                 </div>
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Detalhes", "Details", new {id=item.Id }) |
-                @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
-            </td>
+               </td>
         </tr>
     }
     </tbody>
 </table>
-
-
