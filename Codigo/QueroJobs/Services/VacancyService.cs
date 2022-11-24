@@ -44,4 +44,9 @@ public class VacancyService : IVacancyService
     {
         return await _queroJobsContext.Vacancies.Select(v => v).ToListAsync();
     }
+
+    public Task<IEnumerable<Candidate>> GetAllInterestedsCandidates()
+    {
+        throw new NotImplementedException(); //TODO Voltar para implementar esse método!
+    }
 }
