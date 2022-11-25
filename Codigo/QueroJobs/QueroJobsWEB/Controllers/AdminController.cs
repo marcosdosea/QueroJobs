@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Core;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
 
 namespace QueroJobsWEB.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ICandidateService _candidateService;
