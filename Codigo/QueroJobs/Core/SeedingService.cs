@@ -230,7 +230,6 @@ public class SeedingService
         Institution institution3 = new Institution { Id = 3, InstitutionName = "Unissal" };
         Institution institution4 = new Institution { Id = 4, InstitutionName = "Estácio" };
 
-
         _queroJobsContext.AddRange(c1, c2, c3);
         _queroJobsContext.AddRange(r1, r2, r3, r4, r5, r6, r7);
         _queroJobsContext.AddRange(v1, v2, v3);

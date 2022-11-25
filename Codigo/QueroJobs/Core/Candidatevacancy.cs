@@ -1,11 +1,13 @@
-﻿#nullable disable
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
 
 namespace Core
 {
     public partial class Candidatevacancy
     {
         public int IdCandidate { get; set; }
-        public DateTime SubmitDate { get; set; }
         public string Situation { get; set; }
         public string Message { get; set; }
         public int IdVacancy { get; set; }
