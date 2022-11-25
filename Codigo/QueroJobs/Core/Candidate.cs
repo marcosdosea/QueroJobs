@@ -1,4 +1,7 @@
-﻿#nullable disable
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
 
 namespace Core
 {
@@ -30,7 +33,7 @@ namespace Core
         public string Gender { get; set; }
         public string Cpf { get; set; }
         public string Deficiency { get; set; }
-        public decimal SalaryExpectation { get; set; }
+        public decimal? SalaryExpectation { get; set; }
         public string EmploymentStatus { get; set; }
         public string ActualRole { get; set; }
         public string Description { get; set; }
