@@ -3,9 +3,11 @@
 ![Pull Requests CLosed](https://img.shields.io/github/issues-pr-closed/marcosdosea/QueroJObs?color=green&style=for-the-badge)
 ![Issues Fechadas](https://img.shields.io/github/issues-closed-raw/marcosdosea/QueroJobs?color=purple&style=for-the-badge)
 
-![C#](https://img.shields.io/badge/Csharp-%23007ACC.svg?style=for-the-badge&logo=Csharp&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![C#](https://img.shields.io/badge/Csharp-%23007ACC.svg?style=for-the-badge&logo=Csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%23316192.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 <h1 align=center> QueroJobs </h1>
@@ -19,7 +21,6 @@
  <a href="#objetivo"> :heavy_check_mark: O que temos a oferecer? </a> |
  <a href="#solucao"> :chart_with_upwards_trend: Nossa solução </a>  <br><br>
  <a href="#usuarios"> :raising_hand_man: Usuários</a> | |
- <a href="#gestores"> :woman: Gestores</a>  <br><br>
  <a href="#autor"> 	:copyright: Realizadores</a>
 </p>
 

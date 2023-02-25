@@ -1,4 +1,5 @@
 ﻿using Core;
+using Core.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -7,8 +8,8 @@ namespace Services.Tests;
 [TestClass()]
 public class VacancyServiceTests
 {
-    private QueroJobsContext _queroJobsContext;
-    private VacancyService _vacancyService;
+    private QueroJobsContext _context;
+    private IVacancyService _vacancyService;
 
     [TestInitialize]
     public void Initialize()
@@ -17,10 +18,9 @@ public class VacancyServiceTests
         var builder = new DbContextOptionsBuilder<QueroJobsContext>();
         builder.UseInMemoryDatabase("QueroJobs");
         var options = builder.Options;
-
-        _queroJobsContext = new QueroJobsContext(options);
-        _queroJobsContext.Database.EnsureDeleted();
-        _queroJobsContext.Database.EnsureCreated();
+        _context = new QueroJobsContext(options);
+        _context.Database.EnsureDeleted();
+        _context.Database.EnsureCreated();
         var vacancies = new List<Vacancy>
         {
              new Vacancy
@@ -40,10 +40,10 @@ public class VacancyServiceTests
                 },
         };
 
-        _queroJobsContext.AddRange(vacancies);
-        _queroJobsContext.SaveChanges();
+        _context.AddRange(vacancies);
+        _context.SaveChanges();
 
-        _vacancyService = new VacancyService(_queroJobsContext);
+        _vacancyService = new VacancyService(_context);
     }
 
     [TestMethod()]

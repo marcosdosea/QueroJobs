@@ -1,12 +1,13 @@
 using AutoMapper;
 using Core;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
-using Services;
 
 namespace QueroJobsWEB.Controllers;
 
+[Authorize(Roles = "Empresa")]
 public class CompanyController : Controller
 {
     private readonly ICompanyService _companyService;

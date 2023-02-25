@@ -40,7 +40,7 @@ builder.Services.AddDefaultIdentity<UsersIdentity>(options =>
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.AllowedForNewUsers = true;
-})  .AddRoles<IdentityRole>()
+}).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<IdentityContext>();
 
 builder.Services.ConfigureApplicationCookie(options =>
@@ -64,7 +64,7 @@ builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<IVacancyService, VacancyService>();
 builder.Services.AddTransient<IInstitutionService, InstitutionService>();
 
-
+builder.Services.AddRazorPages();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -85,6 +85,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthentication();
 app.UseAuthorization();

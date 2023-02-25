@@ -48,11 +48,6 @@ public class CompanyService : ICompanyService
         return await _queroJobsContext.Companies.ToListAsync();
     }
 
-    public Task<IEnumerable<Candidate>> GetAllInterestedsCandidates()
-    {
-        throw new NotImplementedException(); //TODO Voltar para implementar esse método!
-    }
-
     public async Task UpdateCompanyNameById(int id, string corporateName)
     {
         var company = await _queroJobsContext.Companies.FirstOrDefaultAsync(c => c.Id == id);
