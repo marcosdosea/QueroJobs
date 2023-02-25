@@ -26,17 +26,50 @@ public class VacancyServiceTests
              new Vacancy
                 {
                     Id = 1,
-                    VacancyName = "Manicure"
+                    IdCompany = 1,
+                    IdRole = 1,
+                    VacancyName = "DevWeb Trainne",
+                    Salary = 0,
+                    OpenDate = DateTime.UtcNow,
+                    CloseDate = DateTime.UtcNow.AddDays(1),
+                    Description = "Lorem ipsum",
+                    Location = "UFS",
+                    Modality = "REMOTE",
+                    Situation = "OPEN",
+                    Workload = 2,
+                    Quantity = 20
                 },
                 new Vacancy
                 {
                     Id = 2,
-                    VacancyName = "Motorista"
+                    IdCompany = 3,
+                    IdRole = 2,
+                    VacancyName = "Engenheiro De Software III",
+                    Salary = 8000,
+                    OpenDate = DateTime.UtcNow,
+                    CloseDate = DateTime.UtcNow.AddDays(10),
+                    Description = "Lorem ipsum",
+                    Location = "Casa de Dósea",
+                    Modality = "PRESENTIAL",
+                    Situation = "OPEN",
+                    Workload = 8,
+                    Quantity = 1
                 },
                 new Vacancy
                 {
                     Id = 3,
-                    VacancyName = "Marceneiro"
+                    IdCompany = 2,
+                    IdRole = 3,
+                    VacancyName = "Designer UX/UI",
+                    Salary = 0,
+                    OpenDate = DateTime.UtcNow,
+                    CloseDate = DateTime.UtcNow.AddDays(5),
+                    Description = "Lorem ipsum",
+                    Location = "Centro de itabaiana",
+                    Modality = "HYBRID",
+                    Situation = "OPEN",
+                    Workload = 4,
+                    Quantity = 2
                 },
         };
 
@@ -53,7 +86,18 @@ public class VacancyServiceTests
         _vacancyService.Create(new Vacancy()
         {
             Id = 4,
-            VacancyName = "Análista de dados"
+            VacancyName = "Análista de dados",
+            IdCompany = 3,
+            IdRole = 1,
+            Salary = 2500,
+            OpenDate = DateTime.UtcNow,
+            CloseDate = DateTime.UtcNow.AddDays(1),
+            Description = "Lorem ipsum",
+            Location = "UFS",
+            Modality = "REMOTE",
+            Situation = "OPEN",
+            Workload = 2,
+            Quantity = 20
         }).Wait();
 
         // Assert
@@ -96,7 +140,7 @@ public class VacancyServiceTests
 
         // Assert
         Assert.IsNotNull(vacancy);
-        Assert.AreEqual("Manicure", vacancy.VacancyName);
+        Assert.AreEqual("DevWeb Trainne", vacancy.VacancyName);
     }
 
     [TestMethod()]
@@ -110,6 +154,6 @@ public class VacancyServiceTests
         Assert.IsNotNull(vacancyList);
         Assert.AreEqual(3, vacancyList.Count());
         Assert.AreEqual(1, vacancyList.First().Id);
-        Assert.AreEqual("Manicure", vacancyList.First().VacancyName);
+        Assert.AreEqual("DevWeb Trainne", vacancyList.First().VacancyName);
     }
 }
