@@ -61,7 +61,7 @@ public class CandidateControllerTests
         Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(CandidateModel));
         CandidateModel candidateModel = (CandidateModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("Maria Milena de Oliveira Souza", candidateModel.Name);
+        Assert.AreEqual("Milena", candidateModel.Name);
         Assert.AreEqual("milena@gmail.com", candidateModel.Email);
     }
 
@@ -116,7 +116,7 @@ public class CandidateControllerTests
         Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(CandidateModel));
         CandidateModel candidateModel = (CandidateModel)viewResult.ViewData.Model;
 
-        Assert.AreEqual("Maria Milena de Oliveira Souza", candidateModel.Name);
+        Assert.AreEqual("Milena", candidateModel.Name);
         Assert.AreEqual("milena@gmail.com", candidateModel.Email);
     }
 
@@ -164,21 +164,21 @@ public class CandidateControllerTests
         return new CandidateModel
         {
             Id = 1,
-            Name = "Maria Milena de Oliveira Souza",
+            Name = "Milena",
             Email = "milena@gmail.com",
-            Cep = "49550-000",
+            Cep = "4955-000",
             Country = "Brasil",
             State = "SE",
             City = "Carira",
             District = "Centro",
-            Street = "Rua Silvino Braz da Silva",
+            Street = "Rua",
             HouseNumber = "233",
             Complement = "Casa",
             CellphoneNumber = "79981341962",
-            TelephoneNumber = "79981341962",
-            BirthDate = new DateTime(1998, 9, 6),
+            TelephoneNumber = "",
+            BirthDate = DateTime.UtcNow,
             Gender = "F",
-            Cpf = "96677758010",
+            Cpf = "123456789",
             Deficiency = "Não se aplica",
             SalaryExpectation = 1000,
             EmploymentStatus = "FREELANCE",
@@ -192,21 +192,21 @@ public class CandidateControllerTests
         return new CandidateModel
         {
             Id = 1,
-            Name = "Maria Milena de Oliveira Souza",
+            Name = "Milena",
             Email = "milena@gmail.com",
-            Cep = "49550-000",
+            Cep = "4955-000",
             Country = "Brasil",
             State = "SE",
             City = "Carira",
             District = "Centro",
-            Street = "Rua Silvino Braz da Silva",
+            Street = "Rua",
             HouseNumber = "233",
             Complement = "Casa",
             CellphoneNumber = "79981341962",
-            TelephoneNumber = "79981341962",
-            BirthDate = new DateTime(1998, 9, 6),
+            TelephoneNumber = "",
+            BirthDate = DateTime.UtcNow,
             Gender = "F",
-            Cpf = "96677758010",
+            Cpf = "123456789",
             Deficiency = "Não se aplica",
             SalaryExpectation = 1000,
             EmploymentStatus = "FREELANCE",
@@ -220,21 +220,21 @@ public class CandidateControllerTests
         return new Candidate
         {
             Id = 1,
-            Name = "Maria Milena de Oliveira Souza",
+            Name = "Milena",
             Email = "milena@gmail.com",
-            Cep = "49550-000",
+            Cep = "4955-000",
             Country = "Brasil",
             State = "SE",
             City = "Carira",
             District = "Centro",
-            Street = "Rua Silvino Braz da Silva",
+            Street = "Rua",
             HouseNumber = "233",
             Complement = "Casa",
             CellphoneNumber = "79981341962",
-            TelephoneNumber = "79981341962",
-            BirthDate = new DateTime(1998, 9, 6),
+            TelephoneNumber = "",
+            BirthDate = DateTime.UtcNow,
             Gender = "F",
-            Cpf = "96677758010",
+            Cpf = "123456789",
             Deficiency = "Não se aplica",
             SalaryExpectation = 1000,
             EmploymentStatus = "FREELANCE",
@@ -250,21 +250,21 @@ public class CandidateControllerTests
             new Candidate
             {
                 Id = 1,
-                Name = "Maria Milena de Oliveira Souza",
+                Name = "Milena",
                 Email = "milena@gmail.com",
-                Cep = "49550-000",
+                Cep = "4955-000",
                 Country = "Brasil",
                 State = "SE",
                 City = "Carira",
                 District = "Centro",
-                Street = "Rua Silvino Braz da Silva",
+                Street = "Rua",
                 HouseNumber = "233",
                 Complement = "Casa",
                 CellphoneNumber = "79981341962",
-                TelephoneNumber = "79981341962",
-                BirthDate = new DateTime(1998, 9, 6),
+                TelephoneNumber = "",
+                BirthDate = DateTime.UtcNow,
                 Gender = "F",
-                Cpf = "96677758010",
+                Cpf = "123456789",
                 Deficiency = "Não se aplica",
                 SalaryExpectation = 1000,
                 EmploymentStatus = "FREELANCE",
@@ -274,23 +274,23 @@ public class CandidateControllerTests
             new Candidate
             {
                 Id = 2,
-                Name = "Ericles Dos Santos",
-                Email = "RatoDeAcademia@gmail.com",
-                Cep = "49550-000",
+                Name = "Eri",
+                Email = "eri@gmail.com",
+                Cep = "4955-000",
                 Country = "USA",
                 State = "SE",
                 City = "Itabaiana",
                 District = "Centro",
-                Street = "Rua Montero",
+                Street = "Rua",
                 HouseNumber = "233",
                 Complement = "Casa",
-                CellphoneNumber = "79912345678",
-                TelephoneNumber = "79912345678",
-                BirthDate = new DateTime(1998, 12, 25),
+                CellphoneNumber = "7912345678",
+                TelephoneNumber = "",
+                BirthDate = DateTime.UtcNow,
                 Gender = "M",
-                Cpf = "66755209031",
+                Cpf = "1234569",
                 Deficiency = "Não se aplica",
-                SalaryExpectation = 4000,
+                SalaryExpectation = 1000,
                 EmploymentStatus = "FREELANCE",
                 ActualRole = "DBA",
                 Description = "Algo sobre mim"
