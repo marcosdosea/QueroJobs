@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Core;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using QueroJobsWEB.Models;
@@ -29,6 +28,6 @@ public class InterestedCandidatesController : Controller
 
         var candidatesModel = _mapper.Map<List<CandidateModel>>(candidates);
 
-        return View(candidatesModel);       
+        return View(candidatesModel);
     }
 }
