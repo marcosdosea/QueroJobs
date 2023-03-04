@@ -12,7 +12,7 @@ namespace QueroJobsWEB.Controllers.Tests;
 [TestClass()]
 public class AdminControllerTests
 {
-    private static AdminController adminController;
+    private static AdminController adminController; //TODO
 
     [TestInitialize]
     public void Initialize()
