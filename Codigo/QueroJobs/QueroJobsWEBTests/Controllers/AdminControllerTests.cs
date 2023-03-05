@@ -367,7 +367,7 @@ public class AdminControllerTests
         return new InstitutionModel
         {
             Id = 1,
-            InstitutionName = "Oxford"
+            InstitutionName = "Massachusetts Institute of Technology - MIT"
         };
     }
 
@@ -376,7 +376,7 @@ public class AdminControllerTests
         return new Institution
         {
             Id = 1,
-            InstitutionName = "Oxford"
+            InstitutionName = "Massachusetts Institute of Technology - MIT"
         };
     }
 
@@ -385,7 +385,7 @@ public class AdminControllerTests
         return new InstitutionModel
         {
             Id = 1,
-            InstitutionName = "Oxford"
+            InstitutionName = "Massachusetts Institute of Technology - MIT"
         };
     }
 
@@ -396,7 +396,7 @@ public class AdminControllerTests
             new Institution
             {
                 Id = 1,
-                InstitutionName = "Oxford"
+                InstitutionName = "Massachusetts Institute of Technology - MIT"
             },
             new Institution
             {
