@@ -20,23 +20,6 @@ INSERT INTO `aspnetroles` VALUES
   ('3','Candidato','Candidato',NULL);
 
 --
--- Table structure for table `aspnetuserroles`
---
-/*TABLE `aspnetuserroles` (
-  `UserId` varchar(767) NOT NULL,
-  `RoleId` varchar(767) NOT NULL,
-  PRIMARY KEY (`UserId`,`RoleId`),
-  KEY `IX_AspNetUserRoles_RoleId` (`RoleId`),
-  CONSTRAINT `FK_AspNetUserRoles_AspNetRoles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `aspnetroles` (`Id`) ON DELETE CASCADE,
-  CONSTRAINT `FK_AspNetUserRoles_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `aspnetusers` (`Id`) ON DELETE CASCADE
-)
-*/
-INSERT INTO `aspnetuserroles` VALUES 
-  ('b788de87-1754-48ae-9e29-10109d5bcd3d','1'), -- Admin
-  ('688e51e9-4e01-46af-b4af-befe4223f21a','2'), -- Empresa
-  ('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','3'); -- Candidato
-
---
 -- Table structure for table `aspnetusers`
 --
 /*TABLE `aspnetusers` (
@@ -67,6 +50,22 @@ INSERT INTO `aspnetusers` VALUES
 
 ('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','candidato@gmail.com','CANDIDATO@GMAIL.COM','candidato@gmail.com','CANDIDATO@GMAIL.COM',_binary '\0','AQAAAAEAACcQAAAAEGK88U7DKX5qYhKWQLcCq0MYmK6FwowkvC9MtZXDeziYQ8BZaGRn8C5zu0YGlgWzyg==','V6GFLK5YWXXRIFAUBU35PWU5YKEQ4JFB','21d9f595-f908-4616-b877-ba7abd8a0808',NULL,_binary '\0',_binary '\0',NULL,_binary '',0);
 
+--
+-- Table structure for table `aspnetuserroles`
+--
+/*TABLE `aspnetuserroles` (
+  `UserId` varchar(767) NOT NULL,
+  `RoleId` varchar(767) NOT NULL,
+  PRIMARY KEY (`UserId`,`RoleId`),
+  KEY `IX_AspNetUserRoles_RoleId` (`RoleId`),
+  CONSTRAINT `FK_AspNetUserRoles_AspNetRoles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `aspnetroles` (`Id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_AspNetUserRoles_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `aspnetusers` (`Id`) ON DELETE CASCADE
+)
+*/
+INSERT INTO `aspnetuserroles` VALUES 
+  ('b788de87-1754-48ae-9e29-10109d5bcd3d','1'), -- Admin
+  ('688e51e9-4e01-46af-b4af-befe4223f21a','2'), -- Empresa
+  ('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','3'); -- Candidato
 
 -- Senha para admin é Admin@123
 -- Senha para empresa é Empresa@123
