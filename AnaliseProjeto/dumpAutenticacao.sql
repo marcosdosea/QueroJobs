@@ -1,65 +1,45 @@
+-- Senha para admin é Admin@123
+-- Senha para empresa é Empresa@123
+-- Senha para candidato é Candidato@123
+
 --
 -- Table structure for table `aspnetroles`
 --
-
-DROP TABLE IF EXISTS `aspnetroles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `aspnetroles` (
+/*TABLE `aspnetroles` (
   `Id` varchar(767) NOT NULL,
   `Name` varchar(256) DEFAULT NULL,
   `NormalizedName` varchar(256) DEFAULT NULL,
   `ConcurrencyStamp` text,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `RoleNameIndex` (`NormalizedName`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `aspnetroles`
---
-
-LOCK TABLES `aspnetroles` WRITE;
-/*!40000 ALTER TABLE `aspnetroles` DISABLE KEYS */;
-INSERT INTO `aspnetroles` VALUES ('1','Admin','Admin',NULL),('2','Empresa','Empresa',NULL);
-/*!40000 ALTER TABLE `aspnetroles` ENABLE KEYS */;
-UNLOCK TABLES;
+)
+*/
+INSERT INTO `aspnetroles` VALUES 
+  ('1','Admin','Admin',NULL),
+  ('2','Empresa','Empresa',NULL),
+  ('3','Candidato','Candidato',NULL);
 
 --
 -- Table structure for table `aspnetuserroles`
 --
-
-DROP TABLE IF EXISTS `aspnetuserroles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `aspnetuserroles` (
+/*TABLE `aspnetuserroles` (
   `UserId` varchar(767) NOT NULL,
   `RoleId` varchar(767) NOT NULL,
   PRIMARY KEY (`UserId`,`RoleId`),
   KEY `IX_AspNetUserRoles_RoleId` (`RoleId`),
   CONSTRAINT `FK_AspNetUserRoles_AspNetRoles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `aspnetroles` (`Id`) ON DELETE CASCADE,
   CONSTRAINT `FK_AspNetUserRoles_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `aspnetusers` (`Id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `aspnetuserroles`
---
-
-LOCK TABLES `aspnetuserroles` WRITE;
-/*!40000 ALTER TABLE `aspnetuserroles` DISABLE KEYS */;
-INSERT INTO `aspnetuserroles` VALUES ('688e51e9-4e01-46af-b4af-befe4223f21a','1'),('e96b10f4-2295-49fe-be9b-c5e9afa8b555','2');
-/*!40000 ALTER TABLE `aspnetuserroles` ENABLE KEYS */;
-UNLOCK TABLES;
+)
+*/
+INSERT INTO `aspnetuserroles` VALUES 
+  ('688e51e9-4e01-46af-b4af-befe4223f21a','1'), -- Admin
+  ('e96b10f4-2295-49fe-be9b-c5e9afa8b555','2'), -- Empresa
+  ('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','3'); -- Candidato
 
 --
 -- Table structure for table `aspnetusers`
 --
-
-DROP TABLE IF EXISTS `aspnetusers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `aspnetusers` (
+/*TABLE `aspnetusers` (
   `Id` varchar(767) NOT NULL,
   `UserName` varchar(256) DEFAULT NULL,
   `NormalizedUserName` varchar(256) DEFAULT NULL,
@@ -78,15 +58,16 @@ CREATE TABLE `aspnetusers` (
   PRIMARY KEY (`Id`),
   UNIQUE KEY `UserNameIndex` (`NormalizedUserName`),
   KEY `EmailIndex` (`NormalizedEmail`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+)
+*/
+INSERT INTO `aspnetusers` VALUES 
+('b788de87-1754-48ae-9e29-10109d5bcd3d','admin@gmail.com','ADMIN@GMAIL.COM','admin@gmail.com','ADMIN@GMAIL.COM',_binary '\0','AQAAAAEAACcQAAAAEPCLBxpixUQKDsQlVTHb2VBCRnGoeKzo4NCyTjYus00dOWAddHY60G7u0n9nsufWqA==','RN7AG6GXCEESSHEJG3INHCN7RHZPWOAC','8dbbe2f0-4514-4090-8a30-9dc3669b991d',NULL,_binary '\0',_binary '\0',NULL,_binary '',0),
 
---
--- Dumping data for table `aspnetusers`
---
+('688e51e9-4e01-46af-b4af-befe4223f21a','empresa@gmail.com','EMPRESA@GMAIL.COM','empresa@gmail.com','EMPRESA@GMAIL.COM',_binary '\0','AQAAAAEAACcQAAAAECEgkMyfTTtOyqNcab9DK4L7GvVL7ZoCHw8L9cN3TgcZtFQZVp0l/KIv+s+RJ2IerQ==','XRMYOCLKAFJ6OI2J6VGQY5OORHBCFDUW','99f9cd3d-587f-4fbd-937e-af53682905f7',NULL,_binary '\0',_binary '\0',NULL,_binary '',0),
 
-LOCK TABLES `aspnetusers` WRITE;
-/*!40000 ALTER TABLE `aspnetusers` DISABLE KEYS */;
-INSERT INTO `aspnetusers` VALUES ('688e51e9-4e01-46af-b4af-befe4223f21a','ericlesdsantos@gmail.com','ERICLESDSANTOS@GMAIL.COM','ericlesdsantos@gmail.com','ERICLESDSANTOS@GMAIL.COM',_binary '\0','AQAAAAEAACcQAAAAEJ+LAhibNvgFJ1/X72RqEP0ck+19fHXhlmlGSrKWgtUdsJw5jWJQM7AzuPt7SeQEPw==','F2FSVIUWJQMBJLZOYIRUOI4AJQIGCHRJ','cfd32502-4867-481a-8449-50e99b424599',NULL,_binary '\0',_binary '\0',NULL,_binary '',0),('e96b10f4-2295-49fe-be9b-c5e9afa8b555','milena@algo.com','MILENA@ALGO.COM','milena@algo.com','MILENA@ALGO.COM',_binary '\0','AQAAAAEAACcQAAAAELldTrUTgJnqij0e5kQffAHHLonpTj6yOVpl/5jvYorC4M9Id+HHYWSYDny/EanO5Q==','T22CT27WGKYWTMBDCGJF3IM622UVMPKZ','76fd6a44-50b4-45a3-89de-f38b15dff399',NULL,_binary '\0',_binary '\0',NULL,_binary '',0);
-/*!40000 ALTER TABLE `aspnetusers` ENABLE KEYS */;
-UNLOCK TABLES;
+('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','candidato@gmail.com','CANDIDATO@GMAIL.COM','candidato@gmail.com','CANDIDATO@GMAIL.COM',_binary '\0','AQAAAAEAACcQAAAAEGK88U7DKX5qYhKWQLcCq0MYmK6FwowkvC9MtZXDeziYQ8BZaGRn8C5zu0YGlgWzyg==','V6GFLK5YWXXRIFAUBU35PWU5YKEQ4JFB','21d9f595-f908-4616-b877-ba7abd8a0808',NULL,_binary '\0',_binary '\0',NULL,_binary '',0);
+
+
+-- Senha para admin é Admin@123
+-- Senha para empresa é Empresa@123
+-- Senha para candidato é Candidato@123
