@@ -32,8 +32,8 @@ INSERT INTO `aspnetroles` VALUES
 )
 */
 INSERT INTO `aspnetuserroles` VALUES 
-  ('688e51e9-4e01-46af-b4af-befe4223f21a','1'), -- Admin
-  ('e96b10f4-2295-49fe-be9b-c5e9afa8b555','2'), -- Empresa
+  ('b788de87-1754-48ae-9e29-10109d5bcd3d','1'), -- Admin
+  ('688e51e9-4e01-46af-b4af-befe4223f21a','2'), -- Empresa
   ('8ef9fae3-1794-42aa-9a09-ef3ffae534ab','3'); -- Candidato
 
 --
