@@ -2,7 +2,7 @@
   "id": "62243dd0-f44c-4580-b7dd-7096095f61de",
   "version": "2.0",
   "name": "QueroJobs",
-  "url": "https://localhost:7124",
+  "url": "https://localhost:7124/Admin",
   "tests": [{
     "id": "4aa5122f-ad6b-4ce0-8345-86e756768e53",
     "name": "QJ-6 : Remover Candidato Invalido",
@@ -1002,6 +1002,392 @@
       ],
       "value": "Invalid login attempt."
     }]
+  }, {
+    "id": "3559e838-088c-4dce-b9a5-0d7bcffb6616",
+    "name": " QJ-16 : Alterar dados da empresa Invalida",
+    "commands": [{
+      "id": "ac52ca31-704b-4a33-a544-0a7bfce174e7",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Company",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2eaefe18-4065-4dd1-973c-2cdc21550fad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "958x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9604aef0-a8a2-424e-8a65-af66aaecfa68",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) a:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) a:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Editar')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Company/Edit/2')]", "xpath:href"],
+        ["xpath=//tr[2]/td[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2d9042f-0ebe-4961-bdbd-4a8dd3562a92",
+      "comment": "",
+      "command": "click",
+      "target": "id=FantasyName",
+      "targets": [
+        ["id=FantasyName", "id"],
+        ["name=FantasyName", "name"],
+        ["css=#FantasyName", "css:finder"],
+        ["xpath=//input[@id='FantasyName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "988e3dbe-223d-4840-bd97-09fdc240f323",
+      "comment": "",
+      "command": "type",
+      "target": "id=FantasyName",
+      "targets": [
+        ["id=FantasyName", "id"],
+        ["name=FantasyName", "name"],
+        ["css=#FantasyName", "css:finder"],
+        ["xpath=//input[@id='FantasyName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Mi"
+    }, {
+      "id": "47b14d9e-a69d-4105-8392-9fb1b1f89293",
+      "comment": "",
+      "command": "click",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0084e296-958d-458f-9612-3649e902fd7f",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "milena20182018@gmail.com"
+    }, {
+      "id": "3aa5b1e8-f755-487b-994c-2a4d17711a1e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d78436ec-376d-4665-93c3-255e4ca6f6c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=Cep",
+      "targets": [
+        ["id=Cep", "id"],
+        ["name=Cep", "name"],
+        ["css=#Cep", "css:finder"],
+        ["xpath=//input[@id='Cep']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "49550000"
+    }, {
+      "id": "95d69097-aeb3-4118-bee2-9f76b3d3b011",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c15fff45-69da-44a4-8f98-e4e18744e6b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a86dbb68-7e90-4cb3-b175-335b086e3242",
+      "comment": "",
+      "command": "click",
+      "target": "id=City",
+      "targets": [
+        ["id=City", "id"],
+        ["name=City", "name"],
+        ["css=#City", "css:finder"],
+        ["xpath=//input[@id='City']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1e8a256-b2e6-42d0-9b6e-af10f41cde1e",
+      "comment": "",
+      "command": "type",
+      "target": "id=City",
+      "targets": [
+        ["id=City", "id"],
+        ["name=City", "name"],
+        ["css=#City", "css:finder"],
+        ["xpath=//input[@id='City']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "Carira"
+    }, {
+      "id": "5e0091ee-4893-40db-b55e-5699a6b84ae6",
+      "comment": "",
+      "command": "click",
+      "target": "id=District",
+      "targets": [
+        ["id=District", "id"],
+        ["name=District", "name"],
+        ["css=#District", "css:finder"],
+        ["xpath=//input[@id='District']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd219794-981f-4bd1-83bf-312854b2ccc2",
+      "comment": "",
+      "command": "click",
+      "target": "id=District",
+      "targets": [
+        ["id=District", "id"],
+        ["name=District", "name"],
+        ["css=#District", "css:finder"],
+        ["xpath=//input[@id='District']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7912e64-bdd6-4c46-8459-04b3777e700a",
+      "comment": "",
+      "command": "type",
+      "target": "id=District",
+      "targets": [
+        ["id=District", "id"],
+        ["name=District", "name"],
+        ["css=#District", "css:finder"],
+        ["xpath=//input[@id='District']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "Centro"
+    }, {
+      "id": "2fd3612c-a52e-46fe-92b6-29e78e9b617b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Street",
+      "targets": [
+        ["id=Street", "id"],
+        ["name=Street", "name"],
+        ["css=#Street", "css:finder"],
+        ["xpath=//input[@id='Street']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77fc4f12-055e-4cc7-abaf-12fc47ac2d97",
+      "comment": "",
+      "command": "type",
+      "target": "id=Street",
+      "targets": [
+        ["id=Street", "id"],
+        ["name=Street", "name"],
+        ["css=#Street", "css:finder"],
+        ["xpath=//input[@id='Street']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Rua Silvino Braz da Silva"
+    }, {
+      "id": "3662a906-4bfa-47be-8a4b-da99079fe981",
+      "comment": "",
+      "command": "click",
+      "target": "id=HouseNumber",
+      "targets": [
+        ["id=HouseNumber", "id"],
+        ["name=HouseNumber", "name"],
+        ["css=#HouseNumber", "css:finder"],
+        ["xpath=//input[@id='HouseNumber']", "xpath:attributes"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41fcb7f8-87c4-4c1a-9e7e-664f405a2b02",
+      "comment": "",
+      "command": "type",
+      "target": "id=HouseNumber",
+      "targets": [
+        ["id=HouseNumber", "id"],
+        ["name=HouseNumber", "name"],
+        ["css=#HouseNumber", "css:finder"],
+        ["xpath=//input[@id='HouseNumber']", "xpath:attributes"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "189"
+    }, {
+      "id": "bfa21217-9ff4-41b2-bb9b-85c8adbe57d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=Complement",
+      "targets": [
+        ["id=Complement", "id"],
+        ["name=Complement", "name"],
+        ["css=#Complement", "css:finder"],
+        ["xpath=//input[@id='Complement']", "xpath:attributes"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cddce708-038c-4e58-9250-c1b4ab6ec7a4",
+      "comment": "",
+      "command": "type",
+      "target": "id=Complement",
+      "targets": [
+        ["id=Complement", "id"],
+        ["name=Complement", "name"],
+        ["css=#Complement", "css:finder"],
+        ["xpath=//input[@id='Complement']", "xpath:attributes"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "Prédio"
+    }, {
+      "id": "ae115708-af78-4d05-b8e5-3eaba257048c",
+      "comment": "",
+      "command": "click",
+      "target": "id=CellphoneNumber",
+      "targets": [
+        ["id=CellphoneNumber", "id"],
+        ["name=CellphoneNumber", "name"],
+        ["css=#CellphoneNumber", "css:finder"],
+        ["xpath=//input[@id='CellphoneNumber']", "xpath:attributes"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61254abe-cb38-44a6-a9d6-5d952e0660b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=CellphoneNumber",
+      "targets": [
+        ["id=CellphoneNumber", "id"],
+        ["name=CellphoneNumber", "name"],
+        ["css=#CellphoneNumber", "css:finder"],
+        ["xpath=//input[@id='CellphoneNumber']", "xpath:attributes"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "79981341962"
+    }, {
+      "id": "e43bc54d-4c6c-41fc-97e4-2bb24cbad8ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=TelephoneNumber",
+      "targets": [
+        ["id=TelephoneNumber", "id"],
+        ["name=TelephoneNumber", "name"],
+        ["css=#TelephoneNumber", "css:finder"],
+        ["xpath=//input[@id='TelephoneNumber']", "xpath:attributes"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2309354a-95b8-4efd-aaf8-3c4ca9e4c68f",
+      "comment": "",
+      "command": "click",
+      "target": "id=TelephoneNumber",
+      "targets": [
+        ["id=TelephoneNumber", "id"],
+        ["name=TelephoneNumber", "name"],
+        ["css=#TelephoneNumber", "css:finder"],
+        ["xpath=//input[@id='TelephoneNumber']", "xpath:attributes"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e39a84d6-7643-4951-84b9-c75f4b6369f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=TelephoneNumber",
+      "targets": [
+        ["id=TelephoneNumber", "id"],
+        ["name=TelephoneNumber", "name"],
+        ["css=#TelephoneNumber", "css:finder"],
+        ["xpath=//input[@id='TelephoneNumber']", "xpath:attributes"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": "79981341962"
+    }, {
+      "id": "fd47c37d-5736-4ff2-a8dd-bf1a93d37d6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Cnpj",
+      "targets": [
+        ["id=Cnpj", "id"],
+        ["name=Cnpj", "name"],
+        ["css=#Cnpj", "css:finder"],
+        ["xpath=//input[@id='Cnpj']", "xpath:attributes"],
+        ["xpath=//div[13]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "291ebfed-c952-40fd-ba7b-885f6bff5279",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@name='']", "xpath:attributes"],
+        ["xpath=//div[17]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08e7b493-1e12-49a4-9530-310443424d8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(2)",
+      "targets": [
+        ["css=.form-group:nth-child(2)", "css:finder"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f339c550-0ac5-4508-9abd-bac1d72d8f17",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FantasyName-error",
+      "targets": [
+        ["id=FantasyName-error", "id"],
+        ["css=#FantasyName-error", "css:finder"],
+        ["xpath=//span[@id='FantasyName-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "O campo FantasyName aceita entre 3 e 100 caracteres"
+    }]
+  }, {
+    "id": "345dbb7d-4356-44d5-8e19-172043d34354",
+    "name": "QJ-75 : Inserir Nova Instituição Válida",
+    "commands": []
   }],
   "suites": [{
     "id": "a2ae4ec5-1636-4ef3-b9fa-e2eb6ccf4779",
@@ -1011,6 +1397,6 @@
     "timeout": 300,
     "tests": ["4aa5122f-ad6b-4ce0-8345-86e756768e53"]
   }],
-  "urls": ["https://localhost:7124/"],
+  "urls": ["https://localhost:7124/", "https://localhost:7124/Company"],
   "plugins": []
 }
