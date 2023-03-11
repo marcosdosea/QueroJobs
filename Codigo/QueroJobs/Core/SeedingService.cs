@@ -80,6 +80,26 @@ public class SeedingService
             CorporateName = "FABRICA DE SOFTWARES",
             ResponsibleName = "Dosea"
         };
+        Company c4 = new Company
+        {
+            Id = 4,
+            FantasyName = "ItaSoftwares",
+            Email = "itasoftwares@gmail.com",
+            Cep = "24050363",
+            Country = "Brasil",
+            State = "SP",
+            City = "São Paulo",
+            District = "Centro",
+            Street = "Bloco A",
+            HouseNumber = "01",
+            Complement = null,
+            CellphoneNumber = "79 999999999",
+            TelephoneNumber = null,
+            Cnpj = "11456548978914",
+            StateRegistration = null,
+            CorporateName = "ItaSoftwares",
+            ResponsibleName = "Joanne stephany"
+        };
 
         Role r1 = new Role { Id = 1, RoleName = "Desenvolvedor de Softwares" };
         Role r2 = new Role { Id = 2, RoleName = "Engenheiro de Software" };
