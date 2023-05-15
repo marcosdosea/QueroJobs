@@ -1,4 +1,4 @@
-![Visitors on this repo](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=marcosdosea.QueroJobs&color=55acb7&style=for-the-badge&logo=Github)
+<!--[Visitors on this repo](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=marcosdosea.QueroJobs&color=55acb7&style=for-the-badge&logo=Github)-->
 ![License](https://img.shields.io/github/license/marcosdosea/QueroJobs?color=Blue&style=for-the-badge)
 ![Pull Requests CLosed](https://img.shields.io/github/issues-pr-closed/marcosdosea/QueroJObs?color=green&style=for-the-badge)
 ![Issues Fechadas](https://img.shields.io/github/issues-closed-raw/marcosdosea/QueroJobs?color=purple&style=for-the-badge)
@@ -14,6 +14,7 @@
 
 <h2 align=center id="objetivo">  Plataforma de conexão entre pessoas em busca de emprego e empresas contratantes </h2>
 
+Para acessar o manua e vídeo basta acessar: [Pasta de Gerenciamento](https://github.com/marcosdosea/QueroJobs/tree/main/Gerenciamento)
 <br>
 
 <h2 align=center> Navegação </h2>
