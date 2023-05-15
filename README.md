@@ -14,7 +14,7 @@
 
 <h2 align=center id="objetivo">  Plataforma de conexão entre pessoas em busca de emprego e empresas contratantes </h2>
 
-Para acessar o manua e vídeo basta acessar: [Pasta de Gerenciamento](https://github.com/marcosdosea/QueroJobs/tree/main/Gerenciamento)
+Para acessar o manual e vídeo basta acessar: [Pasta de Gerenciamento](https://github.com/marcosdosea/QueroJobs/tree/main/Gerenciamento)
 <br>
 
 <h2 align=center> Navegação </h2>
