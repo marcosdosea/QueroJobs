@@ -51,6 +51,13 @@ Para acessar o manual e vídeo basta acessar: [Pasta de Gerenciamento](https://g
 
 <br><br>
 
+<h2 align=center id="apresentacao"> Uma breve apresentação sobre o Projeto </h2>
+
+     <https://youtu.be/ZbtzrNExPag>
+
+<br><br>
+
+
 <h2 id="usuarios">  :raising_hand_man: Usuários</h2>
 
    O cliente alvo deste sistema é composto por um grupo de indivíduos que procuram por uma ocupação no mercado de trabalho e empresas interessadas em admitir mão de obra sem espera e sem dificuldades. Em outras palavras, o mercado alvo está fortemente associado a soluções de recrutamento e seleção personificado e humanizado.
