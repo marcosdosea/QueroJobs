@@ -51,9 +51,9 @@ Para acessar o manual e vídeo basta acessar: [Pasta de Gerenciamento](https://g
 
 <br><br>
 
-<h2 align=center id="apresentacao"> Uma breve apresentação sobre o Projeto </h2>
+<h2 align=center id="apresentacao"> Uma breve apresentação sobre o projeto </h2>
 
-     <https://youtu.be/ZbtzrNExPag>
+[Apresentação QueroJobs](https://youtu.be/ZbtzrNExPag)
 
 <br><br>
 
