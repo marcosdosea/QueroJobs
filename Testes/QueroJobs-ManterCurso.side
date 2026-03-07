@@ -1,0 +1,382 @@
+{
+  "id": "d4ba4afc-624f-47d4-b9fe-4974741f02ec",
+  "version": "2.0",
+  "name": "Testes_Curso",
+  "url": "https://localhost:7124/Course",
+  "tests": [{
+    "id": "cfcb4352-ff84-4659-a391-1331b9c665b6",
+    "name": "test_inserir_curso",
+    "commands": [{
+      "id": "5d341f62-e190-4e45-9124-c278df01afdb",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f9f9075-af9e-4a6b-97e2-6c8b20db26a0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "831x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54baca4f-fdbe-4e56-8854-efcfbc1026fc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Criar novo curso",
+      "targets": [
+        ["linkText=Criar novo curso", "linkText"],
+        ["css=p > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Criar novo curso')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Course/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Criar novo curso')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "360f8199-2b90-466e-a34a-d00f751549ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94d9ee84-be95-4b1f-a8b9-dc2dc290e38b",
+      "comment": "",
+      "command": "type",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Bacharelado em Letras"
+    }, {
+      "id": "fb5a6e53-4b61-4915-932e-367681c02b82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@name='']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c5e5e7b-91e8-4229-8c72-5cfe202c548b",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Bacharelado em Letras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "39c25ba3-1124-4fa3-84b2-f86f9aed6cf6",
+    "name": "test_inserir_curso_invalido",
+    "commands": [{
+      "id": "f0603cc6-7980-4fce-acbc-f63127fda4cd",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91d3cc73-2a82-427c-99fb-61389f73d1f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "831x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b6f7a59-a072-481f-a188-9170758ac63a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Criar novo curso",
+      "targets": [
+        ["linkText=Criar novo curso", "linkText"],
+        ["css=p > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Criar novo curso')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Course/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Criar novo curso')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f25afad1-2103-46fc-8949-a05d9d3979e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75f0076b-4748-48d2-a455-6ec55307d7ce",
+      "comment": "",
+      "command": "type",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Bacharelado em Letras"
+    }, {
+      "id": "e1d28f17-fe53-4ab4-a07d-4202acbdedad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@name='']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32176bbf-fa27-4cb0-88a9-2583d44b8f00",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Bacharelado em Letras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8b57f19-8c45-4e15-a54c-d1261b0c2fcf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Bacharelado em Letras')]", "xpath:innerText"]
+      ],
+      "value": "Bacharelado em Letras"
+    }]
+  }, {
+    "id": "1abe5ac8-9086-4fa4-9428-db0b8b5f2429",
+    "name": "test_consultar_curso",
+    "commands": [{
+      "id": "9968f1bb-057e-46bd-a419-b19a5d4ad98f",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "175f8692-093c-4859-bda7-92f5e56fbc9f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "831x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63a7f024-4ec6-4204-9f14-67807cd61e0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Curso')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "870042f1-2a0f-41dc-843a-7bcba3a1a0be",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Curso')]", "xpath:innerText"]
+      ],
+      "value": "Curso"
+    }, {
+      "id": "32d0d6a9-caea-44a0-a41a-7f5d64607e6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Bacharelado em Letras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72558f79-ebf1-43c2-80cc-e9173f1a4aa7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Bacharelado em Letras')]", "xpath:innerText"]
+      ],
+      "value": "Bacharelado em Letras"
+    }, {
+      "id": "0fcd1fe7-efe9-41f7-b5fb-a87fe73a4e74",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3248639-a5bf-4999-8ac7-79adac033e2a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"]
+      ],
+      "value": "Bacharelado em Letras"
+    }]
+  }, {
+    "id": "040cd11e-c9fa-4cd0-bb50-8d05c6072793",
+    "name": "test_remover_curso",
+    "commands": [{
+      "id": "f8bdce09-9e5a-4258-a8e2-d412b7093f00",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63ca2342-7863-4d16-b8dd-7c6e8df4b15f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "831x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "793cc679-565d-405c-9930-080f195165c8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Deletar",
+      "targets": [
+        ["linkText=Deletar", "linkText"],
+        ["css=tr:nth-child(1) a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Deletar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Course/Delete/1')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Deletar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62a1e907-36b5-4dc3-b709-4aa394026df2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0edb455f-249c-4521-987b-f4e3a90c4369",
+    "name": "test_alterar_curso",
+    "commands": [{
+      "id": "d8fa0789-1639-4a31-a7c5-14fccc6726de",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:7124/Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "807402bc-e46c-4af5-a4a0-165da828e2a1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c89d4bf9-7627-4320-a03d-06841d6d3f6b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar",
+      "targets": [
+        ["linkText=Editar", "linkText"],
+        ["css=td > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Course/Edit/2')]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7573a45c-e29e-4632-a09f-336b6fd3ef08",
+      "comment": "",
+      "command": "click",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c302a03d-82b6-4d5f-8dac-9154498d113c",
+      "comment": "",
+      "command": "type",
+      "target": "id=CourseName",
+      "targets": [
+        ["id=CourseName", "id"],
+        ["name=CourseName", "name"],
+        ["css=#CourseName", "css:finder"],
+        ["xpath=//input[@id='CourseName']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Bacharelado em Letra"
+    }, {
+      "id": "3bff3ded-1d99-42a5-8619-f236b8194ae1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@name='']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "61f04726-2002-4cfe-8392-1e060036bea7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cfcb4352-ff84-4659-a391-1331b9c665b6"]
+  }],
+  "urls": ["https://localhost:7124/Course"],
+  "plugins": []
+}
